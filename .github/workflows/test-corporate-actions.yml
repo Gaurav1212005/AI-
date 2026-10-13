@@ -1,14 +1,16 @@
 
-name: Test Corporate Actions Data
+name: Corporate Actions Monitor
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
 
 permissions:
   contents: read
 
 jobs:
-  test-nse-data:
+  corporate-actions:
     runs-on: ubuntu-latest
 
     steps:
