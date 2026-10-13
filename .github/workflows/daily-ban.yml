@@ -1,11 +1,13 @@
 
-name: Telegram Bot Test
+name: Daily NSE F&O Ban Monitor
 
 on:
+  schedule:
+    - cron: "0 4 * * 1-5"
   workflow_dispatch:
 
 jobs:
-  test-bot:
+  send-ban-list:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -16,7 +18,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run Telegram bot test
+      - name: Fetch NSE ban list and send Telegram alert
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.FoList_Bot }}
         run: python bot.py
