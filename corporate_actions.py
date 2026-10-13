@@ -1,14 +1,45 @@
 
 import json
+import re
 import urllib.request
 import http.cookiejar
+from pathlib import Path
 
-NSE_HOME = "https://www.nseindia.in/companies-listing/corporate-filings-application"
-NSE_API = "https://www.nseindia.com/api/corporates-corporateActions?index=equities"
+NSE_HOME = (
+    "https://www.nseindia.in/"
+    "companies-listing/corporate-filings-application"
+)
+NSE_API = (
+    "https://www.nseindia.com/"
+    "api/corporates-corporateActions?index=equities"
+)
 
-def main():
-    print("Testing connection to NSE corporate-actions data...")
 
+def normalize(text):
+    text = text.lower()
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return " ".join(text.split())
+
+
+def load_watchlist():
+    path = Path("watchlist.txt")
+
+    if not path.exists():
+        raise FileNotFoundError("watchlist.txt was not found.")
+
+    companies = [
+        line.strip()
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+
+    if not companies:
+        raise ValueError("watchlist.txt is empty.")
+
+    return companies
+
+
+def fetch_actions():
     cookies = http.cookiejar.CookieJar()
     opener = urllib.request.build_opener(
         urllib.request.HTTPCookieProcessor(cookies)
@@ -21,49 +52,77 @@ def main():
             "Chrome/130.0.0.0 Safari/537.36"
         ),
         "Accept": "application/json, text/plain, */*",
-        "Referer": NSE_HOME,
+        "Referer": "https://www.nseindia.com/",
     }
 
-    # Visit NSE first to establish a session.
     request = urllib.request.Request(
-        NSE_HOME,
-        headers=headers
+        NSE_HOME, headers=headers
     )
-
     with opener.open(request, timeout=30) as response:
-        print("NSE homepage status:", response.status)
+        print("NSE page status:", response.status)
 
-    # Request the corporate-actions data.
     request = urllib.request.Request(
-        NSE_API,
-        headers=headers
+        NSE_API, headers=headers
     )
-
     with opener.open(request, timeout=30) as response:
-        raw_data = response.read().decode("utf-8")
-        print("Corporate-actions response status:", response.status)
-
-    data = json.loads(raw_data)
+        data = json.loads(response.read().decode("utf-8"))
+        print("Corporate-actions status:", response.status)
 
     if isinstance(data, dict):
-        records = data.get("data", [])
-    elif isinstance(data, list):
-        records = data
-    else:
-        records = []
+        return data.get("data", [])
+    if isinstance(data, list):
+        return data
+    return []
 
-    print("Records received:", len(records))
 
-    for record in records[:5]:
-        print(json.dumps(record, ensure_ascii=False))
+def main():
+    watchlist = load_watchlist()
+    actions = fetch_actions()
 
-    if not records:
-        raise RuntimeError(
-            "No records returned. NSE may have changed its API "
-            "or the endpoint may require additional parameters."
+    print("Watchlist companies:", len(watchlist))
+    print("NSE records received:", len(actions))
+
+    matched = []
+
+    for action in actions:
+        company = normalize(action.get("comp", ""))
+        symbol = normalize(action.get("symbol", ""))
+
+        for watch_company in watchlist:
+            watch_name = normalize(watch_company)
+
+            # Match full company-name phrases or exact symbols.
+            if (
+                len(watch_name) >= 5
+                and watch_name in company
+            ) or watch_name == symbol:
+                matched.append((watch_company, action))
+                break
+
+    print("Matching watchlist actions:", len(matched))
+
+    for watch_company, action in matched:
+        print(
+            json.dumps(
+                {
+                    "watchlist_name": watch_company,
+                    "company": action.get("comp"),
+                    "symbol": action.get("symbol"),
+                    "purpose": action.get("subject"),
+                    "ex_date": action.get("exDate"),
+                    "record_date": action.get("recDate"),
+                },
+                ensure_ascii=False,
+            )
         )
 
-    print("NSE corporate-actions connection test passed.")
+    if not matched:
+        print(
+            "No watchlist matches in the records returned today. "
+            "This does not necessarily mean there are no actions "
+            "for your companies."
+        )
+
 
 if __name__ == "__main__":
     main()
