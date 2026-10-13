@@ -34,8 +34,17 @@ def fetch_ban_list():
     text = content.decode("utf-8-sig")
     rows = list(csv.reader(io.StringIO(text)))
 
-    if not rows:
-        raise RuntimeError("The NSE CSV is empty.")
+    # Column B = index 1; Row 2 onward = skip the first row.
+    symbols = [
+        row[1].strip().upper()
+        for row in rows[1:]
+        if len(row) > 1 and row[1].strip()
+    ]
+
+    if not symbols:
+        raise RuntimeError("No securities found in Column B.")
+
+    return content, symbols
 
     header = [cell.strip().lower() for cell in rows[0]]
 
