@@ -3,7 +3,7 @@ import json
 import urllib.request
 import http.cookiejar
 
-NSE_HOME = "https://www.nseindia.com/"
+NSE_HOME = "https://www.nseindia.in/companies-listing/corporate-filings-application"
 NSE_API = "https://www.nseindia.com/api/corporates-corporateActions?index=equities"
 
 def main():
