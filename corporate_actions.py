@@ -248,44 +248,25 @@ def send_telegram(message):
 # BUILD TELEGRAM REPORT
 # --------------------------------------------------
 
+
 def build_report(watchlist, actions, matched):
-    lines = [
-        "NSE CORPORATE ACTIONS MONITOR",
-        "",
-    ]
+    lines = ["NSE CORPORATE ACTIONS", ""]
 
-    if matched:
+    if not matched:
         lines.append(
-            f"Matching watchlist actions: {len(matched)}"
+            "No matching corporate actions found for your watchlist."
         )
-        lines.append("")
+        return "\n".join(lines)
 
-        for item in matched:
-            lines.extend([
-                f"Company: {item['company']}",
-                f"Symbol: {item['symbol']}",
-                f"Action: {item['purpose']}",
-                f"Ex-date: {item['ex_date']}",
-                f"Record date: {item['record_date']}",
-                "",
-            ])
-    else:
+    for item in matched:
         lines.extend([
-            "No watchlist matches were found",
-            "in the records returned by NSE.",
+            f"Company: {item['company']}",
+            f"Symbol: {item['symbol']}",
+            f"Action: {item['purpose']}",
+            f"Ex-date: {item['ex_date']}",
+            f"Record date: {item['record_date']}",
             "",
         ])
-
-    lines.extend([
-        "WATCHLIST SUMMARY",
-        f"Companies in watchlist: {len(watchlist)}",
-        f"NSE records retrieved: {len(actions)}",
-        "",
-        "Important: This report covers only the records",
-        "returned by the current NSE endpoint. It does",
-        "not confirm that every market announcement",
-        "or corporate action has been checked.",
-    ])
 
     return "\n".join(lines)
 
