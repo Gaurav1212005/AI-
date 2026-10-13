@@ -20,5 +20,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Test NSE corporate actions
+      - name: Run corporate actions monitor
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.FoList_Bot }}
+          TELEGRAM_CHAT_ID: "8430921727"
         run: python corporate_actions.py
