@@ -78,7 +78,6 @@ try:
     listing = "\n".join(f"• {symbol}" for symbol in symbols)
 
     message = (
-        "📊 NSE F&O BAN MONITOR\n\n"
         f"{heading}\n\n"
         f"{listing}\n\n"
         f"Official NSE CSV:\n{NSE_CSV_URL}\n\n"
