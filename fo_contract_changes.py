@@ -1,4 +1,3 @@
-
 import csv
 import gzip
 import io
@@ -6,6 +5,7 @@ import json
 import os
 import re
 import urllib.request
+import urllib.parse
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -23,6 +23,30 @@ def normalize(value):
     return re.sub(r"[^a-z0-9]", "", str(value or "").lower())
 
 
+def expiry_month(value):
+    """Convert an expiry date to YYYY-MM to ignore day-only changes."""
+    value = str(value or "").strip()
+
+    formats = [
+        "%d-%b-%Y",
+        "%d-%B-%Y",
+        "%d-%m-%Y",
+        "%d/%m/%Y",
+        "%Y-%m-%d",
+        "%d%m%Y",
+        "%d-%b-%Y %H:%M:%S",
+    ]
+
+    for fmt in formats:
+        try:
+            return datetime.strptime(value, fmt).strftime("%Y-%m")
+        except ValueError:
+            continue
+
+    # If the date format is unknown, retain the original normalized value.
+    return normalize(value)
+
+
 def download_contract_file():
     today = datetime.now(ZoneInfo("Asia/Kolkata")).date()
 
@@ -34,21 +58,25 @@ def download_contract_file():
         "Accept": "*/*",
     }
 
-    # Try today's file and recent previous dates.
     for days_ago in range(8):
         date_to_try = today - timedelta(days=days_ago)
+
         filename = (
             f"NSE_FO_contract_{date_to_try.strftime('%d%m%Y')}.csv.gz"
         )
 
         for host in ARCHIVE_HOSTS:
             url = host + filename
+
             try:
-                request = urllib.request.Request(url, headers=headers)
+                request = urllib.request.Request(
+                    url,
+                    headers=headers,
+                )
+
                 with urllib.request.urlopen(request, timeout=40) as response:
                     compressed = response.read()
 
-                # Reject HTML/error pages even if HTTP returned 200.
                 content = gzip.decompress(compressed)
                 text = content.decode("utf-8-sig", errors="replace")
 
@@ -59,8 +87,13 @@ def download_contract_file():
                 return text, filename
 
             except Exception as error:
-                print("Could not download", filename, "from", host)
-                print(type(error).__name__)
+                print(
+                    "Could not download",
+                    filename,
+                    "from",
+                    host,
+                    type(error).__name__,
+                )
 
     raise RuntimeError(
         "Could not download a recent NSE F&O contract file. "
@@ -72,21 +105,27 @@ def find_column(headers, alternatives):
     lookup = {normalize(header): header for header in headers}
 
     for alternative in alternatives:
-        if normalize(alternative) in lookup:
-            return lookup[normalize(alternative)]
+        key = normalize(alternative)
+
+        if key in lookup:
+            return lookup[key]
 
     return None
 
 
 def parse_contracts(text):
-    sample = text[:10000]
-
     try:
-        dialect = csv.Sniffer().sniff(sample, delimiters=",|;")
+        dialect = csv.Sniffer().sniff(
+            text[:10000],
+            delimiters=",|;",
+        )
     except csv.Error:
         dialect = csv.excel
 
-    reader = csv.DictReader(io.StringIO(text), dialect=dialect)
+    reader = csv.DictReader(
+        io.StringIO(text),
+        dialect=dialect,
+    )
 
     if not reader.fieldnames:
         raise RuntimeError("NSE file has no readable column headers.")
@@ -104,24 +143,26 @@ def parse_contracts(text):
             reader.fieldnames,
             ["Expiry Date", "Expiry", "Expiration Date"],
         ),
-        "strike": find_column(
-            reader.fieldnames,
-            ["Strike Price", "Strike"],
-        ),
-        "option_type": find_column(
-            reader.fieldnames,
-            ["Option Type", "Option Type Code", "Opt Type"],
-        ),
         "lot_size": find_column(
             reader.fieldnames,
-            ["Market Lot", "Lot Size", "Market Lot Size", "Market Lot Quantity"],
+            [
+                "Market Lot",
+                "Lot Size",
+                "Market Lot Size",
+                "Market Lot Quantity",
+            ],
         ),
     }
 
-    missing = [name for name, column in columns.items() if column is None]
+    missing = [
+        name
+        for name, column in columns.items()
+        if column is None
+    ]
+
     if missing:
         raise RuntimeError(
-            "Could not identify these contract columns: "
+            "Could not identify contract columns: "
             + ", ".join(missing)
             + ". Actual headers: "
             + ", ".join(reader.fieldnames)
@@ -130,55 +171,132 @@ def parse_contracts(text):
     contracts = {}
 
     for row in reader:
-        instrument = str(row.get(columns["instrument"], "") or "").strip()
-        symbol = str(row.get(columns["symbol"], "") or "").strip()
-        expiry = str(row.get(columns["expiry"], "") or "").strip()
-        strike = str(row.get(columns["strike"], "") or "").strip()
-        option_type = str(row.get(columns["option_type"], "") or "").strip()
-        lot_size = str(row.get(columns["lot_size"], "") or "").strip()
+        instrument = str(
+            row.get(columns["instrument"], "") or ""
+        ).strip().upper()
 
-        if not instrument or not symbol or not expiry:
+        symbol = str(
+            row.get(columns["symbol"], "") or ""
+        ).strip()
+
+        expiry = str(
+            row.get(columns["expiry"], "") or ""
+        ).strip()
+
+        lot_size = str(
+            row.get(columns["lot_size"], "") or ""
+        ).strip()
+
+        # Keep Futures only. Exclude all Options.
+        if not instrument.startswith("FUT"):
             continue
 
-        # Identify a contract by its specifications, not its market price.
-        identity = "|".join(
-            normalize(part)
-            for part in (instrument, symbol, expiry, strike, option_type)
-        )
+        if not symbol or not expiry:
+            continue
+
+        # Identity excludes the expiry day and includes its month.
+        # This prevents a day-only expiry change from triggering
+        # a false addition or removal.
+        identity = "|".join([
+            normalize(instrument),
+            normalize(symbol),
+            expiry_month(expiry),
+        ])
 
         if identity in contracts:
             raise RuntimeError(
-                "Duplicate contract identity found. "
-                "Stopping to avoid incorrect alerts."
+                "Duplicate Futures contract identity found: "
+                + identity
+                + ". Stopping to avoid incorrect alerts."
             )
 
         contracts[identity] = {
             "instrument": instrument,
             "symbol": symbol,
             "expiry": expiry,
-            "strike": strike,
-            "option_type": option_type,
             "lot_size": lot_size,
         }
 
-    if len(contracts) < 100:
+    if len(contracts) < 10:
         raise RuntimeError(
-            f"Only {len(contracts)} contracts were parsed. "
-            "This may be an incomplete file, so no snapshot was changed."
+            f"Only {len(contracts)} Futures contracts were parsed. "
+            "The file may be incomplete. Snapshot was not changed."
         )
 
-    print("Contracts parsed:", len(contracts))
+    print("Futures contracts parsed:", len(contracts))
     return contracts
+
+
+def load_previous_snapshot():
+    if not SNAPSHOT_FILE.exists():
+        return None
+
+    raw = json.loads(
+        SNAPSHOT_FILE.read_text(encoding="utf-8")
+    )
+
+    if not isinstance(raw, dict):
+        raise RuntimeError("Previous snapshot has an invalid format.")
+
+    previous = {}
+
+    for contract in raw.values():
+        if not isinstance(contract, dict):
+            continue
+
+        instrument = str(
+            contract.get("instrument", "")
+        ).strip().upper()
+
+        # Remove Options from the old snapshot.
+        if not instrument.startswith("FUT"):
+            continue
+
+        symbol = str(contract.get("symbol", "")).strip()
+        expiry = str(contract.get("expiry", "")).strip()
+
+        if not symbol or not expiry:
+            continue
+
+        identity = "|".join([
+            normalize(instrument),
+            normalize(symbol),
+            expiry_month(expiry),
+        ])
+
+        if identity in previous:
+            raise RuntimeError(
+                "Duplicate Futures identity in previous snapshot: "
+                + identity
+                + ". Snapshot was not changed."
+            )
+
+        previous[identity] = {
+            "instrument": instrument,
+            "symbol": symbol,
+            "expiry": expiry,
+            "lot_size": str(contract.get("lot_size", "")).strip(),
+        }
+
+    return previous
 
 
 def compare_contracts(previous, current):
     old_keys = set(previous)
     new_keys = set(current)
 
-    added = [current[key] for key in sorted(new_keys - old_keys)]
-    removed = [previous[key] for key in sorted(old_keys - new_keys)]
+    added = [
+        current[key]
+        for key in sorted(new_keys - old_keys)
+    ]
+
+    removed = [
+        previous[key]
+        for key in sorted(old_keys - new_keys)
+    ]
 
     lot_changes = []
+
     for key in sorted(old_keys & new_keys):
         old_lot = previous[key]["lot_size"]
         new_lot = current[key]["lot_size"]
@@ -194,53 +312,65 @@ def compare_contracts(previous, current):
 
 
 def contract_label(contract):
-    parts = [
-        contract["symbol"],
-        contract["instrument"],
-        "Expiry " + contract["expiry"],
-    ]
-
-    if contract["strike"]:
-        parts.append("Strike " + contract["strike"])
-
-    if contract["option_type"]:
-        parts.append(contract["option_type"])
-
-    return " | ".join(parts)
+    return (
+        f"{contract['symbol']} FUTURES"
+        f" | Expiry: {contract['expiry']}"
+    )
 
 
 def build_report(added, removed, lot_changes):
-    lines = ["NSE F&O CONTRACT CHANGES", ""]
+    today = datetime.now(
+        ZoneInfo("Asia/Kolkata")
+    ).strftime("%d-%b-%Y")
 
-    lines.append(f"New contracts: {len(added)}")
-    lines.append(f"Removed contracts: {len(removed)}")
-    lines.append(f"Lot-size changes: {len(lot_changes)}")
-    lines.append("")
+    lines = [
+        "NSE FUTURES CONTRACT CHANGES",
+        f"Date: {today}",
+        "",
+        f"New Futures contracts: {len(added)}",
+        f"Removed Futures contracts: {len(removed)}",
+        f"Lot-size changes: {len(lot_changes)}",
+        "",
+    ]
 
-    # Keep Telegram messages readable if many contracts change.
     limit = 25
 
-    for item in lot_changes[:limit]:
-        lines.append(
-            f"LOT SIZE: {contract_label(item['contract'])}\n"
-            f"Old: {item['old_lot']} -> New: {item['new_lot']}"
-        )
+    if lot_changes:
+        lines.append("LOT-SIZE CHANGES")
 
-    for contract in added[:limit]:
-        lines.append("ADDED: " + contract_label(contract))
+        for item in lot_changes[:limit]:
+            lines.append(
+                f"{item['contract']['symbol']} FUTURES\n"
+                f"Old lot size: {item['old_lot']}\n"
+                f"New lot size: {item['new_lot']}"
+            )
 
-    for contract in removed[:limit]:
-        lines.append("REMOVED: " + contract_label(contract))
+        lines.append("")
+
+    if added:
+        lines.append("NEW FUTURES CONTRACTS")
+
+        for contract in added[:limit]:
+            lines.append(contract_label(contract))
+
+        lines.append("")
+
+    if removed:
+        lines.append("REMOVED FUTURES CONTRACTS")
+
+        for contract in removed[:limit]:
+            lines.append(contract_label(contract))
 
     total = len(added) + len(removed) + len(lot_changes)
+
     if total > limit:
         lines.extend([
             "",
-            f"Showing up to {limit} entries per category. "
-            "Check the workflow log for totals.",
+            "Some entries are omitted from this message.",
+            f"Total changes detected: {total}",
         ])
 
-    return "\n\n".join(lines)
+    return "\n".join(lines).strip()
 
 
 def send_telegram(message):
@@ -252,14 +382,15 @@ def send_telegram(message):
 
     url = f"{TELEGRAM_API}/bot{token}/sendMessage"
 
-    # Split long reports into Telegram-safe chunks.
     chunks = []
+
     while message:
         if len(message) <= 3500:
             chunks.append(message)
             break
 
         split_at = message.rfind("\n", 0, 3500)
+
         if split_at < 1:
             split_at = 3500
 
@@ -281,58 +412,68 @@ def send_telegram(message):
         )
 
         with urllib.request.urlopen(request, timeout=30) as response:
-            result = json.loads(response.read().decode("utf-8"))
+            result = json.loads(
+                response.read().decode("utf-8")
+            )
 
         if not result.get("ok"):
-            raise RuntimeError("Telegram did not accept the message.")
+            raise RuntimeError(
+                "Telegram did not accept the message."
+            )
 
     print("Telegram notification sent.")
 
 
 def main():
-    print("Starting NSE F&O contract monitor...")
+    print("Starting NSE Futures contract monitor...")
 
     text, filename = download_contract_file()
     current = parse_contracts(text)
 
-    # First successful run establishes the baseline.
-    if not SNAPSHOT_FILE.exists():
+    previous = load_previous_snapshot()
+
+    # The first successful run establishes the baseline.
+    if previous is None:
         SNAPSHOT_FILE.write_text(
             json.dumps(current, indent=2),
             encoding="utf-8",
         )
 
         send_telegram(
-            "F&O CONTRACT MONITOR: BASELINE CREATED\n"
+            "NSE FUTURES MONITOR: BASELINE CREATED\n"
             f"File: {filename}\n"
-            f"Contracts recorded: {len(current)}\n\n"
-            "The next successful run will compare contracts "
-            "against this snapshot."
+            f"Futures contracts recorded: {len(current)}\n\n"
+            "The next successful run will compare Futures "
+            "contracts against this baseline."
         )
         return
 
-    previous = json.loads(SNAPSHOT_FILE.read_text(encoding="utf-8"))
+    added, removed, lot_changes = compare_contracts(
+        previous,
+        current,
+    )
 
-    added, removed, lot_changes = compare_contracts(previous, current)
-
-    print("Added:", len(added))
-    print("Removed:", len(removed))
+    print("New Futures contracts:", len(added))
+    print("Removed Futures contracts:", len(removed))
     print("Lot-size changes:", len(lot_changes))
 
-    if not added and not removed and not lot_changes:
-        report = "NO UPDATE FOR FO CONTRACT"
-    else:
-        report = build_report(added, removed, lot_changes)
-
-    # Save the snapshot; the workflow will commit it for tomorrow.
+    # Save only after the file has been downloaded and validated.
     SNAPSHOT_FILE.write_text(
         json.dumps(current, indent=2),
         encoding="utf-8",
     )
 
+    if not added and not removed and not lot_changes:
+        report = "NO UPDATE FOR FO FUTURES CONTRACT"
+    else:
+        report = build_report(
+            added,
+            removed,
+            lot_changes,
+        )
+
     send_telegram(report)
 
 
 if __name__ == "__main__":
-    import urllib.parse
     main()
