@@ -7,7 +7,7 @@ import subprocess
 import urllib.request
 import urllib.parse
 import urllib.error
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 
 # ============================================================
 # CONFIGURATION
@@ -20,7 +20,7 @@ CHAT_ID = str(
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SCRIPT_TIMEOUT = 180
-TELEGRAM_MESSAGE_LIMIT = 3900
+MESSAGE_LIMIT = 3900
 POLL_TIMEOUT = 50
 
 COMMANDS = {
@@ -42,27 +42,24 @@ COMMANDS = {
             "fo_contract_changes.py",
             "corporate_actions.py",
         ],
-        "description": "Run all three programs",
+        "description": "All monitoring programs",
     },
 }
 
 MENU = (
     "🤖 INTERACTIVE NSE MONITOR\n"
     "━━━━━━━━━━━━━━━━━━━━\n\n"
-    "Choose a command:\n\n"
+    "Available commands:\n\n"
     "/run — F&O ban list\n"
     "/update — F&O contract changes\n"
     "/actions — Corporate actions\n"
     "/all — Run everything\n"
     "/status — Listener status\n"
     "/help — Show this menu\n\n"
-    "You can also type commands without /."
+    "You can also send commands without /."
 )
 
-# Prevent overlapping executions.
 execution_lock = threading.Lock()
-
-# Listener start time.
 START_TIME = datetime.now(timezone.utc)
 
 
@@ -71,16 +68,17 @@ START_TIME = datetime.now(timezone.utc)
 # ============================================================
 
 def api(method, timeout=60, **params):
-    """Call the Telegram Bot API."""
+    """Make a request to the Telegram Bot API."""
 
     url = f"https://api.telegram.org/bot{TOKEN}/{method}"
-
     data = urllib.parse.urlencode(params).encode("utf-8")
 
     request = urllib.request.Request(
         url,
         data=data,
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
     )
 
     with urllib.request.urlopen(request, timeout=timeout) as response:
@@ -94,55 +92,44 @@ def api(method, timeout=60, **params):
     return result
 
 
-def send(text):
-    """Send a Telegram message, splitting long reports if necessary."""
+def send(message):
+    """Send a message, splitting long reports when needed."""
 
-    text = str(text).strip()
+    message = str(message).strip()
 
-    if not text:
-        text = "No report was produced."
+    if not message:
+        return
 
-    chunks = []
+    while message:
+        if len(message) <= MESSAGE_LIMIT:
+            chunk = message
+            message = ""
+        else:
+            split_at = message.rfind("\n", 0, MESSAGE_LIMIT)
 
-    while len(text) > TELEGRAM_MESSAGE_LIMIT:
-        split_at = text.rfind("\n", 0, TELEGRAM_MESSAGE_LIMIT)
+            if split_at <= 0:
+                split_at = MESSAGE_LIMIT
 
-        if split_at < 1:
-            split_at = TELEGRAM_MESSAGE_LIMIT
+            chunk = message[:split_at]
+            message = message[split_at:].lstrip("\n")
 
-        chunks.append(text[:split_at])
-        text = text[split_at:].lstrip("\n")
-
-    if text:
-        chunks.append(text)
-
-    for chunk in chunks:
         api(
             "sendMessage",
+            timeout=30,
             chat_id=CHAT_ID,
             text=chunk,
-            timeout=30,
         )
 
 
 # ============================================================
-# REPORT CLEANING
+# OUTPUT CLEANING
 # ============================================================
 
 def clean_report(output):
-    """
-    Remove common debugging and delivery-confirmation lines.
-
-    Preserve the actual report, including security names,
-    dates, corporate actions and contract-change details.
-    """
-
-    lines = output.splitlines()
-    cleaned = []
+    """Remove common technical and debugging lines."""
 
     skip_prefixes = (
         "[OK]",
-        "Success: Telegram message sent.",
         "Success: Telegram message sent",
         "Heading:",
         "Extracted securities:",
@@ -153,19 +140,16 @@ def clean_report(output):
         "Debug ",
     )
 
-    for line in lines:
+    cleaned = []
+
+    for line in output.splitlines():
         stripped = line.strip()
 
         if any(stripped.startswith(prefix) for prefix in skip_prefixes):
             continue
 
-        # Ignore standalone debugging messages.
-        if stripped.lower().startswith("debugging output:"):
-            continue
-
         cleaned.append(line)
 
-    # Remove excess blank lines.
     report = "\n".join(cleaned).strip()
 
     while "\n\n\n" in report:
@@ -175,23 +159,18 @@ def clean_report(output):
 
 
 # ============================================================
-# SCRIPT EXECUTION
+# PROGRAM EXECUTION
 # ============================================================
 
 def run_script(script):
-    """Execute a Python program and return its report."""
+    """Run one Python script and return its report."""
 
     script_path = os.path.join(BASE_DIR, script)
 
     if not os.path.isfile(script_path):
-        return {
-            "success": False,
-            "script": script,
-            "report": f"Required file not found: {script}",
-        }
+        return False, f"❌ Required file not found: {script}"
 
     env = os.environ.copy()
-
     env["TELEGRAM_BOT_TOKEN"] = TOKEN
     env["TELEGRAM_CHAT_ID"] = CHAT_ID
 
@@ -212,84 +191,59 @@ def run_script(script):
         )
 
         if result.returncode != 0:
-            # Send a useful error if the program fails.
-            error_text = clean_report(output)
+            error = clean_report(output)
 
-            return {
-                "success": False,
-                "script": script,
-                "report": (
-                    f"❌ {script} failed.\n\n"
-                    f"{error_text[-3000:] or 'No error details available.'}"
-                ),
-            }
+            return False, (
+                f"❌ {script} failed.\n\n"
+                f"{error[-3000:] or 'No error details available.'}"
+            )
 
         report = clean_report(output)
 
-        return {
-            "success": True,
-            "script": script,
-            "report": report,
-        }
+        return True, report
 
     except subprocess.TimeoutExpired:
-        return {
-            "success": False,
-            "script": script,
-            "report": (
-                f"❌ {script} exceeded the "
-                f"{SCRIPT_TIMEOUT}-second execution limit."
-            ),
-        }
+        return False, (
+            f"❌ {script} timed out after "
+            f"{SCRIPT_TIMEOUT} seconds."
+        )
 
     except Exception as exc:
-        return {
-            "success": False,
-            "script": script,
-            "report": f"❌ Could not execute {script}: {exc}",
-        }
+        return False, f"❌ Could not execute {script}: {exc}"
 
 
 def execute_command(command):
-    """Run the program or programs associated with a command."""
+    """Execute the programs associated with a Telegram command."""
 
     if not execution_lock.acquire(blocking=False):
         send(
-            "⏳ Another task is already running.\n"
-            "Please wait for it to finish before starting another."
+            "⏳ Another task is already running. "
+            "Please wait for it to finish."
         )
         return
 
     try:
         config = COMMANDS[command]
-        scripts = config["scripts"]
 
         send(f"⏳ Running: {config['description']}")
 
         failures = 0
 
-        for script in scripts:
-            result = run_script(script)
+        for script in config["scripts"]:
+            success, report = run_script(script)
 
-            if not result["success"]:
+            if not success:
                 failures += 1
+                send(report)
+                continue
 
-            report = result["report"]
-
-            # Do not send successful execution/debug logs.
-            # Send only the report produced by the script.
+            # Send only the report, not technical success logs.
             if report:
                 send(report)
-            elif result["success"]:
-                # Successful scripts may send their own report
-                # directly through the Telegram API.
-                # Do not send an extra technical success message.
-                pass
 
         if failures:
             send(
-                f"⚠️ Task completed with {failures} "
-                f"program failure(s)."
+                f"⚠️ Finished with {failures} failed program(s)."
             )
 
     finally:
@@ -301,27 +255,24 @@ def execute_command(command):
 # ============================================================
 
 def get_command(message):
-    """Normalize commands, including optional bot usernames."""
+    """Normalize commands with or without a leading slash."""
 
     text = (message.get("text") or "").strip()
 
     if not text:
         return ""
 
-    first_word = text.split()[0]
-    first_word = first_word.split("@")[0]
-    first_word = first_word.lstrip("/").lower()
-
-    return first_word
+    command = text.split()[0]
+    command = command.split("@")[0]
+    return command.lstrip("/").lower()
 
 
 def handle_message(message):
-    """Process messages from the authorized Telegram chat only."""
+    """Handle messages only from the authorized Telegram chat."""
 
     chat = message.get("chat", {})
     incoming_chat_id = str(chat.get("id", ""))
 
-    # Ignore all other chats.
     if incoming_chat_id != CHAT_ID:
         return
 
@@ -333,18 +284,17 @@ def handle_message(message):
 
     if command == "status":
         uptime = datetime.now(timezone.utc) - START_TIME
-        hours, remainder = divmod(int(uptime.total_seconds()), 3600)
-        minutes = remainder // 60
+        total_minutes = int(uptime.total_seconds() // 60)
+        hours, minutes = divmod(total_minutes, 60)
 
         send(
             "✅ LISTENER STATUS\n"
             "━━━━━━━━━━━━━━━━━━━━\n"
             "Listener: Running\n"
             f"Uptime: {hours}h {minutes}m\n"
-            f"Available programs: {len(COMMANDS)} commands\n"
-            "Execution mode: Sequential\n\n"
-            "Note: This confirms the listener is running, "
-            "not that NSE data sources are available."
+            "Available commands: 7\n"
+            "Execution: Sequential\n\n"
+            "This checks the listener, not NSE availability."
         )
         return
 
@@ -352,14 +302,11 @@ def handle_message(message):
         execute_command(command)
         return
 
-    send(
-        "❓ Unknown command.\n\n"
-        "Send /help to see the available commands."
-    )
+    send("❓ Unknown command.\n\nSend /help to see the menu.")
 
 
 # ============================================================
-# MAIN POLLING LOOP
+# MAIN LISTENER
 # ============================================================
 
 def main():
@@ -369,9 +316,8 @@ def main():
             "Set it as an environment variable."
         )
 
-    # Check the token before entering the polling loop.
-    me = api("getMe", timeout=20)
-    bot_name = me["result"].get("username", "unknown")
+    bot_info = api("getMe", timeout=20)
+    bot_name = bot_info["result"].get("username", "unknown")
 
     print(f"Connected to Telegram bot: @{bot_name}")
     print("Listener is running. Press Ctrl+C to stop.")
@@ -380,7 +326,10 @@ def main():
 
     while True:
         try:
-            params = {"timeout": POLL_TIMEOUT}
+            # IMPORTANT:
+            # Do not put timeout in params. It is passed separately
+            # to api(), preventing the duplicate-timeout error.
+            params = {}
 
             if offset is not None:
                 params["offset"] = offset
@@ -388,35 +337,34 @@ def main():
             response = api(
                 "getUpdates",
                 timeout=POLL_TIMEOUT + 10,
+                allowed_updates=json.dumps(["message"]),
                 **params,
             )
 
             for update in response.get("result", []):
                 offset = update["update_id"] + 1
 
-                message = (
-                    update.get("message")
-                    or update.get("edited_message")
-                    or {}
-                )
+                message = update.get("message") or {}
 
-                if message:
-                    try:
-                        handle_message(message)
-                    except Exception as exc:
-                        print("Message handling error:", exc)
+                if not message:
+                    continue
 
-                        # Avoid exposing internal errors or secrets
-                        # in Telegram.
+                try:
+                    handle_message(message)
+
+                except Exception as exc:
+                    print("Message handling error:", exc)
+
+                    # Do not expose internal errors or secrets
+                    # in Telegram messages.
+                    if str(
+                        message.get("chat", {}).get("id", "")
+                    ) == CHAT_ID:
                         try:
-                            if str(
-                                message.get("chat", {}).get("id", "")
-                            ) == CHAT_ID:
-                                send(
-                                    "❌ The command could not be "
-                                    "completed. Check the listener "
-                                    "logs for details."
-                                )
+                            send(
+                                "❌ The command could not be completed. "
+                                "Check Terminal for details."
+                            )
                         except Exception:
                             pass
 
@@ -426,8 +374,6 @@ def main():
 
         except urllib.error.HTTPError as exc:
             print("Telegram HTTP error:", exc.code)
-
-            # Avoid repeatedly hammering Telegram after an error.
             time.sleep(10)
 
         except Exception as exc:
