@@ -1,0 +1,3925 @@
+{
+  "version": 2,
+  "source_file": "NSE_FO_contract_13102026.csv.gz",
+  "updated_at": "2026-10-14T15:41:06.311662+05:30",
+  "contracts": {
+    "011NSETEST|2026-11-28": {
+      "symbol": "011NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "021NSETEST|2026-11-28": {
+      "symbol": "021NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "031NSETEST|2026-11-28": {
+      "symbol": "031NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "041NSETEST|2026-11-28": {
+      "symbol": "041NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "051NSETEST|2026-11-28": {
+      "symbol": "051NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "061NSETEST|2026-11-28": {
+      "symbol": "061NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "071NSETEST|2026-11-28": {
+      "symbol": "071NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "081NSETEST|2026-11-28": {
+      "symbol": "081NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "091NSETEST|2026-11-28": {
+      "symbol": "091NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "101NSETEST|2026-11-28": {
+      "symbol": "101NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "111NSETEST|2026-11-28": {
+      "symbol": "111NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "121NSETEST|2026-11-28": {
+      "symbol": "121NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "131NSETEST|2026-11-28": {
+      "symbol": "131NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "141NSETEST|2026-11-28": {
+      "symbol": "141NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "151NSETEST|2026-11-28": {
+      "symbol": "151NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "161NSETEST|2026-11-28": {
+      "symbol": "161NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "171NSETEST|2026-11-28": {
+      "symbol": "171NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "181NSETEST|2026-11-28": {
+      "symbol": "181NSETEST",
+      "instrument": "FUTSTK",
+      "expiry": "2026-11-28",
+      "lot_size": "50"
+    },
+    "360ONE|2016-10-27": {
+      "symbol": "360ONE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "500"
+    },
+    "ABB|2016-10-27": {
+      "symbol": "ABB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "ABCAPITAL|2016-10-27": {
+      "symbol": "ABCAPITAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "3100"
+    },
+    "ADANIENSOL|2016-10-27": {
+      "symbol": "ADANIENSOL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "675"
+    },
+    "ADANIENT|2016-10-27": {
+      "symbol": "ADANIENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "309"
+    },
+    "ADANIGREEN|2016-10-27": {
+      "symbol": "ADANIGREEN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "600"
+    },
+    "ADANIPORTS|2016-10-27": {
+      "symbol": "ADANIPORTS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "475"
+    },
+    "ADANIPOWER|2016-10-27": {
+      "symbol": "ADANIPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "3550"
+    },
+    "ALKEM|2016-10-27": {
+      "symbol": "ALKEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "AMBER|2016-10-27": {
+      "symbol": "AMBER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "100"
+    },
+    "AMBUJACEM|2016-10-27": {
+      "symbol": "AMBUJACEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1200"
+    },
+    "ANGELONE|2016-10-27": {
+      "symbol": "ANGELONE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2500"
+    },
+    "APLAPOLLO|2016-10-27": {
+      "symbol": "APLAPOLLO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "350"
+    },
+    "APOLLOHOSP|2016-10-27": {
+      "symbol": "APOLLOHOSP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "ASHOKLEY|2016-10-27": {
+      "symbol": "ASHOKLEY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "5000"
+    },
+    "ASIANPAINT|2016-10-27": {
+      "symbol": "ASIANPAINT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "250"
+    },
+    "ASTRAL|2016-10-27": {
+      "symbol": "ASTRAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "425"
+    },
+    "AUBANK|2016-10-27": {
+      "symbol": "AUBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1000"
+    },
+    "AUROPHARMA|2016-10-27": {
+      "symbol": "AUROPHARMA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "550"
+    },
+    "AXISBANK|2016-10-27": {
+      "symbol": "AXISBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "625"
+    },
+    "BAJAJ-AUTO|2016-10-27": {
+      "symbol": "BAJAJ-AUTO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "75"
+    },
+    "BAJAJFINSV|2016-10-27": {
+      "symbol": "BAJAJFINSV",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "300"
+    },
+    "BAJAJHLDNG|2016-10-27": {
+      "symbol": "BAJAJHLDNG",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "75"
+    },
+    "BAJFINANCE|2016-10-27": {
+      "symbol": "BAJFINANCE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "750"
+    },
+    "BANDHANBNK|2016-10-27": {
+      "symbol": "BANDHANBNK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "3600"
+    },
+    "BANKBARODA|2016-10-27": {
+      "symbol": "BANKBARODA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2925"
+    },
+    "BANKINDIA|2016-10-27": {
+      "symbol": "BANKINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "5200"
+    },
+    "BDL|2016-10-27": {
+      "symbol": "BDL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "425"
+    },
+    "BEL|2016-10-27": {
+      "symbol": "BEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1425"
+    },
+    "BHARATFORG|2016-10-27": {
+      "symbol": "BHARATFORG",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "500"
+    },
+    "BHARTIARTL|2016-10-27": {
+      "symbol": "BHARTIARTL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "475"
+    },
+    "BHEL|2016-10-27": {
+      "symbol": "BHEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2625"
+    },
+    "BIOCON|2016-10-27": {
+      "symbol": "BIOCON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2500"
+    },
+    "BLUESTARCO|2016-10-27": {
+      "symbol": "BLUESTARCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "325"
+    },
+    "BOSCHLTD|2016-10-27": {
+      "symbol": "BOSCHLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "25"
+    },
+    "BPCL|2016-10-27": {
+      "symbol": "BPCL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1975"
+    },
+    "BRITANNIA|2016-10-27": {
+      "symbol": "BRITANNIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "BSE|2016-10-27": {
+      "symbol": "BSE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "200"
+    },
+    "CAMS|2016-10-27": {
+      "symbol": "CAMS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "825"
+    },
+    "CANBK|2016-10-27": {
+      "symbol": "CANBK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "6750"
+    },
+    "CDSL|2016-10-27": {
+      "symbol": "CDSL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "475"
+    },
+    "CGPOWER|2016-10-27": {
+      "symbol": "CGPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "850"
+    },
+    "CHOLAFIN|2016-10-27": {
+      "symbol": "CHOLAFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "625"
+    },
+    "CIPLA|2016-10-27": {
+      "symbol": "CIPLA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "425"
+    },
+    "COALINDIA|2016-10-27": {
+      "symbol": "COALINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1350"
+    },
+    "COCHINSHIP|2016-10-27": {
+      "symbol": "COCHINSHIP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "400"
+    },
+    "COFORGE|2016-10-27": {
+      "symbol": "COFORGE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "475"
+    },
+    "COLPAL|2016-10-27": {
+      "symbol": "COLPAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "275"
+    },
+    "CONCOR|2016-10-27": {
+      "symbol": "CONCOR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1250"
+    },
+    "CROMPTON|2016-10-27": {
+      "symbol": "CROMPTON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2150"
+    },
+    "CUMMINSIND|2016-10-27": {
+      "symbol": "CUMMINSIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "200"
+    },
+    "DABUR|2016-10-27": {
+      "symbol": "DABUR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1250"
+    },
+    "DELHIVERY|2016-10-27": {
+      "symbol": "DELHIVERY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2075"
+    },
+    "DIVISLAB|2016-10-27": {
+      "symbol": "DIVISLAB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "100"
+    },
+    "DIXON|2016-10-27": {
+      "symbol": "DIXON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "50"
+    },
+    "DLF|2016-10-27": {
+      "symbol": "DLF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "950"
+    },
+    "DMART|2016-10-27": {
+      "symbol": "DMART",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "150"
+    },
+    "DRREDDY|2016-10-27": {
+      "symbol": "DRREDDY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "625"
+    },
+    "EICHERMOT|2016-10-27": {
+      "symbol": "EICHERMOT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "100"
+    },
+    "ETERNAL|2016-10-27": {
+      "symbol": "ETERNAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2425"
+    },
+    "FEDERALBNK|2016-10-27": {
+      "symbol": "FEDERALBNK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2500"
+    },
+    "FORCEMOT|2016-10-27": {
+      "symbol": "FORCEMOT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "25"
+    },
+    "FORTIS|2016-10-27": {
+      "symbol": "FORTIS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "775"
+    },
+    "GAIL|2016-10-27": {
+      "symbol": "GAIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "3550"
+    },
+    "GLENMARK|2016-10-27": {
+      "symbol": "GLENMARK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "375"
+    },
+    "GMRAIRPORT|2016-10-27": {
+      "symbol": "GMRAIRPORT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "6975"
+    },
+    "GODFRYPHLP|2016-10-27": {
+      "symbol": "GODFRYPHLP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "275"
+    },
+    "GODREJCP|2016-10-27": {
+      "symbol": "GODREJCP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "500"
+    },
+    "GODREJPROP|2016-10-27": {
+      "symbol": "GODREJPROP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "325"
+    },
+    "GRASIM|2016-10-27": {
+      "symbol": "GRASIM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "250"
+    },
+    "GVT&D|2016-10-27": {
+      "symbol": "GVT&D",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "HAL|2016-10-27": {
+      "symbol": "HAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "150"
+    },
+    "HAVELLS|2016-10-27": {
+      "symbol": "HAVELLS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "500"
+    },
+    "HCLTECH|2016-10-27": {
+      "symbol": "HCLTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "400"
+    },
+    "HDFCAMC|2016-10-27": {
+      "symbol": "HDFCAMC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "300"
+    },
+    "HDFCBANK|2016-10-27": {
+      "symbol": "HDFCBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "650"
+    },
+    "HDFCLIFE|2016-10-27": {
+      "symbol": "HDFCLIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1100"
+    },
+    "HEROMOTOCO|2016-10-27": {
+      "symbol": "HEROMOTOCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "150"
+    },
+    "HINDALCO|2016-10-27": {
+      "symbol": "HINDALCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "700"
+    },
+    "HINDPETRO|2016-10-27": {
+      "symbol": "HINDPETRO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2025"
+    },
+    "HINDUNILVR|2016-10-27": {
+      "symbol": "HINDUNILVR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "300"
+    },
+    "HINDZINC|2016-10-27": {
+      "symbol": "HINDZINC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1225"
+    },
+    "HYUNDAI|2016-10-27": {
+      "symbol": "HYUNDAI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "275"
+    },
+    "ICICIBANK|2016-10-27": {
+      "symbol": "ICICIBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "700"
+    },
+    "ICICIGI|2016-10-27": {
+      "symbol": "ICICIGI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "325"
+    },
+    "ICICIPRULI|2016-10-27": {
+      "symbol": "ICICIPRULI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "925"
+    },
+    "IDEA|2016-10-27": {
+      "symbol": "IDEA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "71475"
+    },
+    "IDFCFIRSTB|2016-10-27": {
+      "symbol": "IDFCFIRSTB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "9275"
+    },
+    "IEX|2016-10-27": {
+      "symbol": "IEX",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "4350"
+    },
+    "INDHOTEL|2016-10-27": {
+      "symbol": "INDHOTEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1000"
+    },
+    "INDIANB|2016-10-27": {
+      "symbol": "INDIANB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1000"
+    },
+    "INDIGO|2016-10-27": {
+      "symbol": "INDIGO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "150"
+    },
+    "INDUSINDBK|2016-10-27": {
+      "symbol": "INDUSINDBK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "700"
+    },
+    "INDUSTOWER|2016-10-27": {
+      "symbol": "INDUSTOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1700"
+    },
+    "INFY|2016-10-27": {
+      "symbol": "INFY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "400"
+    },
+    "INOXWIND|2016-10-27": {
+      "symbol": "INOXWIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "6400"
+    },
+    "IOC|2016-10-27": {
+      "symbol": "IOC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "4875"
+    },
+    "IREDA|2016-10-27": {
+      "symbol": "IREDA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "4525"
+    },
+    "IRFC|2016-10-27": {
+      "symbol": "IRFC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "5425"
+    },
+    "ITC|2016-10-27": {
+      "symbol": "ITC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1725"
+    },
+    "JINDALSTEL|2016-10-27": {
+      "symbol": "JINDALSTEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "625"
+    },
+    "JIOFIN|2016-10-27": {
+      "symbol": "JIOFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2350"
+    },
+    "JSWENERGY|2016-10-27": {
+      "symbol": "JSWENERGY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1075"
+    },
+    "JSWSTEEL|2016-10-27": {
+      "symbol": "JSWSTEEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "675"
+    },
+    "JUBLFOOD|2016-10-27": {
+      "symbol": "JUBLFOOD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1250"
+    },
+    "KALYANKJIL|2016-10-27": {
+      "symbol": "KALYANKJIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1350"
+    },
+    "KAYNES|2016-10-27": {
+      "symbol": "KAYNES",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "150"
+    },
+    "KEI|2016-10-27": {
+      "symbol": "KEI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "KFINTECH|2016-10-27": {
+      "symbol": "KFINTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "575"
+    },
+    "KOTAKBANK|2016-10-27": {
+      "symbol": "KOTAKBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2000"
+    },
+    "KPITTECH|2016-10-27": {
+      "symbol": "KPITTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "775"
+    },
+    "LAURUSLABS|2016-10-27": {
+      "symbol": "LAURUSLABS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "850"
+    },
+    "LICHSGFIN|2016-10-27": {
+      "symbol": "LICHSGFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1000"
+    },
+    "LICI|2016-10-27": {
+      "symbol": "LICI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1400"
+    },
+    "LODHA|2016-10-27": {
+      "symbol": "LODHA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "625"
+    },
+    "LT|2016-10-27": {
+      "symbol": "LT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "LTF|2016-10-27": {
+      "symbol": "LTF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2250"
+    },
+    "LTM|2016-10-27": {
+      "symbol": "LTM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "150"
+    },
+    "LUPIN|2016-10-27": {
+      "symbol": "LUPIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "425"
+    },
+    "M&M|2016-10-27": {
+      "symbol": "M&M",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "200"
+    },
+    "MANAPPURAM|2016-10-27": {
+      "symbol": "MANAPPURAM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "3000"
+    },
+    "MANKIND|2016-10-27": {
+      "symbol": "MANKIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "250"
+    },
+    "MARICO|2016-10-27": {
+      "symbol": "MARICO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1200"
+    },
+    "MARUTI|2016-10-27": {
+      "symbol": "MARUTI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "50"
+    },
+    "MAXHEALTH|2016-10-27": {
+      "symbol": "MAXHEALTH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "525"
+    },
+    "MAZDOCK|2016-10-27": {
+      "symbol": "MAZDOCK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "225"
+    },
+    "MCX|2016-10-27": {
+      "symbol": "MCX",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "225"
+    },
+    "MFSL|2016-10-27": {
+      "symbol": "MFSL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "400"
+    },
+    "MOTHERSON|2016-10-27": {
+      "symbol": "MOTHERSON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "6150"
+    },
+    "MOTILALOFS|2016-10-27": {
+      "symbol": "MOTILALOFS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "775"
+    },
+    "MPHASIS|2016-10-27": {
+      "symbol": "MPHASIS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "275"
+    },
+    "MUTHOOTFIN|2016-10-27": {
+      "symbol": "MUTHOOTFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "275"
+    },
+    "NAM-INDIA|2016-10-27": {
+      "symbol": "NAM-INDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "625"
+    },
+    "NATIONALUM|2016-10-27": {
+      "symbol": "NATIONALUM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1875"
+    },
+    "NAUKRI|2016-10-27": {
+      "symbol": "NAUKRI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "550"
+    },
+    "NBCC|2016-10-27": {
+      "symbol": "NBCC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "6500"
+    },
+    "NESTLEIND|2016-10-27": {
+      "symbol": "NESTLEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "500"
+    },
+    "NHPC|2016-10-27": {
+      "symbol": "NHPC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "6950"
+    },
+    "NMDC|2016-10-27": {
+      "symbol": "NMDC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "6750"
+    },
+    "NTPC|2016-10-27": {
+      "symbol": "NTPC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1500"
+    },
+    "NYKAA|2016-10-27": {
+      "symbol": "NYKAA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "3125"
+    },
+    "OBEROIRLTY|2016-10-27": {
+      "symbol": "OBEROIRLTY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "350"
+    },
+    "OFSS|2016-10-27": {
+      "symbol": "OFSS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "100"
+    },
+    "OIL|2016-10-27": {
+      "symbol": "OIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1400"
+    },
+    "ONGC|2016-10-27": {
+      "symbol": "ONGC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2250"
+    },
+    "PAGEIND|2016-10-27": {
+      "symbol": "PAGEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "20"
+    },
+    "PATANJALI|2016-10-27": {
+      "symbol": "PATANJALI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1075"
+    },
+    "PAYTM|2016-10-27": {
+      "symbol": "PAYTM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "725"
+    },
+    "PERSISTENT|2016-10-27": {
+      "symbol": "PERSISTENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "PETRONET|2016-10-27": {
+      "symbol": "PETRONET",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1900"
+    },
+    "PFC|2016-10-27": {
+      "symbol": "PFC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1300"
+    },
+    "PGEL|2016-10-27": {
+      "symbol": "PGEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "950"
+    },
+    "PHOENIXLTD|2016-10-27": {
+      "symbol": "PHOENIXLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "350"
+    },
+    "PIDILITIND|2016-10-27": {
+      "symbol": "PIDILITIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "500"
+    },
+    "PIIND|2016-10-27": {
+      "symbol": "PIIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "PNB|2016-10-27": {
+      "symbol": "PNB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "8000"
+    },
+    "PNBHOUSING|2016-10-27": {
+      "symbol": "PNBHOUSING",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "650"
+    },
+    "POLICYBZR|2016-10-27": {
+      "symbol": "POLICYBZR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "350"
+    },
+    "POLYCAB|2016-10-27": {
+      "symbol": "POLYCAB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "POWERGRID|2016-10-27": {
+      "symbol": "POWERGRID",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1900"
+    },
+    "POWERINDIA|2016-10-27": {
+      "symbol": "POWERINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "25"
+    },
+    "PREMIERENE|2016-10-27": {
+      "symbol": "PREMIERENE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "650"
+    },
+    "PRESTIGE|2016-10-27": {
+      "symbol": "PRESTIGE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "450"
+    },
+    "RADICO|2016-10-27": {
+      "symbol": "RADICO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "150"
+    },
+    "RBLBANK|2016-10-27": {
+      "symbol": "RBLBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "3175"
+    },
+    "RECLTD|2016-10-27": {
+      "symbol": "RECLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1575"
+    },
+    "RELIANCE|2016-10-27": {
+      "symbol": "RELIANCE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "500"
+    },
+    "RVNL|2016-10-27": {
+      "symbol": "RVNL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1925"
+    },
+    "SAIL|2016-10-27": {
+      "symbol": "SAIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "4700"
+    },
+    "SBICARD|2016-10-27": {
+      "symbol": "SBICARD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "800"
+    },
+    "SBILIFE|2016-10-27": {
+      "symbol": "SBILIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "375"
+    },
+    "SBIN|2016-10-27": {
+      "symbol": "SBIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "750"
+    },
+    "SHREECEM|2016-10-27": {
+      "symbol": "SHREECEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "25"
+    },
+    "SHRIRAMFIN|2016-10-27": {
+      "symbol": "SHRIRAMFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "825"
+    },
+    "SIEMENS|2016-10-27": {
+      "symbol": "SIEMENS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "SOLARINDS|2016-10-27": {
+      "symbol": "SOLARINDS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "50"
+    },
+    "SONACOMS|2016-10-27": {
+      "symbol": "SONACOMS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1225"
+    },
+    "SRF|2016-10-27": {
+      "symbol": "SRF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "200"
+    },
+    "SUNPHARMA|2016-10-27": {
+      "symbol": "SUNPHARMA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "350"
+    },
+    "SUPREMEIND|2016-10-27": {
+      "symbol": "SUPREMEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "SUZLON|2016-10-27": {
+      "symbol": "SUZLON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "12700"
+    },
+    "SWIGGY|2016-10-27": {
+      "symbol": "SWIGGY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1825"
+    },
+    "TATACONSUM|2016-10-27": {
+      "symbol": "TATACONSUM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "550"
+    },
+    "TATAELXSI|2016-10-27": {
+      "symbol": "TATAELXSI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "TATAPOWER|2016-10-27": {
+      "symbol": "TATAPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1450"
+    },
+    "TATASTEEL|2016-10-27": {
+      "symbol": "TATASTEEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "2750"
+    },
+    "TCS|2016-10-27": {
+      "symbol": "TCS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "225"
+    },
+    "TECHM|2016-10-27": {
+      "symbol": "TECHM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "600"
+    },
+    "TIINDIA|2016-10-27": {
+      "symbol": "TIINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "200"
+    },
+    "TITAN|2016-10-27": {
+      "symbol": "TITAN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "TMPV|2016-10-27": {
+      "symbol": "TMPV",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1600"
+    },
+    "TORNTPHARM|2016-10-27": {
+      "symbol": "TORNTPHARM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "125"
+    },
+    "TRENT|2016-10-27": {
+      "symbol": "TRENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "225"
+    },
+    "TVSMOTOR|2016-10-27": {
+      "symbol": "TVSMOTOR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "ULTRACEMCO|2016-10-27": {
+      "symbol": "ULTRACEMCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "50"
+    },
+    "UNIONBANK|2016-10-27": {
+      "symbol": "UNIONBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "4425"
+    },
+    "UNITDSPR|2016-10-27": {
+      "symbol": "UNITDSPR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "400"
+    },
+    "UNOMINDA|2016-10-27": {
+      "symbol": "UNOMINDA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "550"
+    },
+    "UPL|2016-10-27": {
+      "symbol": "UPL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1355"
+    },
+    "VBL|2016-10-27": {
+      "symbol": "VBL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1275"
+    },
+    "VEDL|2016-10-27": {
+      "symbol": "VEDL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "1150"
+    },
+    "VMM|2016-10-27": {
+      "symbol": "VMM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "4850"
+    },
+    "VOLTAS|2016-10-27": {
+      "symbol": "VOLTAS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "375"
+    },
+    "WAAREEENER|2016-10-27": {
+      "symbol": "WAAREEENER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "WIPRO|2016-10-27": {
+      "symbol": "WIPRO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "3000"
+    },
+    "YESBANK|2016-10-27": {
+      "symbol": "YESBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "31100"
+    },
+    "ZYDUSLIFE|2016-10-27": {
+      "symbol": "ZYDUSLIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "900"
+    },
+    "360ONE|2016-12-29": {
+      "symbol": "360ONE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "500"
+    },
+    "ABB|2016-12-29": {
+      "symbol": "ABB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "ABCAPITAL|2016-12-29": {
+      "symbol": "ABCAPITAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "3100"
+    },
+    "ADANIENSOL|2016-12-29": {
+      "symbol": "ADANIENSOL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "675"
+    },
+    "ADANIENT|2016-12-29": {
+      "symbol": "ADANIENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "309"
+    },
+    "ADANIGREEN|2016-12-29": {
+      "symbol": "ADANIGREEN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "600"
+    },
+    "ADANIPORTS|2016-12-29": {
+      "symbol": "ADANIPORTS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "475"
+    },
+    "ADANIPOWER|2016-12-29": {
+      "symbol": "ADANIPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "3550"
+    },
+    "ALKEM|2016-12-29": {
+      "symbol": "ALKEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "AMBER|2016-12-29": {
+      "symbol": "AMBER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "100"
+    },
+    "AMBUJACEM|2016-12-29": {
+      "symbol": "AMBUJACEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1200"
+    },
+    "ANANDRATHI|2016-10-27": {
+      "symbol": "ANANDRATHI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "250"
+    },
+    "ANANDRATHI|2016-11-23": {
+      "symbol": "ANANDRATHI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "250"
+    },
+    "ANANDRATHI|2016-12-29": {
+      "symbol": "ANANDRATHI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "250"
+    },
+    "ANGELONE|2016-12-29": {
+      "symbol": "ANGELONE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2500"
+    },
+    "APLAPOLLO|2016-12-29": {
+      "symbol": "APLAPOLLO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "350"
+    },
+    "APOLLOHOSP|2016-12-29": {
+      "symbol": "APOLLOHOSP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "ASHOKLEY|2016-12-29": {
+      "symbol": "ASHOKLEY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "5000"
+    },
+    "ASIANPAINT|2016-12-29": {
+      "symbol": "ASIANPAINT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "250"
+    },
+    "ASTRAL|2016-12-29": {
+      "symbol": "ASTRAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "425"
+    },
+    "ATHERENERG|2016-12-29": {
+      "symbol": "ATHERENERG",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "375"
+    },
+    "AUBANK|2016-12-29": {
+      "symbol": "AUBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1000"
+    },
+    "AUROPHARMA|2016-12-29": {
+      "symbol": "AUROPHARMA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "550"
+    },
+    "AXISBANK|2016-12-29": {
+      "symbol": "AXISBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "625"
+    },
+    "BAJAJ-AUTO|2016-12-29": {
+      "symbol": "BAJAJ-AUTO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "75"
+    },
+    "BAJAJFINSV|2016-12-29": {
+      "symbol": "BAJAJFINSV",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "300"
+    },
+    "BAJFINANCE|2016-12-29": {
+      "symbol": "BAJFINANCE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "750"
+    },
+    "BANDHANBNK|2016-12-29": {
+      "symbol": "BANDHANBNK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "3600"
+    },
+    "BANKBARODA|2016-12-29": {
+      "symbol": "BANKBARODA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2925"
+    },
+    "BANKINDIA|2016-12-29": {
+      "symbol": "BANKINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "5200"
+    },
+    "BDL|2016-12-29": {
+      "symbol": "BDL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "425"
+    },
+    "BEL|2016-12-29": {
+      "symbol": "BEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1425"
+    },
+    "BHARATFORG|2016-12-29": {
+      "symbol": "BHARATFORG",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "500"
+    },
+    "BHARTIARTL|2016-12-29": {
+      "symbol": "BHARTIARTL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "475"
+    },
+    "BHEL|2016-12-29": {
+      "symbol": "BHEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2625"
+    },
+    "BIOCON|2016-12-29": {
+      "symbol": "BIOCON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2500"
+    },
+    "BLUESTARCO|2016-12-29": {
+      "symbol": "BLUESTARCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "325"
+    },
+    "BOSCHLTD|2016-12-29": {
+      "symbol": "BOSCHLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "25"
+    },
+    "BPCL|2016-12-29": {
+      "symbol": "BPCL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1975"
+    },
+    "BRITANNIA|2016-12-29": {
+      "symbol": "BRITANNIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "BSE|2016-12-29": {
+      "symbol": "BSE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "200"
+    },
+    "CAMS|2016-12-29": {
+      "symbol": "CAMS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "825"
+    },
+    "CANBK|2016-12-29": {
+      "symbol": "CANBK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "6750"
+    },
+    "CDSL|2016-12-29": {
+      "symbol": "CDSL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "475"
+    },
+    "CGPOWER|2016-12-29": {
+      "symbol": "CGPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "850"
+    },
+    "CHOLAFIN|2016-12-29": {
+      "symbol": "CHOLAFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "625"
+    },
+    "CIPLA|2016-12-29": {
+      "symbol": "CIPLA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "425"
+    },
+    "COALINDIA|2016-12-29": {
+      "symbol": "COALINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1350"
+    },
+    "COCHINSHIP|2016-12-29": {
+      "symbol": "COCHINSHIP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "400"
+    },
+    "COFORGE|2016-12-29": {
+      "symbol": "COFORGE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "475"
+    },
+    "COLPAL|2016-12-29": {
+      "symbol": "COLPAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "275"
+    },
+    "CONCOR|2016-12-29": {
+      "symbol": "CONCOR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1250"
+    },
+    "CROMPTON|2016-12-29": {
+      "symbol": "CROMPTON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2150"
+    },
+    "CUMMINSIND|2016-12-29": {
+      "symbol": "CUMMINSIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "200"
+    },
+    "DABUR|2016-12-29": {
+      "symbol": "DABUR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1250"
+    },
+    "DELHIVERY|2016-12-29": {
+      "symbol": "DELHIVERY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2075"
+    },
+    "DIVISLAB|2016-12-29": {
+      "symbol": "DIVISLAB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "100"
+    },
+    "DIXON|2016-12-29": {
+      "symbol": "DIXON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "50"
+    },
+    "DLF|2016-12-29": {
+      "symbol": "DLF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "950"
+    },
+    "DMART|2016-12-29": {
+      "symbol": "DMART",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "150"
+    },
+    "DRREDDY|2016-12-29": {
+      "symbol": "DRREDDY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "625"
+    },
+    "EICHERMOT|2016-12-29": {
+      "symbol": "EICHERMOT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "100"
+    },
+    "ENRIN|2016-10-27": {
+      "symbol": "ENRIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "175"
+    },
+    "ENRIN|2016-11-23": {
+      "symbol": "ENRIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "ENRIN|2016-12-29": {
+      "symbol": "ENRIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "ETERNAL|2016-12-29": {
+      "symbol": "ETERNAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2425"
+    },
+    "FEDERALBNK|2016-12-29": {
+      "symbol": "FEDERALBNK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2500"
+    },
+    "FORCEMOT|2016-12-29": {
+      "symbol": "FORCEMOT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "25"
+    },
+    "FORTIS|2016-12-29": {
+      "symbol": "FORTIS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "775"
+    },
+    "GAIL|2016-12-29": {
+      "symbol": "GAIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "3550"
+    },
+    "GLENMARK|2016-12-29": {
+      "symbol": "GLENMARK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "375"
+    },
+    "GMRAIRPORT|2016-12-29": {
+      "symbol": "GMRAIRPORT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "6975"
+    },
+    "GODFRYPHLP|2016-12-29": {
+      "symbol": "GODFRYPHLP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "275"
+    },
+    "GODREJCP|2016-12-29": {
+      "symbol": "GODREJCP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "500"
+    },
+    "GODREJPROP|2016-12-29": {
+      "symbol": "GODREJPROP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "325"
+    },
+    "GRASIM|2016-12-29": {
+      "symbol": "GRASIM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "250"
+    },
+    "GVT&D|2016-12-29": {
+      "symbol": "GVT&D",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "HAL|2016-12-29": {
+      "symbol": "HAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "150"
+    },
+    "HAVELLS|2016-12-29": {
+      "symbol": "HAVELLS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "500"
+    },
+    "HCLTECH|2016-12-29": {
+      "symbol": "HCLTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "400"
+    },
+    "HDFCAMC|2016-12-29": {
+      "symbol": "HDFCAMC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "300"
+    },
+    "HDFCBANK|2016-12-29": {
+      "symbol": "HDFCBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "650"
+    },
+    "HDFCLIFE|2016-12-29": {
+      "symbol": "HDFCLIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1100"
+    },
+    "HEROMOTOCO|2016-12-29": {
+      "symbol": "HEROMOTOCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "150"
+    },
+    "HINDALCO|2016-12-29": {
+      "symbol": "HINDALCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "700"
+    },
+    "HINDPETRO|2016-12-29": {
+      "symbol": "HINDPETRO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2025"
+    },
+    "HINDUNILVR|2016-12-29": {
+      "symbol": "HINDUNILVR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "300"
+    },
+    "HINDZINC|2016-12-29": {
+      "symbol": "HINDZINC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1225"
+    },
+    "HYUNDAI|2016-12-29": {
+      "symbol": "HYUNDAI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "275"
+    },
+    "ICICIBANK|2016-12-29": {
+      "symbol": "ICICIBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "700"
+    },
+    "ICICIGI|2016-12-29": {
+      "symbol": "ICICIGI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "325"
+    },
+    "ICICIPRULI|2016-12-29": {
+      "symbol": "ICICIPRULI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "925"
+    },
+    "IDEA|2016-12-29": {
+      "symbol": "IDEA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "71475"
+    },
+    "IDFCFIRSTB|2016-12-29": {
+      "symbol": "IDFCFIRSTB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "9275"
+    },
+    "INDHOTEL|2016-12-29": {
+      "symbol": "INDHOTEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1000"
+    },
+    "INDIANB|2016-12-29": {
+      "symbol": "INDIANB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1000"
+    },
+    "INDIGO|2016-12-29": {
+      "symbol": "INDIGO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "150"
+    },
+    "INDUSINDBK|2016-12-29": {
+      "symbol": "INDUSINDBK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "700"
+    },
+    "INDUSTOWER|2016-12-29": {
+      "symbol": "INDUSTOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1700"
+    },
+    "INFY|2016-12-29": {
+      "symbol": "INFY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "400"
+    },
+    "INOXWIND|2016-12-29": {
+      "symbol": "INOXWIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "6400"
+    },
+    "IOC|2016-12-29": {
+      "symbol": "IOC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "4875"
+    },
+    "IRFC|2016-12-29": {
+      "symbol": "IRFC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "5425"
+    },
+    "ITC|2016-12-29": {
+      "symbol": "ITC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1725"
+    },
+    "JINDALSTEL|2016-12-29": {
+      "symbol": "JINDALSTEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "625"
+    },
+    "JIOFIN|2016-12-29": {
+      "symbol": "JIOFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2350"
+    },
+    "JSWENERGY|2016-12-29": {
+      "symbol": "JSWENERGY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1075"
+    },
+    "JSWSTEEL|2016-12-29": {
+      "symbol": "JSWSTEEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "675"
+    },
+    "JUBLFOOD|2016-12-29": {
+      "symbol": "JUBLFOOD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1250"
+    },
+    "KALYANKJIL|2016-12-29": {
+      "symbol": "KALYANKJIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1350"
+    },
+    "KAYNES|2016-12-29": {
+      "symbol": "KAYNES",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "150"
+    },
+    "KEI|2016-12-29": {
+      "symbol": "KEI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "KFINTECH|2016-12-29": {
+      "symbol": "KFINTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "575"
+    },
+    "KOTAKBANK|2016-12-29": {
+      "symbol": "KOTAKBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2000"
+    },
+    "KPITTECH|2016-12-29": {
+      "symbol": "KPITTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "775"
+    },
+    "LAURUSLABS|2016-12-29": {
+      "symbol": "LAURUSLABS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "850"
+    },
+    "LICHSGFIN|2016-12-29": {
+      "symbol": "LICHSGFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1000"
+    },
+    "LICI|2016-12-29": {
+      "symbol": "LICI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1400"
+    },
+    "LODHA|2016-12-29": {
+      "symbol": "LODHA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "625"
+    },
+    "LT|2016-12-29": {
+      "symbol": "LT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "LTF|2016-12-29": {
+      "symbol": "LTF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2250"
+    },
+    "LTM|2016-12-29": {
+      "symbol": "LTM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "150"
+    },
+    "LUPIN|2016-12-29": {
+      "symbol": "LUPIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "425"
+    },
+    "M&M|2016-12-29": {
+      "symbol": "M&M",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "200"
+    },
+    "MAHABANK|2016-12-29": {
+      "symbol": "MAHABANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "6500"
+    },
+    "MANAPPURAM|2016-12-29": {
+      "symbol": "MANAPPURAM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "3000"
+    },
+    "MANKIND|2016-12-29": {
+      "symbol": "MANKIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "250"
+    },
+    "MARICO|2016-12-29": {
+      "symbol": "MARICO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1200"
+    },
+    "MARUTI|2016-12-29": {
+      "symbol": "MARUTI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "50"
+    },
+    "MAXHEALTH|2016-12-29": {
+      "symbol": "MAXHEALTH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "525"
+    },
+    "MAZDOCK|2016-12-29": {
+      "symbol": "MAZDOCK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "225"
+    },
+    "MCX|2016-12-29": {
+      "symbol": "MCX",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "225"
+    },
+    "MFSL|2016-12-29": {
+      "symbol": "MFSL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "400"
+    },
+    "MOTHERSON|2016-12-29": {
+      "symbol": "MOTHERSON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "6150"
+    },
+    "MOTILALOFS|2016-12-29": {
+      "symbol": "MOTILALOFS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "775"
+    },
+    "MPHASIS|2016-12-29": {
+      "symbol": "MPHASIS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "275"
+    },
+    "MUTHOOTFIN|2016-12-29": {
+      "symbol": "MUTHOOTFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "275"
+    },
+    "NAM-INDIA|2016-12-29": {
+      "symbol": "NAM-INDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "625"
+    },
+    "NATIONALUM|2016-12-29": {
+      "symbol": "NATIONALUM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1875"
+    },
+    "NAUKRI|2016-12-29": {
+      "symbol": "NAUKRI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "550"
+    },
+    "NBCC|2016-12-29": {
+      "symbol": "NBCC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "6500"
+    },
+    "NESTLEIND|2016-12-29": {
+      "symbol": "NESTLEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "500"
+    },
+    "NHPC|2016-12-29": {
+      "symbol": "NHPC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "6950"
+    },
+    "NMDC|2016-12-29": {
+      "symbol": "NMDC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "6750"
+    },
+    "NTPC|2016-12-29": {
+      "symbol": "NTPC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1500"
+    },
+    "NYKAA|2016-12-29": {
+      "symbol": "NYKAA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "3125"
+    },
+    "OBEROIRLTY|2016-12-29": {
+      "symbol": "OBEROIRLTY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "350"
+    },
+    "OFSS|2016-12-29": {
+      "symbol": "OFSS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "100"
+    },
+    "OIL|2016-12-29": {
+      "symbol": "OIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1400"
+    },
+    "ONGC|2016-12-29": {
+      "symbol": "ONGC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2250"
+    },
+    "PAGEIND|2016-12-29": {
+      "symbol": "PAGEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "20"
+    },
+    "PATANJALI|2016-12-29": {
+      "symbol": "PATANJALI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1075"
+    },
+    "PAYTM|2016-12-29": {
+      "symbol": "PAYTM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "725"
+    },
+    "PERSISTENT|2016-12-29": {
+      "symbol": "PERSISTENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "PETRONET|2016-12-29": {
+      "symbol": "PETRONET",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1900"
+    },
+    "PFC|2016-12-29": {
+      "symbol": "PFC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1300"
+    },
+    "PGEL|2016-12-29": {
+      "symbol": "PGEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "950"
+    },
+    "PHOENIXLTD|2016-12-29": {
+      "symbol": "PHOENIXLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "350"
+    },
+    "PIDILITIND|2016-12-29": {
+      "symbol": "PIDILITIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "500"
+    },
+    "PIIND|2016-12-29": {
+      "symbol": "PIIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "PNB|2016-12-29": {
+      "symbol": "PNB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "8000"
+    },
+    "PNBHOUSING|2016-12-29": {
+      "symbol": "PNBHOUSING",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "650"
+    },
+    "POLICYBZR|2016-12-29": {
+      "symbol": "POLICYBZR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "350"
+    },
+    "POLYCAB|2016-12-29": {
+      "symbol": "POLYCAB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "POWERGRID|2016-12-29": {
+      "symbol": "POWERGRID",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1900"
+    },
+    "POWERINDIA|2016-12-29": {
+      "symbol": "POWERINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "25"
+    },
+    "PREMIERENE|2016-12-29": {
+      "symbol": "PREMIERENE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "650"
+    },
+    "PRESTIGE|2016-12-29": {
+      "symbol": "PRESTIGE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "450"
+    },
+    "RADICO|2016-12-29": {
+      "symbol": "RADICO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "150"
+    },
+    "RBLBANK|2016-12-29": {
+      "symbol": "RBLBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "3175"
+    },
+    "RECLTD|2016-12-29": {
+      "symbol": "RECLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1575"
+    },
+    "RELIANCE|2016-12-29": {
+      "symbol": "RELIANCE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "500"
+    },
+    "RVNL|2016-12-29": {
+      "symbol": "RVNL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1925"
+    },
+    "SAGILITY|2016-12-29": {
+      "symbol": "SAGILITY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "12000"
+    },
+    "SAIL|2016-12-29": {
+      "symbol": "SAIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "4700"
+    },
+    "SBICARD|2016-12-29": {
+      "symbol": "SBICARD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "800"
+    },
+    "SBILIFE|2016-12-29": {
+      "symbol": "SBILIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "375"
+    },
+    "SBIN|2016-12-29": {
+      "symbol": "SBIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "750"
+    },
+    "SHREECEM|2016-12-29": {
+      "symbol": "SHREECEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "25"
+    },
+    "SHRIRAMFIN|2016-12-29": {
+      "symbol": "SHRIRAMFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "825"
+    },
+    "SIEMENS|2016-12-29": {
+      "symbol": "SIEMENS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "SOLARINDS|2016-12-29": {
+      "symbol": "SOLARINDS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "50"
+    },
+    "SONACOMS|2016-12-29": {
+      "symbol": "SONACOMS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1225"
+    },
+    "SRF|2016-12-29": {
+      "symbol": "SRF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "200"
+    },
+    "SUNPHARMA|2016-12-29": {
+      "symbol": "SUNPHARMA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "350"
+    },
+    "SUPREMEIND|2016-12-29": {
+      "symbol": "SUPREMEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "SUZLON|2016-12-29": {
+      "symbol": "SUZLON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "12700"
+    },
+    "SWIGGY|2016-12-29": {
+      "symbol": "SWIGGY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1825"
+    },
+    "TATACONSUM|2016-12-29": {
+      "symbol": "TATACONSUM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "550"
+    },
+    "TATAELXSI|2016-12-29": {
+      "symbol": "TATAELXSI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "TATAPOWER|2016-12-29": {
+      "symbol": "TATAPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1450"
+    },
+    "TATASTEEL|2016-12-29": {
+      "symbol": "TATASTEEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "2750"
+    },
+    "TCS|2016-12-29": {
+      "symbol": "TCS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "225"
+    },
+    "TECHM|2016-12-29": {
+      "symbol": "TECHM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "600"
+    },
+    "TIINDIA|2016-12-29": {
+      "symbol": "TIINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "200"
+    },
+    "TITAN|2016-12-29": {
+      "symbol": "TITAN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "TMPV|2016-12-29": {
+      "symbol": "TMPV",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1600"
+    },
+    "TORNTPHARM|2016-12-29": {
+      "symbol": "TORNTPHARM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "125"
+    },
+    "TRENT|2016-12-29": {
+      "symbol": "TRENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "225"
+    },
+    "TVSMOTOR|2016-12-29": {
+      "symbol": "TVSMOTOR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "UJJIVANSFB|2016-10-27": {
+      "symbol": "UJJIVANSFB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "8000"
+    },
+    "UJJIVANSFB|2016-11-23": {
+      "symbol": "UJJIVANSFB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "8000"
+    },
+    "UJJIVANSFB|2016-12-29": {
+      "symbol": "UJJIVANSFB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "8000"
+    },
+    "ULTRACEMCO|2016-12-29": {
+      "symbol": "ULTRACEMCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "50"
+    },
+    "UNIONBANK|2016-12-29": {
+      "symbol": "UNIONBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "4425"
+    },
+    "UNITDSPR|2016-12-29": {
+      "symbol": "UNITDSPR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "400"
+    },
+    "UNOMINDA|2016-12-29": {
+      "symbol": "UNOMINDA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "550"
+    },
+    "UPL|2016-12-29": {
+      "symbol": "UPL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1355"
+    },
+    "VBL|2016-12-29": {
+      "symbol": "VBL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1275"
+    },
+    "VEDL|2016-12-29": {
+      "symbol": "VEDL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "1150"
+    },
+    "VMM|2016-12-29": {
+      "symbol": "VMM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "4850"
+    },
+    "VOLTAS|2016-12-29": {
+      "symbol": "VOLTAS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "375"
+    },
+    "WAAREEENER|2016-12-29": {
+      "symbol": "WAAREEENER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "175"
+    },
+    "WIPRO|2016-12-29": {
+      "symbol": "WIPRO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "3000"
+    },
+    "YESBANK|2016-12-29": {
+      "symbol": "YESBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "31100"
+    },
+    "ZYDUSLIFE|2016-12-29": {
+      "symbol": "ZYDUSLIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-12-29",
+      "lot_size": "900"
+    },
+    "360ONE|2016-11-23": {
+      "symbol": "360ONE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "500"
+    },
+    "ABB|2016-11-23": {
+      "symbol": "ABB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "ABCAPITAL|2016-11-23": {
+      "symbol": "ABCAPITAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "3100"
+    },
+    "ADANIENSOL|2016-11-23": {
+      "symbol": "ADANIENSOL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "675"
+    },
+    "ADANIENT|2016-11-23": {
+      "symbol": "ADANIENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "309"
+    },
+    "ADANIGREEN|2016-11-23": {
+      "symbol": "ADANIGREEN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "600"
+    },
+    "ADANIPORTS|2016-11-23": {
+      "symbol": "ADANIPORTS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "475"
+    },
+    "ADANIPOWER|2016-11-23": {
+      "symbol": "ADANIPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "3550"
+    },
+    "ALKEM|2016-11-23": {
+      "symbol": "ALKEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "AMBER|2016-11-23": {
+      "symbol": "AMBER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "100"
+    },
+    "AMBUJACEM|2016-11-23": {
+      "symbol": "AMBUJACEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1200"
+    },
+    "ANGELONE|2016-11-23": {
+      "symbol": "ANGELONE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2500"
+    },
+    "APLAPOLLO|2016-11-23": {
+      "symbol": "APLAPOLLO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "350"
+    },
+    "APOLLOHOSP|2016-11-23": {
+      "symbol": "APOLLOHOSP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "ASHOKLEY|2016-11-23": {
+      "symbol": "ASHOKLEY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "5000"
+    },
+    "ASIANPAINT|2016-11-23": {
+      "symbol": "ASIANPAINT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "250"
+    },
+    "ASTRAL|2016-11-23": {
+      "symbol": "ASTRAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "425"
+    },
+    "ATHERENERG|2016-10-27": {
+      "symbol": "ATHERENERG",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "375"
+    },
+    "ATHERENERG|2016-11-23": {
+      "symbol": "ATHERENERG",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "375"
+    },
+    "AUBANK|2016-11-23": {
+      "symbol": "AUBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1000"
+    },
+    "AUROPHARMA|2016-11-23": {
+      "symbol": "AUROPHARMA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "550"
+    },
+    "AXISBANK|2016-11-23": {
+      "symbol": "AXISBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "625"
+    },
+    "BAJAJ-AUTO|2016-11-23": {
+      "symbol": "BAJAJ-AUTO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "75"
+    },
+    "BAJAJFINSV|2016-11-23": {
+      "symbol": "BAJAJFINSV",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "300"
+    },
+    "BAJFINANCE|2016-11-23": {
+      "symbol": "BAJFINANCE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "750"
+    },
+    "BANDHANBNK|2016-11-23": {
+      "symbol": "BANDHANBNK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "3600"
+    },
+    "BANKBARODA|2016-11-23": {
+      "symbol": "BANKBARODA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2925"
+    },
+    "BANKINDIA|2016-11-23": {
+      "symbol": "BANKINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "5200"
+    },
+    "BDL|2016-11-23": {
+      "symbol": "BDL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "425"
+    },
+    "BEL|2016-11-23": {
+      "symbol": "BEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1425"
+    },
+    "BHARATFORG|2016-11-23": {
+      "symbol": "BHARATFORG",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "500"
+    },
+    "BHARTIARTL|2016-11-23": {
+      "symbol": "BHARTIARTL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "475"
+    },
+    "BHEL|2016-11-23": {
+      "symbol": "BHEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2625"
+    },
+    "BIOCON|2016-11-23": {
+      "symbol": "BIOCON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2500"
+    },
+    "BLUESTARCO|2016-11-23": {
+      "symbol": "BLUESTARCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "325"
+    },
+    "BOSCHLTD|2016-11-23": {
+      "symbol": "BOSCHLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "25"
+    },
+    "BPCL|2016-11-23": {
+      "symbol": "BPCL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1975"
+    },
+    "BRITANNIA|2016-11-23": {
+      "symbol": "BRITANNIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "BSE|2016-11-23": {
+      "symbol": "BSE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "200"
+    },
+    "CAMS|2016-11-23": {
+      "symbol": "CAMS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "825"
+    },
+    "CANBK|2016-11-23": {
+      "symbol": "CANBK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "6750"
+    },
+    "CDSL|2016-11-23": {
+      "symbol": "CDSL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "475"
+    },
+    "CGPOWER|2016-11-23": {
+      "symbol": "CGPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "850"
+    },
+    "CHOLAFIN|2016-11-23": {
+      "symbol": "CHOLAFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "625"
+    },
+    "CIPLA|2016-11-23": {
+      "symbol": "CIPLA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "425"
+    },
+    "COALINDIA|2016-11-23": {
+      "symbol": "COALINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1350"
+    },
+    "COCHINSHIP|2016-11-23": {
+      "symbol": "COCHINSHIP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "400"
+    },
+    "COFORGE|2016-11-23": {
+      "symbol": "COFORGE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "475"
+    },
+    "COLPAL|2016-11-23": {
+      "symbol": "COLPAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "275"
+    },
+    "CONCOR|2016-11-23": {
+      "symbol": "CONCOR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1250"
+    },
+    "CROMPTON|2016-11-23": {
+      "symbol": "CROMPTON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2150"
+    },
+    "CUMMINSIND|2016-11-23": {
+      "symbol": "CUMMINSIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "200"
+    },
+    "DABUR|2016-11-23": {
+      "symbol": "DABUR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1250"
+    },
+    "DELHIVERY|2016-11-23": {
+      "symbol": "DELHIVERY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2075"
+    },
+    "DIVISLAB|2016-11-23": {
+      "symbol": "DIVISLAB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "100"
+    },
+    "DIXON|2016-11-23": {
+      "symbol": "DIXON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "50"
+    },
+    "DLF|2016-11-23": {
+      "symbol": "DLF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "950"
+    },
+    "DMART|2016-11-23": {
+      "symbol": "DMART",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "150"
+    },
+    "DRREDDY|2016-11-23": {
+      "symbol": "DRREDDY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "625"
+    },
+    "EICHERMOT|2016-11-23": {
+      "symbol": "EICHERMOT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "100"
+    },
+    "ETERNAL|2016-11-23": {
+      "symbol": "ETERNAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2425"
+    },
+    "FEDERALBNK|2016-11-23": {
+      "symbol": "FEDERALBNK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2500"
+    },
+    "FORCEMOT|2016-11-23": {
+      "symbol": "FORCEMOT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "25"
+    },
+    "FORTIS|2016-11-23": {
+      "symbol": "FORTIS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "775"
+    },
+    "GAIL|2016-11-23": {
+      "symbol": "GAIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "3550"
+    },
+    "GLENMARK|2016-11-23": {
+      "symbol": "GLENMARK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "375"
+    },
+    "GMRAIRPORT|2016-11-23": {
+      "symbol": "GMRAIRPORT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "6975"
+    },
+    "GODFRYPHLP|2016-11-23": {
+      "symbol": "GODFRYPHLP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "275"
+    },
+    "GODREJCP|2016-11-23": {
+      "symbol": "GODREJCP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "500"
+    },
+    "GODREJPROP|2016-11-23": {
+      "symbol": "GODREJPROP",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "325"
+    },
+    "GRASIM|2016-11-23": {
+      "symbol": "GRASIM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "250"
+    },
+    "GVT&D|2016-11-23": {
+      "symbol": "GVT&D",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "HAL|2016-11-23": {
+      "symbol": "HAL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "150"
+    },
+    "HAVELLS|2016-11-23": {
+      "symbol": "HAVELLS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "500"
+    },
+    "HCLTECH|2016-11-23": {
+      "symbol": "HCLTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "400"
+    },
+    "HDFCAMC|2016-11-23": {
+      "symbol": "HDFCAMC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "300"
+    },
+    "HDFCBANK|2016-11-23": {
+      "symbol": "HDFCBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "650"
+    },
+    "HDFCLIFE|2016-11-23": {
+      "symbol": "HDFCLIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1100"
+    },
+    "HEROMOTOCO|2016-11-23": {
+      "symbol": "HEROMOTOCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "150"
+    },
+    "HINDALCO|2016-11-23": {
+      "symbol": "HINDALCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "700"
+    },
+    "HINDPETRO|2016-11-23": {
+      "symbol": "HINDPETRO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2025"
+    },
+    "HINDUNILVR|2016-11-23": {
+      "symbol": "HINDUNILVR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "300"
+    },
+    "HINDZINC|2016-11-23": {
+      "symbol": "HINDZINC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1225"
+    },
+    "HYUNDAI|2016-11-23": {
+      "symbol": "HYUNDAI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "275"
+    },
+    "ICICIBANK|2016-11-23": {
+      "symbol": "ICICIBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "700"
+    },
+    "ICICIGI|2016-11-23": {
+      "symbol": "ICICIGI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "325"
+    },
+    "ICICIPRULI|2016-11-23": {
+      "symbol": "ICICIPRULI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "925"
+    },
+    "IDEA|2016-11-23": {
+      "symbol": "IDEA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "71475"
+    },
+    "IDFCFIRSTB|2016-11-23": {
+      "symbol": "IDFCFIRSTB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "9275"
+    },
+    "IEX|2016-11-23": {
+      "symbol": "IEX",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "4350"
+    },
+    "INDHOTEL|2016-11-23": {
+      "symbol": "INDHOTEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1000"
+    },
+    "INDIANB|2016-11-23": {
+      "symbol": "INDIANB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1000"
+    },
+    "INDIGO|2016-11-23": {
+      "symbol": "INDIGO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "150"
+    },
+    "INDUSINDBK|2016-11-23": {
+      "symbol": "INDUSINDBK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "700"
+    },
+    "INDUSTOWER|2016-11-23": {
+      "symbol": "INDUSTOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1700"
+    },
+    "INFY|2016-11-23": {
+      "symbol": "INFY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "400"
+    },
+    "INOXWIND|2016-11-23": {
+      "symbol": "INOXWIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "6400"
+    },
+    "IOC|2016-11-23": {
+      "symbol": "IOC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "4875"
+    },
+    "IREDA|2016-11-23": {
+      "symbol": "IREDA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "4525"
+    },
+    "IRFC|2016-11-23": {
+      "symbol": "IRFC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "5425"
+    },
+    "ITC|2016-11-23": {
+      "symbol": "ITC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1725"
+    },
+    "JINDALSTEL|2016-11-23": {
+      "symbol": "JINDALSTEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "625"
+    },
+    "JIOFIN|2016-11-23": {
+      "symbol": "JIOFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2350"
+    },
+    "JSWENERGY|2016-11-23": {
+      "symbol": "JSWENERGY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1075"
+    },
+    "JSWSTEEL|2016-11-23": {
+      "symbol": "JSWSTEEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "675"
+    },
+    "JUBLFOOD|2016-11-23": {
+      "symbol": "JUBLFOOD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1250"
+    },
+    "KALYANKJIL|2016-11-23": {
+      "symbol": "KALYANKJIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1350"
+    },
+    "KAYNES|2016-11-23": {
+      "symbol": "KAYNES",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "150"
+    },
+    "KEI|2016-11-23": {
+      "symbol": "KEI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "KFINTECH|2016-11-23": {
+      "symbol": "KFINTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "575"
+    },
+    "KOTAKBANK|2016-11-23": {
+      "symbol": "KOTAKBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2000"
+    },
+    "KPITTECH|2016-11-23": {
+      "symbol": "KPITTECH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "775"
+    },
+    "LAURUSLABS|2016-11-23": {
+      "symbol": "LAURUSLABS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "850"
+    },
+    "LICHSGFIN|2016-11-23": {
+      "symbol": "LICHSGFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1000"
+    },
+    "LICI|2016-11-23": {
+      "symbol": "LICI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1400"
+    },
+    "LODHA|2016-11-23": {
+      "symbol": "LODHA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "625"
+    },
+    "LT|2016-11-23": {
+      "symbol": "LT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "LTF|2016-11-23": {
+      "symbol": "LTF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2250"
+    },
+    "LTM|2016-11-23": {
+      "symbol": "LTM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "150"
+    },
+    "LUPIN|2016-11-23": {
+      "symbol": "LUPIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "425"
+    },
+    "M&M|2016-11-23": {
+      "symbol": "M&M",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "200"
+    },
+    "MAHABANK|2016-10-27": {
+      "symbol": "MAHABANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "6500"
+    },
+    "MAHABANK|2016-11-23": {
+      "symbol": "MAHABANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "6500"
+    },
+    "MANAPPURAM|2016-11-23": {
+      "symbol": "MANAPPURAM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "3000"
+    },
+    "MANKIND|2016-11-23": {
+      "symbol": "MANKIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "250"
+    },
+    "MARICO|2016-11-23": {
+      "symbol": "MARICO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1200"
+    },
+    "MARUTI|2016-11-23": {
+      "symbol": "MARUTI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "50"
+    },
+    "MAXHEALTH|2016-11-23": {
+      "symbol": "MAXHEALTH",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "525"
+    },
+    "MAZDOCK|2016-11-23": {
+      "symbol": "MAZDOCK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "225"
+    },
+    "MCX|2016-11-23": {
+      "symbol": "MCX",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "225"
+    },
+    "MFSL|2016-11-23": {
+      "symbol": "MFSL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "400"
+    },
+    "MOTHERSON|2016-11-23": {
+      "symbol": "MOTHERSON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "6150"
+    },
+    "MOTILALOFS|2016-11-23": {
+      "symbol": "MOTILALOFS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "775"
+    },
+    "MPHASIS|2016-11-23": {
+      "symbol": "MPHASIS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "275"
+    },
+    "MUTHOOTFIN|2016-11-23": {
+      "symbol": "MUTHOOTFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "275"
+    },
+    "NAM-INDIA|2016-11-23": {
+      "symbol": "NAM-INDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "625"
+    },
+    "NATIONALUM|2016-11-23": {
+      "symbol": "NATIONALUM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1875"
+    },
+    "NAUKRI|2016-11-23": {
+      "symbol": "NAUKRI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "550"
+    },
+    "NBCC|2016-11-23": {
+      "symbol": "NBCC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "6500"
+    },
+    "NESTLEIND|2016-11-23": {
+      "symbol": "NESTLEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "500"
+    },
+    "NHPC|2016-11-23": {
+      "symbol": "NHPC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "6950"
+    },
+    "NMDC|2016-11-23": {
+      "symbol": "NMDC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "6750"
+    },
+    "NTPC|2016-11-23": {
+      "symbol": "NTPC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1500"
+    },
+    "NYKAA|2016-11-23": {
+      "symbol": "NYKAA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "3125"
+    },
+    "OBEROIRLTY|2016-11-23": {
+      "symbol": "OBEROIRLTY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "350"
+    },
+    "OFSS|2016-11-23": {
+      "symbol": "OFSS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "100"
+    },
+    "OIL|2016-11-23": {
+      "symbol": "OIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1400"
+    },
+    "ONGC|2016-11-23": {
+      "symbol": "ONGC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2250"
+    },
+    "PAGEIND|2016-11-23": {
+      "symbol": "PAGEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "20"
+    },
+    "PATANJALI|2016-11-23": {
+      "symbol": "PATANJALI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1075"
+    },
+    "PAYTM|2016-11-23": {
+      "symbol": "PAYTM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "725"
+    },
+    "PERSISTENT|2016-11-23": {
+      "symbol": "PERSISTENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "PETRONET|2016-11-23": {
+      "symbol": "PETRONET",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1900"
+    },
+    "PFC|2016-11-23": {
+      "symbol": "PFC",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1300"
+    },
+    "PGEL|2016-11-23": {
+      "symbol": "PGEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "950"
+    },
+    "PHOENIXLTD|2016-11-23": {
+      "symbol": "PHOENIXLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "350"
+    },
+    "PIDILITIND|2016-11-23": {
+      "symbol": "PIDILITIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "500"
+    },
+    "PIIND|2016-11-23": {
+      "symbol": "PIIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "PNB|2016-11-23": {
+      "symbol": "PNB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "8000"
+    },
+    "PNBHOUSING|2016-11-23": {
+      "symbol": "PNBHOUSING",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "650"
+    },
+    "POLICYBZR|2016-11-23": {
+      "symbol": "POLICYBZR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "350"
+    },
+    "POLYCAB|2016-11-23": {
+      "symbol": "POLYCAB",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "POWERGRID|2016-11-23": {
+      "symbol": "POWERGRID",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1900"
+    },
+    "POWERINDIA|2016-11-23": {
+      "symbol": "POWERINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "25"
+    },
+    "PREMIERENE|2016-11-23": {
+      "symbol": "PREMIERENE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "650"
+    },
+    "PRESTIGE|2016-11-23": {
+      "symbol": "PRESTIGE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "450"
+    },
+    "RADICO|2016-11-23": {
+      "symbol": "RADICO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "150"
+    },
+    "RBLBANK|2016-11-23": {
+      "symbol": "RBLBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "3175"
+    },
+    "RECLTD|2016-11-23": {
+      "symbol": "RECLTD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1575"
+    },
+    "RELIANCE|2016-11-23": {
+      "symbol": "RELIANCE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "500"
+    },
+    "RVNL|2016-11-23": {
+      "symbol": "RVNL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1925"
+    },
+    "SAGILITY|2016-10-27": {
+      "symbol": "SAGILITY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-10-27",
+      "lot_size": "12000"
+    },
+    "SAGILITY|2016-11-23": {
+      "symbol": "SAGILITY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "12000"
+    },
+    "SAIL|2016-11-23": {
+      "symbol": "SAIL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "4700"
+    },
+    "SBICARD|2016-11-23": {
+      "symbol": "SBICARD",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "800"
+    },
+    "SBILIFE|2016-11-23": {
+      "symbol": "SBILIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "375"
+    },
+    "SBIN|2016-11-23": {
+      "symbol": "SBIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "750"
+    },
+    "SHREECEM|2016-11-23": {
+      "symbol": "SHREECEM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "25"
+    },
+    "SHRIRAMFIN|2016-11-23": {
+      "symbol": "SHRIRAMFIN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "825"
+    },
+    "SIEMENS|2016-11-23": {
+      "symbol": "SIEMENS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "SOLARINDS|2016-11-23": {
+      "symbol": "SOLARINDS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "50"
+    },
+    "SONACOMS|2016-11-23": {
+      "symbol": "SONACOMS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1225"
+    },
+    "SRF|2016-11-23": {
+      "symbol": "SRF",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "200"
+    },
+    "SUNPHARMA|2016-11-23": {
+      "symbol": "SUNPHARMA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "350"
+    },
+    "SUPREMEIND|2016-11-23": {
+      "symbol": "SUPREMEIND",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "SUZLON|2016-11-23": {
+      "symbol": "SUZLON",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "12700"
+    },
+    "SWIGGY|2016-11-23": {
+      "symbol": "SWIGGY",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1825"
+    },
+    "TATACONSUM|2016-11-23": {
+      "symbol": "TATACONSUM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "550"
+    },
+    "TATAELXSI|2016-11-23": {
+      "symbol": "TATAELXSI",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "TATAPOWER|2016-11-23": {
+      "symbol": "TATAPOWER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1450"
+    },
+    "TATASTEEL|2016-11-23": {
+      "symbol": "TATASTEEL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "2750"
+    },
+    "TCS|2016-11-23": {
+      "symbol": "TCS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "225"
+    },
+    "TECHM|2016-11-23": {
+      "symbol": "TECHM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "600"
+    },
+    "TIINDIA|2016-11-23": {
+      "symbol": "TIINDIA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "200"
+    },
+    "TITAN|2016-11-23": {
+      "symbol": "TITAN",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "TMPV|2016-11-23": {
+      "symbol": "TMPV",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1600"
+    },
+    "TORNTPHARM|2016-11-23": {
+      "symbol": "TORNTPHARM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "125"
+    },
+    "TRENT|2016-11-23": {
+      "symbol": "TRENT",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "225"
+    },
+    "TVSMOTOR|2016-11-23": {
+      "symbol": "TVSMOTOR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "ULTRACEMCO|2016-11-23": {
+      "symbol": "ULTRACEMCO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "50"
+    },
+    "UNIONBANK|2016-11-23": {
+      "symbol": "UNIONBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "4425"
+    },
+    "UNITDSPR|2016-11-23": {
+      "symbol": "UNITDSPR",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "400"
+    },
+    "UNOMINDA|2016-11-23": {
+      "symbol": "UNOMINDA",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "550"
+    },
+    "UPL|2016-11-23": {
+      "symbol": "UPL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1355"
+    },
+    "VBL|2016-11-23": {
+      "symbol": "VBL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1275"
+    },
+    "VEDL|2016-11-23": {
+      "symbol": "VEDL",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "1150"
+    },
+    "VMM|2016-11-23": {
+      "symbol": "VMM",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "4850"
+    },
+    "VOLTAS|2016-11-23": {
+      "symbol": "VOLTAS",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "375"
+    },
+    "WAAREEENER|2016-11-23": {
+      "symbol": "WAAREEENER",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "175"
+    },
+    "WIPRO|2016-11-23": {
+      "symbol": "WIPRO",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "3000"
+    },
+    "YESBANK|2016-11-23": {
+      "symbol": "YESBANK",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "31100"
+    },
+    "ZYDUSLIFE|2016-11-23": {
+      "symbol": "ZYDUSLIFE",
+      "instrument": "FUTSTK",
+      "expiry": "2016-11-23",
+      "lot_size": "900"
+    }
+  }
+}
