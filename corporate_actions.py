@@ -1,4 +1,3 @@
-
 import json
 import os
 import re
@@ -23,8 +22,10 @@ NSE_API = (
 )
 
 WATCHLIST_FILE = "watchlist.txt"
-
 TELEGRAM_API = "https://api.telegram.org"
+
+# Set LISTENER_MODE=1 when called by listener.py
+LISTENER_MODE = os.environ.get("LISTENER_MODE") == "1"
 
 
 # --------------------------------------------------
@@ -46,7 +47,7 @@ def load_watchlist():
 
     if not path.exists():
         raise FileNotFoundError(
-            "watchlist.txt was not found in the repository."
+            "watchlist.txt was not found."
         )
 
     companies = [
@@ -58,9 +59,7 @@ def load_watchlist():
     ]
 
     if not companies:
-        raise ValueError(
-            "watchlist.txt is empty."
-        )
+        raise ValueError("watchlist.txt is empty.")
 
     return companies
 
@@ -70,8 +69,6 @@ def load_watchlist():
 # --------------------------------------------------
 
 def fetch_actions():
-    print("Connecting to NSE corporate-actions data...")
-
     cookies = http.cookiejar.CookieJar()
 
     opener = urllib.request.build_opener(
@@ -88,16 +85,16 @@ def fetch_actions():
         "Referer": "https://www.nseindia.com/",
     }
 
-    # Establish an NSE session first.
+    # Establish an NSE session.
     request = urllib.request.Request(
         NSE_HOME,
         headers=headers,
     )
 
-    with opener.open(request, timeout=30) as response:
-        print("NSE page status:", response.status)
+    with opener.open(request, timeout=30):
+        pass
 
-    # Retrieve corporate-action records.
+    # Fetch corporate-action records.
     request = urllib.request.Request(
         NSE_API,
         headers=headers,
@@ -105,7 +102,6 @@ def fetch_actions():
 
     with opener.open(request, timeout=30) as response:
         raw_data = response.read().decode("utf-8")
-        print("Corporate-actions status:", response.status)
 
     data = json.loads(raw_data)
 
@@ -121,9 +117,6 @@ def fetch_actions():
             "Unexpected NSE response format."
         )
 
-    if not records:
-        print("NSE returned zero corporate-action records.")
-
     return records
 
 
@@ -135,6 +128,11 @@ def match_actions(watchlist, actions):
     matched = []
     seen = set()
 
+    normalized_watchlist = [
+        (company, normalize(company))
+        for company in watchlist
+    ]
+
     for action in actions:
         company_name = normalize(
             action.get("comp", "")
@@ -144,10 +142,8 @@ def match_actions(watchlist, actions):
             action.get("symbol", "")
         )
 
-        for watch_company in watchlist:
-            watch_name = normalize(watch_company)
+        for watch_company, watch_name in normalized_watchlist:
 
-            # Match company-name phrases or exact symbols.
             is_match = (
                 len(watch_name) >= 5
                 and watch_name in company_name
@@ -167,12 +163,28 @@ def match_actions(watchlist, actions):
             if key not in seen:
                 matched.append({
                     "watchlist_name": watch_company,
-                    "company": action.get("comp", watch_company),
-                    "symbol": action.get("symbol", "N/A"),
-                    "purpose": action.get("subject", "N/A"),
-                    "ex_date": action.get("exDate", "N/A"),
-                    "record_date": action.get("recDate", "N/A"),
+                    "company": action.get(
+                        "comp",
+                        watch_company,
+                    ),
+                    "symbol": action.get(
+                        "symbol",
+                        "N/A",
+                    ),
+                    "purpose": action.get(
+                        "subject",
+                        "N/A",
+                    ),
+                    "ex_date": action.get(
+                        "exDate",
+                        "N/A",
+                    ),
+                    "record_date": action.get(
+                        "recDate",
+                        "N/A",
+                    ),
                 })
+
                 seen.add(key)
 
             break
@@ -181,76 +193,14 @@ def match_actions(watchlist, actions):
 
 
 # --------------------------------------------------
-# SEND TELEGRAM MESSAGE
+# BUILD REPORT
 # --------------------------------------------------
 
-def send_telegram(message):
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
-
-    if not token or not chat_id:
-        raise RuntimeError(
-            "Telegram credentials are missing. "
-            "Check the GitHub Actions environment variables."
-        )
-
-    url = f"{TELEGRAM_API}/bot{token}/sendMessage"
-
-    # Telegram messages have a maximum length.
-    # Split long reports into safe-sized messages.
-    chunks = []
-    remaining = message
-
-    while remaining:
-        if len(remaining) <= 3500:
-            chunks.append(remaining)
-            break
-
-        split_at = remaining.rfind("\n", 0, 3500)
-
-        if split_at <= 0:
-            split_at = 3500
-
-        chunks.append(remaining[:split_at])
-        remaining = remaining[split_at:].lstrip("\n")
-
-    for chunk in chunks:
-        payload = urllib.parse.urlencode({
-            "chat_id": chat_id,
-            "text": chunk,
-        }).encode("utf-8")
-
-        request = urllib.request.Request(
-            url,
-            data=payload,
-            headers={
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-        )
-
-        with urllib.request.urlopen(
-            request,
-            timeout=30,
-        ) as response:
-            result = json.loads(
-                response.read().decode("utf-8")
-            )
-
-        if not result.get("ok"):
-            raise RuntimeError(
-                "Telegram rejected the message."
-            )
-
-    print("Telegram message sent successfully.")
-
-
-# --------------------------------------------------
-# BUILD TELEGRAM REPORT
-# --------------------------------------------------
-
-
-def build_report(watchlist, actions, matched):
-    lines = ["NSE CORPORATE ACTIONS", ""]
+def build_report(matched):
+    lines = [
+        "NSE CORPORATE ACTIONS",
+        "",
+    ]
 
     if not matched:
         lines.append(
@@ -268,7 +218,66 @@ def build_report(watchlist, actions, matched):
             "",
         ])
 
-    return "\n".join(lines)
+    return "\n".join(lines).strip()
+
+
+# --------------------------------------------------
+# SEND TELEGRAM MESSAGE
+# --------------------------------------------------
+
+def send_telegram(message):
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
+    if not token or not chat_id:
+        raise RuntimeError(
+            "Telegram credentials are missing."
+        )
+
+    url = f"{TELEGRAM_API}/bot{token}/sendMessage"
+
+    remaining = message
+
+    while remaining:
+        if len(remaining) <= 3500:
+            chunk = remaining
+            remaining = ""
+        else:
+            split_at = remaining.rfind("\n", 0, 3500)
+
+            if split_at <= 0:
+                split_at = 3500
+
+            chunk = remaining[:split_at]
+            remaining = remaining[split_at:].lstrip("\n")
+
+        payload = urllib.parse.urlencode({
+            "chat_id": chat_id,
+            "text": chunk,
+        }).encode("utf-8")
+
+        request = urllib.request.Request(
+            url,
+            data=payload,
+            headers={
+                "Content-Type": (
+                    "application/x-www-form-urlencoded"
+                )
+            },
+        )
+
+        with urllib.request.urlopen(
+            request,
+            timeout=30,
+        ) as response:
+            result = json.loads(
+                response.read().decode("utf-8")
+            )
+
+        if not result.get("ok"):
+            raise RuntimeError(
+                "Telegram rejected the message."
+            )
 
 
 # --------------------------------------------------
@@ -276,34 +285,22 @@ def build_report(watchlist, actions, matched):
 # --------------------------------------------------
 
 def main():
-    print("Starting corporate-actions monitor...")
-
     watchlist = load_watchlist()
-    print("Watchlist companies:", len(watchlist))
-
     actions = fetch_actions()
-    print("NSE records received:", len(actions))
 
-    matched = match_actions(watchlist, actions)
-    print("Matching watchlist actions:", len(matched))
-
-    for item in matched:
-        print(
-            json.dumps(
-                item,
-                ensure_ascii=False,
-            )
-        )
-
-    report = build_report(
+    matched = match_actions(
         watchlist,
         actions,
-        matched,
     )
 
-    send_telegram(report)
+    report = build_report(matched)
 
-    print("Corporate-actions monitor completed.")
+    if LISTENER_MODE:
+        # listener.py will send this report to Telegram.
+        print(report)
+    else:
+        # Standalone or scheduled execution sends it directly.
+        send_telegram(report)
 
 
 if __name__ == "__main__":
