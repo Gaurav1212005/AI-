@@ -128,7 +128,6 @@ skip_exact = {
     "Corporate-actions monitor completed.",
     "Corporate-actions monitor completed",
     "Starting corporate-actions monitor...",
-    "Starting corporate-actions monitor...",
     "Connecting to NSE corporate-actions data...",
     "NSE returned zero corporate-action records.",
 }
@@ -177,12 +176,11 @@ def run_script(script):
 
 script_path = os.path.join(BASE_DIR, script)
 if not os.path.isfile(script_path):
-    return False, f"❌ Required file not found: {script}"
+    return False, f"Required file not found: {script}"
 env = os.environ.copy()
 env["TELEGRAM_BOT_TOKEN"] = TOKEN
 env["TELEGRAM_CHAT_ID"] = CHAT_ID
-# Prevent corporate_actions.py from sending its own message.
-# The listener will send the captured report instead.
+# Prevent corporate_actions.py from sending a duplicate message.
 if script == "corporate_actions.py":
     env["LISTENER_MODE"] = "1"
 else:
@@ -196,12 +194,9 @@ try:
         timeout=SCRIPT_TIMEOUT,
         env=env,
     )
-    # For successful execution, use stdout as the report.
-    # Do not append stderr logs to the report.
     if result.returncode == 0:
         report = clean_report(result.stdout)
         return True, report
-    # Only include captured error details if execution failed.
     error_output = "\n".join(
         part.strip()
         for part in (result.stderr, result.stdout)
@@ -238,7 +233,6 @@ try:
             failures += 1
             send(report)
             continue
-        # Send only the actual report.
         if report:
             send(report)
     if failures:
@@ -330,7 +324,6 @@ while True:
             try:
                 handle_message(message)
             except Exception as exc:
-                # Keep technical details in Terminal only.
                 print("Message handling error:", exc)
                 if str(
                     message.get("chat", {}).get("id", "")
