@@ -4,7 +4,7 @@ name: F&O Contract Changes Monitor
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 4 * * 1-5"
+    - cron: "47 3 * * 1-5"
 
 permissions:
   contents: write
