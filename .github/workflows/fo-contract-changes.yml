@@ -1,57 +1,34 @@
 name: F&O Contract Changes Monitor
-
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "47 3 * * 1-5"
-
+    - cron: "0 4 * * 1-5"
+  workflow_dispatch:
 permissions:
   contents: write
-
-# Prevent simultaneous runs from pushing conflicting commits.
-concurrency:
-  group: fo-contract-changes-monitor
-  cancel-in-progress: false
-
 jobs:
-  monitor-contracts:
+  monitor:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          ref: main
-          fetch-depth: 0
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Run F&O contract changes monitor
+      - name: Run F&O contract monitor
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.FoList_Bot }}
           TELEGRAM_CHAT_ID: "8430921727"
         run: python fo_contract_changes.py
-
-      - name: Save contract snapshot
+      - name: Commit updated snapshot
+        if: success()
         run: |
+          if git diff --quiet -- fo_contract_snapshot.json; then
+            echo "Snapshot unchanged."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add fo_contract_snapshot.json
-
-          if ! git diff --cached --quiet; then
-            git commit -m "Update F&O contract snapshot"
-
-            # Synchronize with the latest remote main branch.
-            git fetch origin main
-            git rebase origin/main
-
-            # Push the updated snapshot.
-            git push origin HEAD:main
-          else
-            echo "No snapshot changes to commit."
-          fi
+          git commit -m "Update F&O contract snapshot"
+          git push
