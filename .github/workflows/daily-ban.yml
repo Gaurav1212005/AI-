@@ -3,7 +3,7 @@ name: Daily NSE F&O Ban Monitor
 
 on:
   schedule:
-    - cron: "0 4 * * 1-5"
+       - cron: "35 7 * * 1-5"
   workflow_dispatch:
 
 jobs:
