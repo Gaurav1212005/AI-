@@ -4,6 +4,8 @@ import io
 import json
 import os
 import re
+import time
+import urllib.error
 import urllib.request
 import urllib.parse
 
@@ -36,7 +38,6 @@ HEADERS = {
 
 MINIMUM_CONTRACTS = 10
 
-# Monitor stock futures and index futures.
 MONITORED_INSTRUMENTS = {"FUTSTK", "FUTIDX"}
 
 
@@ -48,23 +49,8 @@ def normalize(value):
     return re.sub(r"[^a-z0-9]", "", str(value or "").lower())
 
 
-def instrument_name(instrument):
-    if instrument == "FUTSTK":
-        return "STOCK FUTURES"
-
-    if instrument == "FUTIDX":
-        return "INDEX FUTURES"
-
-    return instrument
-
-
 def parse_expiry(value):
-    """
-    Parse NSE expiry dates.
-
-    NSE files may contain Unix timestamps or conventional
-    date strings.
-    """
+    """Parse NSE Unix timestamps or conventional date strings."""
     value = str(value or "").strip()
 
     if not value:
@@ -82,27 +68,38 @@ def parse_expiry(value):
     except (ValueError, OverflowError, OSError):
         pass
 
-    formats = (
+    for fmt in (
         "%Y-%m-%d",
         "%d-%m-%Y",
         "%d/%m/%Y",
         "%d-%b-%Y",
         "%d-%B-%Y",
-    )
-
-    for fmt in formats:
+    ):
         try:
-            return datetime.strptime(
-                value,
-                fmt,
-            ).date().isoformat()
-
+            return datetime.strptime(value, fmt).date().isoformat()
         except ValueError:
             continue
 
-    raise RuntimeError(
-        f"Unrecognized expiry date: {value!r}"
+    raise RuntimeError(f"Unrecognized expiry date: {value!r}")
+
+
+def file_date(filename):
+    """Extract the date from NSE_FO_contract_DDMMYYYY.csv.gz."""
+    match = re.search(
+        r"NSE_FO_contract_(\d{2})(\d{2})(\d{4})\.csv\.gz",
+        filename,
     )
+
+    if not match:
+        return None
+
+    day, month, year = map(int, match.groups())
+
+    try:
+        from datetime import date
+        return date(year, month, day)
+    except ValueError:
+        return None
 
 
 # ============================================================
@@ -111,10 +108,8 @@ def parse_expiry(value):
 
 def download_contract_file():
     """
-    Download the most recent available NSE F&O contract file.
-
-    The function tries today's date first and then works
-    backwards for up to eight calendar days.
+    Try today's archive first, then the previous seven days.
+    Never change the saved snapshot if downloading fails.
     """
     today = datetime.now(IST).date()
 
@@ -122,8 +117,7 @@ def download_contract_file():
         date_to_try = today - timedelta(days=days_ago)
 
         filename = (
-            "NSE_FO_contract_"
-            f"{date_to_try.strftime('%d%m%Y')}.csv.gz"
+            f"NSE_FO_contract_{date_to_try.strftime('%d%m%Y')}.csv.gz"
         )
 
         for host in ARCHIVE_HOSTS:
@@ -142,11 +136,7 @@ def download_contract_file():
                     compressed = response.read()
 
                 content = gzip.decompress(compressed)
-
-                text = content.decode(
-                    "utf-8-sig",
-                    errors="replace",
-                )
+                text = content.decode("utf-8-sig", errors="replace")
 
                 if not text.strip():
                     continue
@@ -173,10 +163,7 @@ def download_contract_file():
 # ============================================================
 
 def find_column(headers, candidates):
-    lookup = {
-        normalize(header): header
-        for header in headers
-    }
+    lookup = {normalize(header): header for header in headers}
 
     for candidate in candidates:
         column = lookup.get(normalize(candidate))
@@ -189,21 +176,16 @@ def find_column(headers, candidates):
 
 def parse_contracts(text):
     """
-    Parse FUTSTK and FUTIDX records.
+    Track FUTSTK and FUTIDX only.
 
     Contract identity:
         INSTRUMENT|SYMBOL|EXPIRY
-
-    Example:
-        FUTSTK|IEX|2026-10-27
-        FUTIDX|NIFTY|2026-10-27
     """
     try:
         dialect = csv.Sniffer().sniff(
             text[:10000],
             delimiters=",|;",
         )
-
     except csv.Error:
         dialect = csv.excel
 
@@ -213,9 +195,7 @@ def parse_contracts(text):
     )
 
     if not reader.fieldnames:
-        raise RuntimeError(
-            "The NSE contract file has no headers."
-        )
+        raise RuntimeError("NSE contract file has no headers.")
 
     columns = {
         "instrument": find_column(
@@ -237,8 +217,7 @@ def parse_contracts(text):
     }
 
     missing = [
-        name
-        for name, column in columns.items()
+        name for name, column in columns.items()
         if not column
     ]
 
@@ -267,9 +246,7 @@ def parse_contracts(text):
         if not symbol:
             continue
 
-        expiry = parse_expiry(
-            row.get(columns["expiry"], "")
-        )
+        expiry = parse_expiry(row.get(columns["expiry"], ""))
 
         lot_size = str(
             row.get(columns["lot_size"], "") or ""
@@ -281,7 +258,6 @@ def parse_contracts(text):
         try:
             if float(lot_size) <= 0:
                 continue
-
         except ValueError:
             continue
 
@@ -290,7 +266,7 @@ def parse_contracts(text):
         if key in contracts:
             raise RuntimeError(
                 f"Duplicate contract detected: {key}. "
-                "The snapshot will not be changed."
+                "Snapshot not changed."
             )
 
         contracts[key] = {
@@ -303,39 +279,27 @@ def parse_contracts(text):
     if len(contracts) < MINIMUM_CONTRACTS:
         raise RuntimeError(
             f"Only {len(contracts)} contracts were parsed. "
-            "The file may be incomplete or incorrectly parsed. "
-            "The snapshot will not be changed."
+            "The file may be incomplete or incorrectly parsed."
         )
 
-    stock_contracts = sum(
-        1
-        for contract in contracts.values()
-        if contract["instrument"] == "FUTSTK"
-    )
+    stock_contracts = [
+        item for item in contracts.values()
+        if item["instrument"] == "FUTSTK"
+    ]
 
-    index_contracts = sum(
-        1
-        for contract in contracts.values()
-        if contract["instrument"] == "FUTIDX"
-    )
+    index_contracts = [
+        item for item in contracts.values()
+        if item["instrument"] == "FUTIDX"
+    ]
 
-    stock_symbols = {
-        contract["symbol"]
-        for contract in contracts.values()
-        if contract["instrument"] == "FUTSTK"
-    }
-
-    index_symbols = {
-        contract["symbol"]
-        for contract in contracts.values()
-        if contract["instrument"] == "FUTIDX"
-    }
+    stock_symbols = {item["symbol"] for item in stock_contracts}
+    index_symbols = {item["symbol"] for item in index_contracts}
 
     print("\n========== NSE CONTRACT SUMMARY ==========")
     print("Total contracts:", len(contracts))
-    print("Stock Futures contracts:", stock_contracts)
+    print("Stock Futures contracts:", len(stock_contracts))
     print("Unique stock symbols:", len(stock_symbols))
-    print("Index Futures contracts:", index_contracts)
+    print("Index Futures contracts:", len(index_contracts))
     print("Unique index symbols:", len(index_symbols))
     print("==========================================\n")
 
@@ -343,39 +307,31 @@ def parse_contracts(text):
 
 
 # ============================================================
-# SUMMARIZE EXPIRIES
+# SUMMARIZE CONTRACTS
 # ============================================================
 
 def contract_summary(contracts):
-    """
-    Group contracts by instrument and underlying symbol.
-
-    Each symbol has a list of available expiry dates.
-    """
     summary = {}
 
     for contract in contracts.values():
-        instrument = contract["instrument"]
-        symbol = contract["symbol"]
+        key = (
+            contract["instrument"],
+            contract["symbol"],
+        )
 
-        summary.setdefault(
-            (instrument, symbol),
-            [],
-        ).append({
+        summary.setdefault(key, []).append({
             "expiry": contract["expiry"],
             "lot_size": contract["lot_size"],
         })
 
     for key in summary:
-        summary[key].sort(
-            key=lambda item: item["expiry"]
-        )
+        summary[key].sort(key=lambda item: item["expiry"])
 
     return summary
 
 
 # ============================================================
-# LOAD PREVIOUS SNAPSHOT
+# LOAD SNAPSHOT
 # ============================================================
 
 def load_snapshot():
@@ -384,36 +340,33 @@ def load_snapshot():
 
     try:
         data = json.loads(
-            SNAPSHOT_FILE.read_text(
-                encoding="utf-8"
-            )
+            SNAPSHOT_FILE.read_text(encoding="utf-8")
         )
-
     except (json.JSONDecodeError, OSError) as error:
-        raise RuntimeError(
-            f"Unable to read snapshot: {error}"
-        )
+        raise RuntimeError(f"Unable to read snapshot: {error}")
 
     if not isinstance(data, dict):
-        raise RuntimeError(
-            "Snapshot has an invalid format."
-        )
+        raise RuntimeError("Snapshot has an invalid format.")
 
-    # Support both versioned snapshots and older snapshots.
     if (
         data.get("version") in (2, 3)
         and isinstance(data.get("contracts"), dict)
     ):
-        contracts = data["contracts"]
-        source_file = data.get("source_file", "Unknown")
-
+        raw_contracts = data["contracts"]
+        metadata = {
+            "source_file": data.get("source_file", "Unknown"),
+            "version": data.get("version"),
+        }
     else:
-        contracts = data
-        source_file = "Previous snapshot (legacy format)"
+        raw_contracts = data
+        metadata = {
+            "source_file": "Unknown",
+            "version": 1,
+        }
 
     cleaned = {}
 
-    for _, contract in contracts.items():
+    for contract in raw_contracts.values():
         if not isinstance(contract, dict):
             continue
 
@@ -431,9 +384,7 @@ def load_snapshot():
         if not symbol:
             continue
 
-        expiry = parse_expiry(
-            contract.get("expiry", "")
-        )
+        expiry = parse_expiry(contract.get("expiry", ""))
 
         lot_size = str(
             contract.get("lot_size", "")
@@ -451,14 +402,17 @@ def load_snapshot():
             "lot_size": lot_size,
         }
 
-    print("Previous snapshot:", source_file)
+    print("Previous snapshot:", metadata["source_file"])
     print("Previous contract count:", len(cleaned))
 
-    return cleaned
+    return {
+        "contracts": cleaned,
+        "metadata": metadata,
+    }
 
 
 # ============================================================
-# COMPARE PREVIOUS AND CURRENT CONTRACTS
+# COMPARE SNAPSHOTS
 # ============================================================
 
 def compare_contracts(previous, current):
@@ -468,53 +422,41 @@ def compare_contracts(previous, current):
     old_keys = set(previous)
     new_keys = set(current)
 
-    # Individual contracts that appeared or disappeared.
-    added_contract_keys = sorted(new_keys - old_keys)
-    removed_contract_keys = sorted(old_keys - new_keys)
-
     added_contracts = [
-        current[key]
-        for key in added_contract_keys
+        current[key] for key in sorted(new_keys - old_keys)
     ]
 
     removed_contracts = [
-        previous[key]
-        for key in removed_contract_keys
+        previous[key] for key in sorted(old_keys - new_keys)
     ]
 
-    # Compare underlying stock/index symbols.
     old_symbols = set(old_summary)
     new_symbols = set(new_summary)
 
     added_symbols = sorted(new_symbols - old_symbols)
     removed_symbols = sorted(old_symbols - new_symbols)
 
-    # Compare number of available expiries for every symbol.
     expiry_count_changes = []
 
     for key in sorted(old_symbols & new_symbols):
-        instrument, symbol = key
+        old_expiries = [
+            item["expiry"] for item in old_summary[key]
+        ]
 
-        old_count = len(old_summary[key])
-        new_count = len(new_summary[key])
+        new_expiries = [
+            item["expiry"] for item in new_summary[key]
+        ]
 
-        if old_count != new_count:
+        if len(old_expiries) != len(new_expiries):
             expiry_count_changes.append({
-                "instrument": instrument,
-                "symbol": symbol,
-                "old_count": old_count,
-                "new_count": new_count,
-                "old_expiries": [
-                    item["expiry"]
-                    for item in old_summary[key]
-                ],
-                "new_expiries": [
-                    item["expiry"]
-                    for item in new_summary[key]
-                ],
+                "instrument": key[0],
+                "symbol": key[1],
+                "old_count": len(old_expiries),
+                "new_count": len(new_expiries),
+                "old_expiries": old_expiries,
+                "new_expiries": new_expiries,
             })
 
-    # Compare lot sizes for contracts with matching expiries.
     lot_changes = []
 
     for key in sorted(old_keys & new_keys):
@@ -543,10 +485,10 @@ def compare_contracts(previous, current):
 
 
 # ============================================================
-# BUILD TELEGRAM REPORT
+# BUILD REPORT
 # ============================================================
 
-def build_report(changes, filename, previous_filename):
+def build_report(changes, current_file, previous_file):
     today = datetime.now(IST).strftime("%d-%b-%Y")
 
     added_symbols = changes["added_symbols"]
@@ -559,8 +501,8 @@ def build_report(changes, filename, previous_filename):
     lines = [
         "NSE F&O CONTRACT CHANGES MONITOR",
         f"Report date: {today}",
-        f"Previous file: {previous_filename}",
-        f"Current file: {filename}",
+        f"Previous file: {previous_file}",
+        f"Current file: {current_file}",
         "",
         f"Underlying symbols added: {len(added_symbols)}",
         f"Underlying symbols missing: {len(removed_symbols)}",
@@ -571,141 +513,91 @@ def build_report(changes, filename, previous_filename):
         "",
     ]
 
-    # --------------------------------------------------------
-    # Underlying symbols added
-    # --------------------------------------------------------
-
     if added_symbols:
         lines.append("NEW UNDERLYING SYMBOLS")
 
         for instrument, symbol in added_symbols:
-            lines.append(
-                f"• {instrument} | {symbol}"
-            )
+            lines.append(f"• {instrument} | {symbol}")
 
         lines.append("")
-
-    # --------------------------------------------------------
-    # Underlying symbols missing completely
-    # --------------------------------------------------------
 
     if removed_symbols:
         lines.append("SYMBOLS MISSING FROM CURRENT FILE")
 
         for instrument, symbol in removed_symbols:
-            previous_expiries = [
-                item["expiry"]
-                for item in contract_summary(
-                    {
-                        key: value
-                        for key, value in {}
-                    }
-                ).get((instrument, symbol), [])
-            ]
-
-            # These symbols are no longer present in the current file.
-            lines.append(
-                f"• {instrument} | {symbol}"
-            )
+            lines.append(f"• {instrument} | {symbol}")
 
         lines.append(
-            "Verify against NSE's official introduction/"
-            "exclusion tracker before treating these as removals."
+            "Verify against NSE's official introduction/exclusion "
+            "tracker before treating these as official removals."
         )
         lines.append("")
-
-    # --------------------------------------------------------
-    # Individual contracts added
-    # --------------------------------------------------------
 
     if added_contracts:
         lines.append("NEW EXPIRY CONTRACTS")
 
-        for contract in added_contracts:
+        for item in added_contracts:
             lines.append(
-                f"• {contract['instrument']} | "
-                f"{contract['symbol']} | "
-                f"Expiry: {contract['expiry']} | "
-                f"Lot: {contract['lot_size']}"
+                f"• {item['instrument']} | {item['symbol']} | "
+                f"Expiry: {item['expiry']} | Lot: {item['lot_size']}"
             )
 
         lines.append("")
-
-    # --------------------------------------------------------
-    # Individual contracts removed
-    # --------------------------------------------------------
 
     if removed_contracts:
         lines.append("EXPIRY CONTRACTS NO LONGER PRESENT")
 
-        for contract in removed_contracts:
+        for item in removed_contracts:
             lines.append(
-                f"• {contract['instrument']} | "
-                f"{contract['symbol']} | "
-                f"Expiry: {contract['expiry']} | "
-                f"Previous lot: {contract['lot_size']}"
+                f"• {item['instrument']} | {item['symbol']} | "
+                f"Expiry: {item['expiry']} | "
+                f"Previous lot: {item['lot_size']}"
             )
 
         lines.append(
-            "A contract disappearing may be a normal expiry "
-            "transition and does not by itself prove exclusion."
+            "A disappearing contract may reflect a normal expiry "
+            "transition, not an F&O segment exclusion."
         )
         lines.append("")
-
-    # --------------------------------------------------------
-    # Expiry count changes
-    # --------------------------------------------------------
 
     if expiry_changes:
         lines.append("EXPIRY-COUNT CHANGES")
 
         for item in expiry_changes:
-            old_expiries = ", ".join(item["old_expiries"])
-            new_expiries = ", ".join(item["new_expiries"])
-
             lines.append(
                 f"• {item['instrument']} | {item['symbol']}: "
                 f"{item['old_count']} → {item['new_count']} expiries"
             )
-
             lines.append(
-                f"  Previous: {old_expiries}"
+                f"  Previous: {', '.join(item['old_expiries'])}"
             )
-
             lines.append(
-                f"  Current: {new_expiries}"
+                f"  Current: {', '.join(item['new_expiries'])}"
             )
 
         lines.append("")
-
-    # --------------------------------------------------------
-    # Lot-size changes
-    # --------------------------------------------------------
 
     if lot_changes:
         lines.append("LOT-SIZE CHANGES")
 
         for item in lot_changes:
             lines.append(
-                f"• {item['instrument']} | "
-                f"{item['symbol']} | "
-                f"Expiry: {item['expiry']}\n"
-                f"  Lot: {item['old_lot']} → {item['new_lot']}"
+                f"• {item['instrument']} | {item['symbol']} | "
+                f"Expiry: {item['expiry']} | "
+                f"{item['old_lot']} → {item['new_lot']}"
             )
 
         lines.append("")
 
-    if (
-        not added_symbols
-        and not removed_symbols
-        and not added_contracts
-        and not removed_contracts
-        and not expiry_changes
-        and not lot_changes
-    ):
-        lines.append(
-            "NO UPDATE FOR F&O FUTURES CONTRACTS"
-        )
+    if not any([
+        added_symbols,
+        removed_symbols,
+        added_contracts,
+        removed_contracts,
+        expiry_changes,
+        lot_changes,
+    ]):
+        lines.append("NO CONTRACT CHANGES DETECTED")
 
     return "\n".join(lines).strip()
 
@@ -725,10 +617,7 @@ def save_snapshot(contracts, filename):
     temporary = SNAPSHOT_FILE.with_suffix(".tmp")
 
     temporary.write_text(
-        json.dumps(
-            payload,
-            indent=2,
-        ),
+        json.dumps(payload, indent=2),
         encoding="utf-8",
     )
 
@@ -738,20 +627,15 @@ def save_snapshot(contracts, filename):
 
 
 # ============================================================
-# SEND TELEGRAM MESSAGE
+# TELEGRAM WITH RETRIES
 # ============================================================
 
 def send_telegram(message):
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat_id = os.environ.get(
-        "TELEGRAM_CHAT_ID",
-        "8430921727",
-    )
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "8430921727")
 
     if not token or not chat_id:
-        raise RuntimeError(
-            "Telegram credentials are missing."
-        )
+        raise RuntimeError("Telegram credentials are missing.")
 
     url = f"{TELEGRAM_API}/bot{token}/sendMessage"
 
@@ -759,7 +643,6 @@ def send_telegram(message):
         if len(message) <= 3500:
             chunk = message
             message = ""
-
         else:
             split_at = message.rfind("\n", 0, 3500)
 
@@ -778,26 +661,47 @@ def send_telegram(message):
             url,
             data=payload,
             headers={
-                "Content-Type": (
-                    "application/x-www-form-urlencoded"
-                )
+                "Content-Type": "application/x-www-form-urlencoded"
             },
         )
 
-        with urllib.request.urlopen(
-            request,
-            timeout=30,
-        ) as response:
-            result = json.loads(
-                response.read().decode("utf-8")
-            )
+        for attempt in range(1, 5):
+            try:
+                with urllib.request.urlopen(
+                    request,
+                    timeout=30,
+                ) as response:
+                    result = json.loads(
+                        response.read().decode("utf-8")
+                    )
 
-        if not result.get("ok"):
-            raise RuntimeError(
-                f"Telegram send failed: {result}"
-            )
+                if not result.get("ok"):
+                    raise RuntimeError(
+                        f"Telegram API error: {result}"
+                    )
 
-    print("Telegram notification sent.")
+                print(f"Telegram message sent (attempt {attempt}).")
+                break
+
+            except (
+                urllib.error.URLError,
+                TimeoutError,
+                OSError,
+            ) as error:
+                if attempt == 4:
+                    raise RuntimeError(
+                        "Telegram failed after four attempts. "
+                        "Snapshot not saved."
+                    ) from error
+
+                wait_seconds = attempt * 5
+
+                print(
+                    f"Telegram attempt {attempt} failed: {error}. "
+                    f"Retrying in {wait_seconds} seconds..."
+                )
+
+                time.sleep(wait_seconds)
 
 
 # ============================================================
@@ -810,22 +714,21 @@ def main():
     text, filename = download_contract_file()
     current = parse_contracts(text)
 
-    previous = load_snapshot()
+    snapshot = load_snapshot()
 
-    # First run: create a baseline.
-    if previous is None:
-        save_snapshot(current, filename)
+    # --------------------------------------------------------
+    # FIRST RUN: CREATE BASELINE
+    # --------------------------------------------------------
 
+    if snapshot is None:
         stock_symbols = {
-            contract["symbol"]
-            for contract in current.values()
-            if contract["instrument"] == "FUTSTK"
+            item["symbol"] for item in current.values()
+            if item["instrument"] == "FUTSTK"
         }
 
         index_symbols = {
-            contract["symbol"]
-            for contract in current.values()
-            if contract["instrument"] == "FUTIDX"
+            item["symbol"] for item in current.values()
+            if item["instrument"] == "FUTIDX"
         }
 
         message = (
@@ -835,66 +738,101 @@ def main():
             f"Unique stock symbols: {len(stock_symbols)}\n"
             f"Unique index symbols: {len(index_symbols)}\n"
             f"Total contracts: {len(current)}\n\n"
-            "The next successful run will compare "
-            "expiry counts, contract additions/removals, "
-            "and lot sizes."
+            "Changes will be reported after a newer NSE file "
+            "becomes available."
+        )
+
+        send_telegram(message)
+        save_snapshot(current, filename)
+        return
+
+    previous = snapshot["contracts"]
+    previous_filename = snapshot["metadata"]["source_file"]
+
+    old_date = file_date(previous_filename)
+    new_date = file_date(filename)
+
+    print("Previous source file:", previous_filename)
+    print("Current source file:", filename)
+
+    # --------------------------------------------------------
+    # SAME FILE: DO NOT REPORT FALSE CHANGES
+    # --------------------------------------------------------
+
+    if previous_filename == filename:
+        previous_has_indices = any(
+            item["instrument"] == "FUTIDX"
+            for item in previous.values()
+        )
+
+        current_has_indices = any(
+            item["instrument"] == "FUTIDX"
+            for item in current.values()
+        )
+
+        # Upgrade a legacy stock-only baseline without
+        # incorrectly reporting all index futures as additions.
+        if current_has_indices and not previous_has_indices:
+            message = (
+                "NSE F&O CONTRACT CHANGES MONITOR\n"
+                "Snapshot upgraded successfully.\n\n"
+                f"Source file: {filename}\n"
+                "The previous snapshot did not include FUTIDX.\n"
+                "Index Futures have now been added to the baseline.\n"
+                "No additions or removals are claimed from this "
+                "same-file comparison.\n\n"
+                "Changes will be checked when a newer NSE file "
+                "becomes available."
+            )
+
+            send_telegram(message)
+            save_snapshot(current, filename)
+            return
+
+        message = (
+            "NSE F&O CONTRACT CHANGES MONITOR\n"
+            "No newer NSE contract file is available.\n\n"
+            f"Previous file: {previous_filename}\n"
+            f"Current file: {filename}\n\n"
+            "No comparison was performed because both runs "
+            "used the same source file. The previous snapshot "
+            "has been preserved."
         )
 
         send_telegram(message)
         return
 
-    # Compare snapshots.
-    changes = compare_contracts(
-        previous,
-        current,
-    )
+    # --------------------------------------------------------
+    # DO NOT REPLACE A NEWER SNAPSHOT WITH AN OLDER FILE
+    # --------------------------------------------------------
 
-    old_metadata = {}
-
-    try:
-        saved_data = json.loads(
-            SNAPSHOT_FILE.read_text(encoding="utf-8")
+    if old_date and new_date and new_date < old_date:
+        message = (
+            "NSE F&O CONTRACT CHANGES MONITOR\n"
+            "WARNING: The available NSE file is older than "
+            "the saved snapshot.\n\n"
+            f"Saved snapshot: {previous_filename}\n"
+            f"Downloaded file: {filename}\n\n"
+            "No comparison was performed and the snapshot "
+            "was not changed."
         )
 
-        if isinstance(saved_data, dict):
-            old_metadata["source_file"] = saved_data.get(
-                "source_file",
-                "Unknown",
-            )
+        send_telegram(message)
+        return
 
-    except (OSError, json.JSONDecodeError):
-        old_metadata["source_file"] = "Unknown"
+    # --------------------------------------------------------
+    # COMPARE DIFFERENT SOURCE FILES
+    # --------------------------------------------------------
 
-    previous_filename = old_metadata.get(
-        "source_file",
-        "Unknown",
-    )
+    changes = compare_contracts(previous, current)
 
     print("\n========== CHANGE SUMMARY ==========")
-    print(
-        "Underlying symbols added:",
-        len(changes["added_symbols"]),
-    )
-    print(
-        "Underlying symbols missing:",
-        len(changes["removed_symbols"]),
-    )
-    print(
-        "Expiry contracts added:",
-        len(changes["added_contracts"]),
-    )
-    print(
-        "Expiry contracts removed:",
-        len(changes["removed_contracts"]),
-    )
-    print(
-        "Expiry-count changes:",
-        len(changes["expiry_count_changes"]),
-    )
-    print(
-        "Lot-size changes:",
-        len(changes["lot_changes"]),
-    )
+    print("Underlying symbols added:", len(changes["added_symbols"]))
+    print("Underlying symbols missing:", len(changes["removed_symbols"]))
+    print("Expiry contracts added:", len(changes["added_contracts"]))
+    print("Expiry contracts removed:", len(changes["removed_contracts"]))
+    print("Expiry-count changes:", len(changes["expiry_count_changes"]))
+    print("Lot-size changes:", len(changes["lot_changes"]))
     print("====================================\n")
 
     report = build_report(
@@ -903,11 +841,9 @@ def main():
         previous_filename,
     )
 
-    # Update the snapshot after successful download and parsing.
-    save_snapshot(current, filename)
-
-    # Send report to Telegram.
+    # Send first. Only save after Telegram succeeds.
     send_telegram(report)
+    save_snapshot(current, filename)
 
 
 if __name__ == "__main__":
