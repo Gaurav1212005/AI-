@@ -1,4709 +1,2635 @@
 {
-  "contracts": {
-    "FUTIDX|BANKNIFTY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTIDX",
-      "lot_size": 30,
-      "stock_name": "BANKNIFTY26OCTFUT",
-      "symbol": "BANKNIFTY"
-    },
-    "FUTIDX|BANKNIFTY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTIDX",
-      "lot_size": 30,
-      "stock_name": "BANKNIFTY26NOVFUT",
-      "symbol": "BANKNIFTY"
-    },
-    "FUTIDX|BANKNIFTY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTIDX",
-      "lot_size": 30,
-      "stock_name": "BANKNIFTY26DECFUT",
-      "symbol": "BANKNIFTY"
-    },
-    "FUTIDX|FINNIFTY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTIDX",
-      "lot_size": 60,
-      "stock_name": "FINNIFTY26OCTFUT",
-      "symbol": "FINNIFTY"
-    },
-    "FUTIDX|FINNIFTY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTIDX",
-      "lot_size": 60,
-      "stock_name": "FINNIFTY26NOVFUT",
-      "symbol": "FINNIFTY"
-    },
-    "FUTIDX|FINNIFTY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTIDX",
-      "lot_size": 60,
-      "stock_name": "FINNIFTY26DECFUT",
-      "symbol": "FINNIFTY"
-    },
-    "FUTIDX|MIDCPNIFTY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTIDX",
-      "lot_size": 120,
-      "stock_name": "MIDCPNIFTY26OCTFUT",
-      "symbol": "MIDCPNIFTY"
-    },
-    "FUTIDX|MIDCPNIFTY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTIDX",
-      "lot_size": 120,
-      "stock_name": "MIDCPNIFTY26NOVFUT",
-      "symbol": "MIDCPNIFTY"
-    },
-    "FUTIDX|MIDCPNIFTY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTIDX",
-      "lot_size": 120,
-      "stock_name": "MIDCPNIFTY26DECFUT",
-      "symbol": "MIDCPNIFTY"
-    },
-    "FUTIDX|NIFTYFPI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTIDX",
-      "lot_size": 1100,
-      "stock_name": "NIFTYFPI26OCTFUT",
-      "symbol": "NIFTYFPI"
-    },
-    "FUTIDX|NIFTYFPI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTIDX",
-      "lot_size": 1100,
-      "stock_name": "NIFTYFPI26NOVFUT",
-      "symbol": "NIFTYFPI"
-    },
-    "FUTIDX|NIFTYFPI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTIDX",
-      "lot_size": 1100,
-      "stock_name": "NIFTYFPI26DECFUT",
-      "symbol": "NIFTYFPI"
-    },
-    "FUTIDX|NIFTYNXT50|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTIDX",
-      "lot_size": 25,
-      "stock_name": "NIFTYNXT5026OCTFUT",
-      "symbol": "NIFTYNXT50"
-    },
-    "FUTIDX|NIFTYNXT50|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTIDX",
-      "lot_size": 25,
-      "stock_name": "NIFTYNXT5026NOVFUT",
-      "symbol": "NIFTYNXT50"
-    },
-    "FUTIDX|NIFTYNXT50|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTIDX",
-      "lot_size": 25,
-      "stock_name": "NIFTYNXT5026DECFUT",
-      "symbol": "NIFTYNXT50"
-    },
-    "FUTIDX|NIFTY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTIDX",
-      "lot_size": 65,
-      "stock_name": "NIFTY26OCTFUT",
-      "symbol": "NIFTY"
-    },
-    "FUTIDX|NIFTY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTIDX",
-      "lot_size": 65,
-      "stock_name": "NIFTY26NOVFUT",
-      "symbol": "NIFTY"
-    },
-    "FUTIDX|NIFTY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTIDX",
-      "lot_size": 65,
-      "stock_name": "NIFTY26DECFUT",
-      "symbol": "NIFTY"
-    },
-    "FUTSTK|011NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "011NSETEST36DECFUT",
-      "symbol": "011NSETEST"
-    },
-    "FUTSTK|021NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "021NSETEST36DECFUT",
-      "symbol": "021NSETEST"
-    },
-    "FUTSTK|031NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "031NSETEST36DECFUT",
-      "symbol": "031NSETEST"
-    },
-    "FUTSTK|041NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "041NSETEST36DECFUT",
-      "symbol": "041NSETEST"
-    },
-    "FUTSTK|051NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "051NSETEST36DECFUT",
-      "symbol": "051NSETEST"
-    },
-    "FUTSTK|061NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "061NSETEST36DECFUT",
-      "symbol": "061NSETEST"
-    },
-    "FUTSTK|071NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "071NSETEST36DECFUT",
-      "symbol": "071NSETEST"
-    },
-    "FUTSTK|081NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "081NSETEST36DECFUT",
-      "symbol": "081NSETEST"
-    },
-    "FUTSTK|091NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "091NSETEST36DECFUT",
-      "symbol": "091NSETEST"
-    },
-    "FUTSTK|101NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "101NSETEST36DECFUT",
-      "symbol": "101NSETEST"
-    },
-    "FUTSTK|111NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "111NSETEST36DECFUT",
-      "symbol": "111NSETEST"
-    },
-    "FUTSTK|121NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "121NSETEST36DECFUT",
-      "symbol": "121NSETEST"
-    },
-    "FUTSTK|131NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "131NSETEST36DECFUT",
-      "symbol": "131NSETEST"
-    },
-    "FUTSTK|141NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "141NSETEST36DECFUT",
-      "symbol": "141NSETEST"
-    },
-    "FUTSTK|151NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "151NSETEST36DECFUT",
-      "symbol": "151NSETEST"
-    },
-    "FUTSTK|161NSETEST|2036-12": {
-      "expiry": "2036-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "161NSETEST36DECFUT",
-      "symbol": "161NSETEST"
-    },
-    "FUTSTK|171NSETEST|2036-11": {
-      "expiry": "2036-11",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "171NSETEST36NOVFUT",
-      "symbol": "171NSETEST"
-    },
-    "FUTSTK|181NSETEST|2036-11": {
-      "expiry": "2036-11",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "181NSETEST36NOVFUT",
-      "symbol": "181NSETEST"
-    },
-    "FUTSTK|360ONE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "360ONE26OCTFUT",
-      "symbol": "360ONE"
-    },
-    "FUTSTK|360ONE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "360ONE26NOVFUT",
-      "symbol": "360ONE"
-    },
-    "FUTSTK|360ONE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "360ONE26DECFUT",
-      "symbol": "360ONE"
-    },
-    "FUTSTK|ABB|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "ABB26OCTFUT",
-      "symbol": "ABB"
-    },
-    "FUTSTK|ABB|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "ABB26NOVFUT",
-      "symbol": "ABB"
-    },
-    "FUTSTK|ABB|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "ABB26DECFUT",
-      "symbol": "ABB"
-    },
-    "FUTSTK|ABCAPITAL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 3100,
-      "stock_name": "ABCAPITAL26OCTFUT",
-      "symbol": "ABCAPITAL"
-    },
-    "FUTSTK|ABCAPITAL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 3100,
-      "stock_name": "ABCAPITAL26NOVFUT",
-      "symbol": "ABCAPITAL"
-    },
-    "FUTSTK|ABCAPITAL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 3100,
-      "stock_name": "ABCAPITAL26DECFUT",
-      "symbol": "ABCAPITAL"
-    },
-    "FUTSTK|ADANIENSOL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 675,
-      "stock_name": "ADANIENSOL26OCTFUT",
-      "symbol": "ADANIENSOL"
-    },
-    "FUTSTK|ADANIENSOL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 675,
-      "stock_name": "ADANIENSOL26NOVFUT",
-      "symbol": "ADANIENSOL"
-    },
-    "FUTSTK|ADANIENSOL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 675,
-      "stock_name": "ADANIENSOL26DECFUT",
-      "symbol": "ADANIENSOL"
-    },
-    "FUTSTK|ADANIENT|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 309,
-      "stock_name": "ADANIENT26OCTFUT",
-      "symbol": "ADANIENT"
-    },
-    "FUTSTK|ADANIENT|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 309,
-      "stock_name": "ADANIENT26NOVFUT",
-      "symbol": "ADANIENT"
-    },
-    "FUTSTK|ADANIENT|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 309,
-      "stock_name": "ADANIENT26DECFUT",
-      "symbol": "ADANIENT"
-    },
-    "FUTSTK|ADANIGREEN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 600,
-      "stock_name": "ADANIGREEN26OCTFUT",
-      "symbol": "ADANIGREEN"
-    },
-    "FUTSTK|ADANIGREEN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 600,
-      "stock_name": "ADANIGREEN26NOVFUT",
-      "symbol": "ADANIGREEN"
-    },
-    "FUTSTK|ADANIGREEN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 600,
-      "stock_name": "ADANIGREEN26DECFUT",
-      "symbol": "ADANIGREEN"
-    },
-    "FUTSTK|ADANIPORTS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "ADANIPORTS26OCTFUT",
-      "symbol": "ADANIPORTS"
-    },
-    "FUTSTK|ADANIPORTS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "ADANIPORTS26NOVFUT",
-      "symbol": "ADANIPORTS"
-    },
-    "FUTSTK|ADANIPORTS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "ADANIPORTS26DECFUT",
-      "symbol": "ADANIPORTS"
-    },
-    "FUTSTK|ADANIPOWER|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 3550,
-      "stock_name": "ADANIPOWER26OCTFUT",
-      "symbol": "ADANIPOWER"
-    },
-    "FUTSTK|ADANIPOWER|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 3550,
-      "stock_name": "ADANIPOWER26NOVFUT",
-      "symbol": "ADANIPOWER"
-    },
-    "FUTSTK|ADANIPOWER|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 3550,
-      "stock_name": "ADANIPOWER26DECFUT",
-      "symbol": "ADANIPOWER"
-    },
-    "FUTSTK|ALKEM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "ALKEM26OCTFUT",
-      "symbol": "ALKEM"
-    },
-    "FUTSTK|ALKEM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "ALKEM26NOVFUT",
-      "symbol": "ALKEM"
-    },
-    "FUTSTK|ALKEM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "ALKEM26DECFUT",
-      "symbol": "ALKEM"
-    },
-    "FUTSTK|AMBER|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "AMBER26OCTFUT",
-      "symbol": "AMBER"
-    },
-    "FUTSTK|AMBER|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "AMBER26NOVFUT",
-      "symbol": "AMBER"
-    },
-    "FUTSTK|AMBER|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "AMBER26DECFUT",
-      "symbol": "AMBER"
-    },
-    "FUTSTK|AMBUJACEM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1200,
-      "stock_name": "AMBUJACEM26OCTFUT",
-      "symbol": "AMBUJACEM"
-    },
-    "FUTSTK|AMBUJACEM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1200,
-      "stock_name": "AMBUJACEM26NOVFUT",
-      "symbol": "AMBUJACEM"
-    },
-    "FUTSTK|AMBUJACEM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1200,
-      "stock_name": "AMBUJACEM26DECFUT",
-      "symbol": "AMBUJACEM"
-    },
-    "FUTSTK|ANANDRATHI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "ANANDRATHI26OCTFUT",
-      "symbol": "ANANDRATHI"
-    },
-    "FUTSTK|ANANDRATHI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "ANANDRATHI26NOVFUT",
-      "symbol": "ANANDRATHI"
-    },
-    "FUTSTK|ANANDRATHI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "ANANDRATHI26DECFUT",
-      "symbol": "ANANDRATHI"
-    },
-    "FUTSTK|ANGELONE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "ANGELONE26OCTFUT",
-      "symbol": "ANGELONE"
-    },
-    "FUTSTK|ANGELONE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "ANGELONE26NOVFUT",
-      "symbol": "ANGELONE"
-    },
-    "FUTSTK|ANGELONE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "ANGELONE26DECFUT",
-      "symbol": "ANGELONE"
-    },
-    "FUTSTK|APLAPOLLO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "APLAPOLLO26OCTFUT",
-      "symbol": "APLAPOLLO"
-    },
-    "FUTSTK|APLAPOLLO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "APLAPOLLO26NOVFUT",
-      "symbol": "APLAPOLLO"
-    },
-    "FUTSTK|APLAPOLLO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "APLAPOLLO26DECFUT",
-      "symbol": "APLAPOLLO"
-    },
-    "FUTSTK|APOLLOHOSP|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "APOLLOHOSP26OCTFUT",
-      "symbol": "APOLLOHOSP"
-    },
-    "FUTSTK|APOLLOHOSP|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "APOLLOHOSP26NOVFUT",
-      "symbol": "APOLLOHOSP"
-    },
-    "FUTSTK|APOLLOHOSP|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "APOLLOHOSP26DECFUT",
-      "symbol": "APOLLOHOSP"
-    },
-    "FUTSTK|ASHOKLEY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 5000,
-      "stock_name": "ASHOKLEY26OCTFUT",
-      "symbol": "ASHOKLEY"
-    },
-    "FUTSTK|ASHOKLEY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 5000,
-      "stock_name": "ASHOKLEY26NOVFUT",
-      "symbol": "ASHOKLEY"
-    },
-    "FUTSTK|ASHOKLEY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 5000,
-      "stock_name": "ASHOKLEY26DECFUT",
-      "symbol": "ASHOKLEY"
-    },
-    "FUTSTK|ASIANPAINT|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "ASIANPAINT26OCTFUT",
-      "symbol": "ASIANPAINT"
-    },
-    "FUTSTK|ASIANPAINT|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "ASIANPAINT26NOVFUT",
-      "symbol": "ASIANPAINT"
-    },
-    "FUTSTK|ASIANPAINT|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "ASIANPAINT26DECFUT",
-      "symbol": "ASIANPAINT"
-    },
-    "FUTSTK|ASTRAL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "ASTRAL26OCTFUT",
-      "symbol": "ASTRAL"
-    },
-    "FUTSTK|ASTRAL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "ASTRAL26NOVFUT",
-      "symbol": "ASTRAL"
-    },
-    "FUTSTK|ASTRAL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "ASTRAL26DECFUT",
-      "symbol": "ASTRAL"
-    },
-    "FUTSTK|ATHERENERG|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "ATHERENERG26OCTFUT",
-      "symbol": "ATHERENERG"
-    },
-    "FUTSTK|ATHERENERG|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "ATHERENERG26NOVFUT",
-      "symbol": "ATHERENERG"
-    },
-    "FUTSTK|ATHERENERG|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "ATHERENERG26DECFUT",
-      "symbol": "ATHERENERG"
-    },
-    "FUTSTK|AUBANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "AUBANK26OCTFUT",
-      "symbol": "AUBANK"
-    },
-    "FUTSTK|AUBANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "AUBANK26NOVFUT",
-      "symbol": "AUBANK"
-    },
-    "FUTSTK|AUBANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "AUBANK26DECFUT",
-      "symbol": "AUBANK"
-    },
-    "FUTSTK|AUROPHARMA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "AUROPHARMA26OCTFUT",
-      "symbol": "AUROPHARMA"
-    },
-    "FUTSTK|AUROPHARMA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "AUROPHARMA26NOVFUT",
-      "symbol": "AUROPHARMA"
-    },
-    "FUTSTK|AUROPHARMA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "AUROPHARMA26DECFUT",
-      "symbol": "AUROPHARMA"
-    },
-    "FUTSTK|AXISBANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "AXISBANK26OCTFUT",
-      "symbol": "AXISBANK"
-    },
-    "FUTSTK|AXISBANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "AXISBANK26NOVFUT",
-      "symbol": "AXISBANK"
-    },
-    "FUTSTK|AXISBANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "AXISBANK26DECFUT",
-      "symbol": "AXISBANK"
-    },
-    "FUTSTK|BAJAJ-AUTO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 75,
-      "stock_name": "BAJAJ-AUTO26OCTFUT",
-      "symbol": "BAJAJ-AUTO"
-    },
-    "FUTSTK|BAJAJ-AUTO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 75,
-      "stock_name": "BAJAJ-AUTO26NOVFUT",
-      "symbol": "BAJAJ-AUTO"
-    },
-    "FUTSTK|BAJAJ-AUTO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 75,
-      "stock_name": "BAJAJ-AUTO26DECFUT",
-      "symbol": "BAJAJ-AUTO"
-    },
-    "FUTSTK|BAJAJFINSV|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "BAJAJFINSV26OCTFUT",
-      "symbol": "BAJAJFINSV"
-    },
-    "FUTSTK|BAJAJFINSV|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "BAJAJFINSV26NOVFUT",
-      "symbol": "BAJAJFINSV"
-    },
-    "FUTSTK|BAJAJFINSV|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "BAJAJFINSV26DECFUT",
-      "symbol": "BAJAJFINSV"
-    },
-    "FUTSTK|BAJAJHLDNG|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 75,
-      "stock_name": "BAJAJHLDNG26OCTFUT",
-      "symbol": "BAJAJHLDNG"
-    },
-    "FUTSTK|BAJFINANCE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 750,
-      "stock_name": "BAJFINANCE26OCTFUT",
-      "symbol": "BAJFINANCE"
-    },
-    "FUTSTK|BAJFINANCE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 750,
-      "stock_name": "BAJFINANCE26NOVFUT",
-      "symbol": "BAJFINANCE"
-    },
-    "FUTSTK|BAJFINANCE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 750,
-      "stock_name": "BAJFINANCE26DECFUT",
-      "symbol": "BAJFINANCE"
-    },
-    "FUTSTK|BANDHANBNK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 3600,
-      "stock_name": "BANDHANBNK26OCTFUT",
-      "symbol": "BANDHANBNK"
-    },
-    "FUTSTK|BANDHANBNK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 3600,
-      "stock_name": "BANDHANBNK26NOVFUT",
-      "symbol": "BANDHANBNK"
-    },
-    "FUTSTK|BANDHANBNK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 3600,
-      "stock_name": "BANDHANBNK26DECFUT",
-      "symbol": "BANDHANBNK"
-    },
-    "FUTSTK|BANKBARODA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2925,
-      "stock_name": "BANKBARODA26OCTFUT",
-      "symbol": "BANKBARODA"
-    },
-    "FUTSTK|BANKBARODA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2925,
-      "stock_name": "BANKBARODA26NOVFUT",
-      "symbol": "BANKBARODA"
-    },
-    "FUTSTK|BANKBARODA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2925,
-      "stock_name": "BANKBARODA26DECFUT",
-      "symbol": "BANKBARODA"
-    },
-    "FUTSTK|BANKINDIA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 5200,
-      "stock_name": "BANKINDIA26OCTFUT",
-      "symbol": "BANKINDIA"
-    },
-    "FUTSTK|BANKINDIA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 5200,
-      "stock_name": "BANKINDIA26NOVFUT",
-      "symbol": "BANKINDIA"
-    },
-    "FUTSTK|BANKINDIA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 5200,
-      "stock_name": "BANKINDIA26DECFUT",
-      "symbol": "BANKINDIA"
-    },
-    "FUTSTK|BDL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "BDL26OCTFUT",
-      "symbol": "BDL"
-    },
-    "FUTSTK|BDL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "BDL26NOVFUT",
-      "symbol": "BDL"
-    },
-    "FUTSTK|BDL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "BDL26DECFUT",
-      "symbol": "BDL"
-    },
-    "FUTSTK|BEL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1425,
-      "stock_name": "BEL26OCTFUT",
-      "symbol": "BEL"
-    },
-    "FUTSTK|BEL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1425,
-      "stock_name": "BEL26NOVFUT",
-      "symbol": "BEL"
-    },
-    "FUTSTK|BEL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1425,
-      "stock_name": "BEL26DECFUT",
-      "symbol": "BEL"
-    },
-    "FUTSTK|BHARATFORG|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "BHARATFORG26OCTFUT",
-      "symbol": "BHARATFORG"
-    },
-    "FUTSTK|BHARATFORG|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "BHARATFORG26NOVFUT",
-      "symbol": "BHARATFORG"
-    },
-    "FUTSTK|BHARATFORG|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "BHARATFORG26DECFUT",
-      "symbol": "BHARATFORG"
-    },
-    "FUTSTK|BHARTIARTL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "BHARTIARTL26OCTFUT",
-      "symbol": "BHARTIARTL"
-    },
-    "FUTSTK|BHARTIARTL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "BHARTIARTL26NOVFUT",
-      "symbol": "BHARTIARTL"
-    },
-    "FUTSTK|BHARTIARTL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "BHARTIARTL26DECFUT",
-      "symbol": "BHARTIARTL"
-    },
-    "FUTSTK|BHEL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2625,
-      "stock_name": "BHEL26OCTFUT",
-      "symbol": "BHEL"
-    },
-    "FUTSTK|BHEL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2625,
-      "stock_name": "BHEL26NOVFUT",
-      "symbol": "BHEL"
-    },
-    "FUTSTK|BHEL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2625,
-      "stock_name": "BHEL26DECFUT",
-      "symbol": "BHEL"
-    },
-    "FUTSTK|BIOCON|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "BIOCON26OCTFUT",
-      "symbol": "BIOCON"
-    },
-    "FUTSTK|BIOCON|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "BIOCON26NOVFUT",
-      "symbol": "BIOCON"
-    },
-    "FUTSTK|BIOCON|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "BIOCON26DECFUT",
-      "symbol": "BIOCON"
-    },
-    "FUTSTK|BLUESTARCO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "BLUESTARCO26OCTFUT",
-      "symbol": "BLUESTARCO"
-    },
-    "FUTSTK|BLUESTARCO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "BLUESTARCO26NOVFUT",
-      "symbol": "BLUESTARCO"
-    },
-    "FUTSTK|BLUESTARCO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "BLUESTARCO26DECFUT",
-      "symbol": "BLUESTARCO"
-    },
-    "FUTSTK|BOSCHLTD|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "BOSCHLTD26OCTFUT",
-      "symbol": "BOSCHLTD"
-    },
-    "FUTSTK|BOSCHLTD|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "BOSCHLTD26NOVFUT",
-      "symbol": "BOSCHLTD"
-    },
-    "FUTSTK|BOSCHLTD|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "BOSCHLTD26DECFUT",
-      "symbol": "BOSCHLTD"
-    },
-    "FUTSTK|BPCL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1975,
-      "stock_name": "BPCL26OCTFUT",
-      "symbol": "BPCL"
-    },
-    "FUTSTK|BPCL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1975,
-      "stock_name": "BPCL26NOVFUT",
-      "symbol": "BPCL"
-    },
-    "FUTSTK|BPCL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1975,
-      "stock_name": "BPCL26DECFUT",
-      "symbol": "BPCL"
-    },
-    "FUTSTK|BRITANNIA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "BRITANNIA26OCTFUT",
-      "symbol": "BRITANNIA"
-    },
-    "FUTSTK|BRITANNIA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "BRITANNIA26NOVFUT",
-      "symbol": "BRITANNIA"
-    },
-    "FUTSTK|BRITANNIA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "BRITANNIA26DECFUT",
-      "symbol": "BRITANNIA"
-    },
-    "FUTSTK|BSE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "BSE26OCTFUT",
-      "symbol": "BSE"
-    },
-    "FUTSTK|BSE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "BSE26NOVFUT",
-      "symbol": "BSE"
-    },
-    "FUTSTK|BSE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "BSE26DECFUT",
-      "symbol": "BSE"
-    },
-    "FUTSTK|CAMS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 825,
-      "stock_name": "CAMS26OCTFUT",
-      "symbol": "CAMS"
-    },
-    "FUTSTK|CAMS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 825,
-      "stock_name": "CAMS26NOVFUT",
-      "symbol": "CAMS"
-    },
-    "FUTSTK|CAMS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 825,
-      "stock_name": "CAMS26DECFUT",
-      "symbol": "CAMS"
-    },
-    "FUTSTK|CANBK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 6750,
-      "stock_name": "CANBK26OCTFUT",
-      "symbol": "CANBK"
-    },
-    "FUTSTK|CANBK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 6750,
-      "stock_name": "CANBK26NOVFUT",
-      "symbol": "CANBK"
-    },
-    "FUTSTK|CANBK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 6750,
-      "stock_name": "CANBK26DECFUT",
-      "symbol": "CANBK"
-    },
-    "FUTSTK|CDSL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "CDSL26OCTFUT",
-      "symbol": "CDSL"
-    },
-    "FUTSTK|CDSL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "CDSL26NOVFUT",
-      "symbol": "CDSL"
-    },
-    "FUTSTK|CDSL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "CDSL26DECFUT",
-      "symbol": "CDSL"
-    },
-    "FUTSTK|CGPOWER|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 850,
-      "stock_name": "CGPOWER26OCTFUT",
-      "symbol": "CGPOWER"
-    },
-    "FUTSTK|CGPOWER|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 850,
-      "stock_name": "CGPOWER26NOVFUT",
-      "symbol": "CGPOWER"
-    },
-    "FUTSTK|CGPOWER|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 850,
-      "stock_name": "CGPOWER26DECFUT",
-      "symbol": "CGPOWER"
-    },
-    "FUTSTK|CHOLAFIN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "CHOLAFIN26OCTFUT",
-      "symbol": "CHOLAFIN"
-    },
-    "FUTSTK|CHOLAFIN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "CHOLAFIN26NOVFUT",
-      "symbol": "CHOLAFIN"
-    },
-    "FUTSTK|CHOLAFIN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "CHOLAFIN26DECFUT",
-      "symbol": "CHOLAFIN"
-    },
-    "FUTSTK|CIPLA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "CIPLA26OCTFUT",
-      "symbol": "CIPLA"
-    },
-    "FUTSTK|CIPLA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "CIPLA26NOVFUT",
-      "symbol": "CIPLA"
-    },
-    "FUTSTK|CIPLA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "CIPLA26DECFUT",
-      "symbol": "CIPLA"
-    },
-    "FUTSTK|COALINDIA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1350,
-      "stock_name": "COALINDIA26OCTFUT",
-      "symbol": "COALINDIA"
-    },
-    "FUTSTK|COALINDIA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1350,
-      "stock_name": "COALINDIA26NOVFUT",
-      "symbol": "COALINDIA"
-    },
-    "FUTSTK|COALINDIA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1350,
-      "stock_name": "COALINDIA26DECFUT",
-      "symbol": "COALINDIA"
-    },
-    "FUTSTK|COCHINSHIP|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "COCHINSHIP26OCTFUT",
-      "symbol": "COCHINSHIP"
-    },
-    "FUTSTK|COCHINSHIP|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "COCHINSHIP26NOVFUT",
-      "symbol": "COCHINSHIP"
-    },
-    "FUTSTK|COCHINSHIP|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "COCHINSHIP26DECFUT",
-      "symbol": "COCHINSHIP"
-    },
-    "FUTSTK|COFORGE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "COFORGE26OCTFUT",
-      "symbol": "COFORGE"
-    },
-    "FUTSTK|COFORGE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "COFORGE26NOVFUT",
-      "symbol": "COFORGE"
-    },
-    "FUTSTK|COFORGE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 475,
-      "stock_name": "COFORGE26DECFUT",
-      "symbol": "COFORGE"
-    },
-    "FUTSTK|COLPAL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "COLPAL26OCTFUT",
-      "symbol": "COLPAL"
-    },
-    "FUTSTK|COLPAL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "COLPAL26NOVFUT",
-      "symbol": "COLPAL"
-    },
-    "FUTSTK|COLPAL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "COLPAL26DECFUT",
-      "symbol": "COLPAL"
-    },
-    "FUTSTK|CONCOR|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "CONCOR26OCTFUT",
-      "symbol": "CONCOR"
-    },
-    "FUTSTK|CONCOR|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "CONCOR26NOVFUT",
-      "symbol": "CONCOR"
-    },
-    "FUTSTK|CONCOR|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "CONCOR26DECFUT",
-      "symbol": "CONCOR"
-    },
-    "FUTSTK|CROMPTON|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2150,
-      "stock_name": "CROMPTON26OCTFUT",
-      "symbol": "CROMPTON"
-    },
-    "FUTSTK|CROMPTON|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2150,
-      "stock_name": "CROMPTON26NOVFUT",
-      "symbol": "CROMPTON"
-    },
-    "FUTSTK|CROMPTON|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2150,
-      "stock_name": "CROMPTON26DECFUT",
-      "symbol": "CROMPTON"
-    },
-    "FUTSTK|CUMMINSIND|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "CUMMINSIND26OCTFUT",
-      "symbol": "CUMMINSIND"
-    },
-    "FUTSTK|CUMMINSIND|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "CUMMINSIND26NOVFUT",
-      "symbol": "CUMMINSIND"
-    },
-    "FUTSTK|CUMMINSIND|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "CUMMINSIND26DECFUT",
-      "symbol": "CUMMINSIND"
-    },
-    "FUTSTK|DABUR|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "DABUR26OCTFUT",
-      "symbol": "DABUR"
-    },
-    "FUTSTK|DABUR|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "DABUR26NOVFUT",
-      "symbol": "DABUR"
-    },
-    "FUTSTK|DABUR|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "DABUR26DECFUT",
-      "symbol": "DABUR"
-    },
-    "FUTSTK|DELHIVERY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2075,
-      "stock_name": "DELHIVERY26OCTFUT",
-      "symbol": "DELHIVERY"
-    },
-    "FUTSTK|DELHIVERY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2075,
-      "stock_name": "DELHIVERY26NOVFUT",
-      "symbol": "DELHIVERY"
-    },
-    "FUTSTK|DELHIVERY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2075,
-      "stock_name": "DELHIVERY26DECFUT",
-      "symbol": "DELHIVERY"
-    },
-    "FUTSTK|DIVISLAB|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "DIVISLAB26OCTFUT",
-      "symbol": "DIVISLAB"
-    },
-    "FUTSTK|DIVISLAB|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "DIVISLAB26NOVFUT",
-      "symbol": "DIVISLAB"
-    },
-    "FUTSTK|DIVISLAB|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "DIVISLAB26DECFUT",
-      "symbol": "DIVISLAB"
-    },
-    "FUTSTK|DIXON|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "DIXON26OCTFUT",
-      "symbol": "DIXON"
-    },
-    "FUTSTK|DIXON|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "DIXON26NOVFUT",
-      "symbol": "DIXON"
-    },
-    "FUTSTK|DIXON|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "DIXON26DECFUT",
-      "symbol": "DIXON"
-    },
-    "FUTSTK|DLF|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 950,
-      "stock_name": "DLF26OCTFUT",
-      "symbol": "DLF"
-    },
-    "FUTSTK|DLF|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 950,
-      "stock_name": "DLF26NOVFUT",
-      "symbol": "DLF"
-    },
-    "FUTSTK|DLF|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 950,
-      "stock_name": "DLF26DECFUT",
-      "symbol": "DLF"
-    },
-    "FUTSTK|DMART|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "DMART26OCTFUT",
-      "symbol": "DMART"
-    },
-    "FUTSTK|DMART|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "DMART26NOVFUT",
-      "symbol": "DMART"
-    },
-    "FUTSTK|DMART|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "DMART26DECFUT",
-      "symbol": "DMART"
-    },
-    "FUTSTK|DRREDDY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "DRREDDY26OCTFUT",
-      "symbol": "DRREDDY"
-    },
-    "FUTSTK|DRREDDY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "DRREDDY26NOVFUT",
-      "symbol": "DRREDDY"
-    },
-    "FUTSTK|DRREDDY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "DRREDDY26DECFUT",
-      "symbol": "DRREDDY"
-    },
-    "FUTSTK|EICHERMOT|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "EICHERMOT26OCTFUT",
-      "symbol": "EICHERMOT"
-    },
-    "FUTSTK|EICHERMOT|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "EICHERMOT26NOVFUT",
-      "symbol": "EICHERMOT"
-    },
-    "FUTSTK|EICHERMOT|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "EICHERMOT26DECFUT",
-      "symbol": "EICHERMOT"
-    },
-    "FUTSTK|ENRIN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "ENRIN26OCTFUT",
-      "symbol": "ENRIN"
-    },
-    "FUTSTK|ENRIN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "ENRIN26NOVFUT",
-      "symbol": "ENRIN"
-    },
-    "FUTSTK|ENRIN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "ENRIN26DECFUT",
-      "symbol": "ENRIN"
-    },
-    "FUTSTK|ETERNAL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2425,
-      "stock_name": "ETERNAL26OCTFUT",
-      "symbol": "ETERNAL"
-    },
-    "FUTSTK|ETERNAL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2425,
-      "stock_name": "ETERNAL26NOVFUT",
-      "symbol": "ETERNAL"
-    },
-    "FUTSTK|ETERNAL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2425,
-      "stock_name": "ETERNAL26DECFUT",
-      "symbol": "ETERNAL"
-    },
-    "FUTSTK|FEDERALBNK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "FEDERALBNK26OCTFUT",
-      "symbol": "FEDERALBNK"
-    },
-    "FUTSTK|FEDERALBNK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "FEDERALBNK26NOVFUT",
-      "symbol": "FEDERALBNK"
-    },
-    "FUTSTK|FEDERALBNK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2500,
-      "stock_name": "FEDERALBNK26DECFUT",
-      "symbol": "FEDERALBNK"
-    },
-    "FUTSTK|FORCEMOT|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "FORCEMOT26OCTFUT",
-      "symbol": "FORCEMOT"
-    },
-    "FUTSTK|FORCEMOT|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "FORCEMOT26NOVFUT",
-      "symbol": "FORCEMOT"
-    },
-    "FUTSTK|FORCEMOT|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "FORCEMOT26DECFUT",
-      "symbol": "FORCEMOT"
-    },
-    "FUTSTK|FORTIS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "FORTIS26OCTFUT",
-      "symbol": "FORTIS"
-    },
-    "FUTSTK|FORTIS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "FORTIS26NOVFUT",
-      "symbol": "FORTIS"
-    },
-    "FUTSTK|FORTIS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "FORTIS26DECFUT",
-      "symbol": "FORTIS"
-    },
-    "FUTSTK|GAIL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 3550,
-      "stock_name": "GAIL26OCTFUT",
-      "symbol": "GAIL"
-    },
-    "FUTSTK|GAIL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 3550,
-      "stock_name": "GAIL26NOVFUT",
-      "symbol": "GAIL"
-    },
-    "FUTSTK|GAIL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 3550,
-      "stock_name": "GAIL26DECFUT",
-      "symbol": "GAIL"
-    },
-    "FUTSTK|GLENMARK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "GLENMARK26OCTFUT",
-      "symbol": "GLENMARK"
-    },
-    "FUTSTK|GLENMARK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "GLENMARK26NOVFUT",
-      "symbol": "GLENMARK"
-    },
-    "FUTSTK|GLENMARK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "GLENMARK26DECFUT",
-      "symbol": "GLENMARK"
-    },
-    "FUTSTK|GMRAIRPORT|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 6975,
-      "stock_name": "GMRAIRPORT26OCTFUT",
-      "symbol": "GMRAIRPORT"
-    },
-    "FUTSTK|GMRAIRPORT|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 6975,
-      "stock_name": "GMRAIRPORT26NOVFUT",
-      "symbol": "GMRAIRPORT"
-    },
-    "FUTSTK|GMRAIRPORT|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 6975,
-      "stock_name": "GMRAIRPORT26DECFUT",
-      "symbol": "GMRAIRPORT"
-    },
-    "FUTSTK|GODFRYPHLP|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "GODFRYPHLP26OCTFUT",
-      "symbol": "GODFRYPHLP"
-    },
-    "FUTSTK|GODFRYPHLP|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "GODFRYPHLP26NOVFUT",
-      "symbol": "GODFRYPHLP"
-    },
-    "FUTSTK|GODFRYPHLP|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "GODFRYPHLP26DECFUT",
-      "symbol": "GODFRYPHLP"
-    },
-    "FUTSTK|GODREJCP|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "GODREJCP26OCTFUT",
-      "symbol": "GODREJCP"
-    },
-    "FUTSTK|GODREJCP|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "GODREJCP26NOVFUT",
-      "symbol": "GODREJCP"
-    },
-    "FUTSTK|GODREJCP|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "GODREJCP26DECFUT",
-      "symbol": "GODREJCP"
-    },
-    "FUTSTK|GODREJPROP|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "GODREJPROP26OCTFUT",
-      "symbol": "GODREJPROP"
-    },
-    "FUTSTK|GODREJPROP|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "GODREJPROP26NOVFUT",
-      "symbol": "GODREJPROP"
-    },
-    "FUTSTK|GODREJPROP|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "GODREJPROP26DECFUT",
-      "symbol": "GODREJPROP"
-    },
-    "FUTSTK|GRASIM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "GRASIM26OCTFUT",
-      "symbol": "GRASIM"
-    },
-    "FUTSTK|GRASIM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "GRASIM26NOVFUT",
-      "symbol": "GRASIM"
-    },
-    "FUTSTK|GRASIM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "GRASIM26DECFUT",
-      "symbol": "GRASIM"
-    },
-    "FUTSTK|GVT&D|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "GVT&D26OCTFUT",
-      "symbol": "GVT&D"
-    },
-    "FUTSTK|GVT&D|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "GVT&D26NOVFUT",
-      "symbol": "GVT&D"
-    },
-    "FUTSTK|GVT&D|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "GVT&D26DECFUT",
-      "symbol": "GVT&D"
-    },
-    "FUTSTK|HAL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "HAL26OCTFUT",
-      "symbol": "HAL"
-    },
-    "FUTSTK|HAL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "HAL26NOVFUT",
-      "symbol": "HAL"
-    },
-    "FUTSTK|HAL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "HAL26DECFUT",
-      "symbol": "HAL"
-    },
-    "FUTSTK|HAVELLS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "HAVELLS26OCTFUT",
-      "symbol": "HAVELLS"
-    },
-    "FUTSTK|HAVELLS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "HAVELLS26NOVFUT",
-      "symbol": "HAVELLS"
-    },
-    "FUTSTK|HAVELLS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "HAVELLS26DECFUT",
-      "symbol": "HAVELLS"
-    },
-    "FUTSTK|HCLTECH|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "HCLTECH26OCTFUT",
-      "symbol": "HCLTECH"
-    },
-    "FUTSTK|HCLTECH|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "HCLTECH26NOVFUT",
-      "symbol": "HCLTECH"
-    },
-    "FUTSTK|HCLTECH|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "HCLTECH26DECFUT",
-      "symbol": "HCLTECH"
-    },
-    "FUTSTK|HDFCAMC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "HDFCAMC26OCTFUT",
-      "symbol": "HDFCAMC"
-    },
-    "FUTSTK|HDFCAMC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "HDFCAMC26NOVFUT",
-      "symbol": "HDFCAMC"
-    },
-    "FUTSTK|HDFCAMC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "HDFCAMC26DECFUT",
-      "symbol": "HDFCAMC"
-    },
-    "FUTSTK|HDFCBANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "HDFCBANK26OCTFUT",
-      "symbol": "HDFCBANK"
-    },
-    "FUTSTK|HDFCBANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "HDFCBANK26NOVFUT",
-      "symbol": "HDFCBANK"
-    },
-    "FUTSTK|HDFCBANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "HDFCBANK26DECFUT",
-      "symbol": "HDFCBANK"
-    },
-    "FUTSTK|HDFCLIFE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1100,
-      "stock_name": "HDFCLIFE26OCTFUT",
-      "symbol": "HDFCLIFE"
-    },
-    "FUTSTK|HDFCLIFE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1100,
-      "stock_name": "HDFCLIFE26NOVFUT",
-      "symbol": "HDFCLIFE"
-    },
-    "FUTSTK|HDFCLIFE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1100,
-      "stock_name": "HDFCLIFE26DECFUT",
-      "symbol": "HDFCLIFE"
-    },
-    "FUTSTK|HEROMOTOCO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "HEROMOTOCO26OCTFUT",
-      "symbol": "HEROMOTOCO"
-    },
-    "FUTSTK|HEROMOTOCO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "HEROMOTOCO26NOVFUT",
-      "symbol": "HEROMOTOCO"
-    },
-    "FUTSTK|HEROMOTOCO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "HEROMOTOCO26DECFUT",
-      "symbol": "HEROMOTOCO"
-    },
-    "FUTSTK|HINDALCO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "HINDALCO26OCTFUT",
-      "symbol": "HINDALCO"
-    },
-    "FUTSTK|HINDALCO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "HINDALCO26NOVFUT",
-      "symbol": "HINDALCO"
-    },
-    "FUTSTK|HINDALCO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "HINDALCO26DECFUT",
-      "symbol": "HINDALCO"
-    },
-    "FUTSTK|HINDPETRO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2025,
-      "stock_name": "HINDPETRO26OCTFUT",
-      "symbol": "HINDPETRO"
-    },
-    "FUTSTK|HINDPETRO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2025,
-      "stock_name": "HINDPETRO26NOVFUT",
-      "symbol": "HINDPETRO"
-    },
-    "FUTSTK|HINDPETRO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2025,
-      "stock_name": "HINDPETRO26DECFUT",
-      "symbol": "HINDPETRO"
-    },
-    "FUTSTK|HINDUNILVR|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "HINDUNILVR26OCTFUT",
-      "symbol": "HINDUNILVR"
-    },
-    "FUTSTK|HINDUNILVR|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "HINDUNILVR26NOVFUT",
-      "symbol": "HINDUNILVR"
-    },
-    "FUTSTK|HINDUNILVR|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 300,
-      "stock_name": "HINDUNILVR26DECFUT",
-      "symbol": "HINDUNILVR"
-    },
-    "FUTSTK|HINDZINC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1225,
-      "stock_name": "HINDZINC26OCTFUT",
-      "symbol": "HINDZINC"
-    },
-    "FUTSTK|HINDZINC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1225,
-      "stock_name": "HINDZINC26NOVFUT",
-      "symbol": "HINDZINC"
-    },
-    "FUTSTK|HINDZINC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1225,
-      "stock_name": "HINDZINC26DECFUT",
-      "symbol": "HINDZINC"
-    },
-    "FUTSTK|HYUNDAI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "HYUNDAI26OCTFUT",
-      "symbol": "HYUNDAI"
-    },
-    "FUTSTK|HYUNDAI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "HYUNDAI26NOVFUT",
-      "symbol": "HYUNDAI"
-    },
-    "FUTSTK|HYUNDAI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "HYUNDAI26DECFUT",
-      "symbol": "HYUNDAI"
-    },
-    "FUTSTK|ICICIBANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "ICICIBANK26OCTFUT",
-      "symbol": "ICICIBANK"
-    },
-    "FUTSTK|ICICIBANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "ICICIBANK26NOVFUT",
-      "symbol": "ICICIBANK"
-    },
-    "FUTSTK|ICICIBANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "ICICIBANK26DECFUT",
-      "symbol": "ICICIBANK"
-    },
-    "FUTSTK|ICICIGI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "ICICIGI26OCTFUT",
-      "symbol": "ICICIGI"
-    },
-    "FUTSTK|ICICIGI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "ICICIGI26NOVFUT",
-      "symbol": "ICICIGI"
-    },
-    "FUTSTK|ICICIGI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 325,
-      "stock_name": "ICICIGI26DECFUT",
-      "symbol": "ICICIGI"
-    },
-    "FUTSTK|ICICIPRULI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 925,
-      "stock_name": "ICICIPRULI26OCTFUT",
-      "symbol": "ICICIPRULI"
-    },
-    "FUTSTK|ICICIPRULI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 925,
-      "stock_name": "ICICIPRULI26NOVFUT",
-      "symbol": "ICICIPRULI"
-    },
-    "FUTSTK|ICICIPRULI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 925,
-      "stock_name": "ICICIPRULI26DECFUT",
-      "symbol": "ICICIPRULI"
-    },
-    "FUTSTK|IDEA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 71475,
-      "stock_name": "IDEA26OCTFUT",
-      "symbol": "IDEA"
-    },
-    "FUTSTK|IDEA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 71475,
-      "stock_name": "IDEA26NOVFUT",
-      "symbol": "IDEA"
-    },
-    "FUTSTK|IDEA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 71475,
-      "stock_name": "IDEA26DECFUT",
-      "symbol": "IDEA"
-    },
-    "FUTSTK|IDFCFIRSTB|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 9275,
-      "stock_name": "IDFCFIRSTB26OCTFUT",
-      "symbol": "IDFCFIRSTB"
-    },
-    "FUTSTK|IDFCFIRSTB|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 9275,
-      "stock_name": "IDFCFIRSTB26NOVFUT",
-      "symbol": "IDFCFIRSTB"
-    },
-    "FUTSTK|IDFCFIRSTB|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 9275,
-      "stock_name": "IDFCFIRSTB26DECFUT",
-      "symbol": "IDFCFIRSTB"
-    },
-    "FUTSTK|IEX|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 4350,
-      "stock_name": "IEX26OCTFUT",
-      "symbol": "IEX"
-    },
-    "FUTSTK|IEX|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 4350,
-      "stock_name": "IEX26NOVFUT",
-      "symbol": "IEX"
-    },
-    "FUTSTK|INDHOTEL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "INDHOTEL26OCTFUT",
-      "symbol": "INDHOTEL"
-    },
-    "FUTSTK|INDHOTEL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "INDHOTEL26NOVFUT",
-      "symbol": "INDHOTEL"
-    },
-    "FUTSTK|INDHOTEL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "INDHOTEL26DECFUT",
-      "symbol": "INDHOTEL"
-    },
-    "FUTSTK|INDIANB|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "INDIANB26OCTFUT",
-      "symbol": "INDIANB"
-    },
-    "FUTSTK|INDIANB|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "INDIANB26NOVFUT",
-      "symbol": "INDIANB"
-    },
-    "FUTSTK|INDIANB|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "INDIANB26DECFUT",
-      "symbol": "INDIANB"
-    },
-    "FUTSTK|INDIGO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "INDIGO26OCTFUT",
-      "symbol": "INDIGO"
-    },
-    "FUTSTK|INDIGO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "INDIGO26NOVFUT",
-      "symbol": "INDIGO"
-    },
-    "FUTSTK|INDIGO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "INDIGO26DECFUT",
-      "symbol": "INDIGO"
-    },
-    "FUTSTK|INDUSINDBK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "INDUSINDBK26OCTFUT",
-      "symbol": "INDUSINDBK"
-    },
-    "FUTSTK|INDUSINDBK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "INDUSINDBK26NOVFUT",
-      "symbol": "INDUSINDBK"
-    },
-    "FUTSTK|INDUSINDBK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 700,
-      "stock_name": "INDUSINDBK26DECFUT",
-      "symbol": "INDUSINDBK"
-    },
-    "FUTSTK|INDUSTOWER|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1700,
-      "stock_name": "INDUSTOWER26OCTFUT",
-      "symbol": "INDUSTOWER"
-    },
-    "FUTSTK|INDUSTOWER|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1700,
-      "stock_name": "INDUSTOWER26NOVFUT",
-      "symbol": "INDUSTOWER"
-    },
-    "FUTSTK|INDUSTOWER|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1700,
-      "stock_name": "INDUSTOWER26DECFUT",
-      "symbol": "INDUSTOWER"
-    },
-    "FUTSTK|INFY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "INFY26OCTFUT",
-      "symbol": "INFY"
-    },
-    "FUTSTK|INFY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "INFY26NOVFUT",
-      "symbol": "INFY"
-    },
-    "FUTSTK|INFY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "INFY26DECFUT",
-      "symbol": "INFY"
-    },
-    "FUTSTK|INOXWIND|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 6400,
-      "stock_name": "INOXWIND26OCTFUT",
-      "symbol": "INOXWIND"
-    },
-    "FUTSTK|INOXWIND|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 6400,
-      "stock_name": "INOXWIND26NOVFUT",
-      "symbol": "INOXWIND"
-    },
-    "FUTSTK|INOXWIND|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 6400,
-      "stock_name": "INOXWIND26DECFUT",
-      "symbol": "INOXWIND"
-    },
-    "FUTSTK|IOC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 4875,
-      "stock_name": "IOC26OCTFUT",
-      "symbol": "IOC"
-    },
-    "FUTSTK|IOC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 4875,
-      "stock_name": "IOC26NOVFUT",
-      "symbol": "IOC"
-    },
-    "FUTSTK|IOC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 4875,
-      "stock_name": "IOC26DECFUT",
-      "symbol": "IOC"
-    },
-    "FUTSTK|IREDA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 4525,
-      "stock_name": "IREDA26OCTFUT",
-      "symbol": "IREDA"
-    },
-    "FUTSTK|IREDA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 4525,
-      "stock_name": "IREDA26NOVFUT",
-      "symbol": "IREDA"
-    },
-    "FUTSTK|IRFC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 5425,
-      "stock_name": "IRFC26OCTFUT",
-      "symbol": "IRFC"
-    },
-    "FUTSTK|IRFC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 5425,
-      "stock_name": "IRFC26NOVFUT",
-      "symbol": "IRFC"
-    },
-    "FUTSTK|IRFC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 5425,
-      "stock_name": "IRFC26DECFUT",
-      "symbol": "IRFC"
-    },
-    "FUTSTK|ITC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1725,
-      "stock_name": "ITC26OCTFUT",
-      "symbol": "ITC"
-    },
-    "FUTSTK|ITC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1725,
-      "stock_name": "ITC26NOVFUT",
-      "symbol": "ITC"
-    },
-    "FUTSTK|ITC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1725,
-      "stock_name": "ITC26DECFUT",
-      "symbol": "ITC"
-    },
-    "FUTSTK|JINDALSTEL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "JINDALSTEL26OCTFUT",
-      "symbol": "JINDALSTEL"
-    },
-    "FUTSTK|JINDALSTEL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "JINDALSTEL26NOVFUT",
-      "symbol": "JINDALSTEL"
-    },
-    "FUTSTK|JINDALSTEL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "JINDALSTEL26DECFUT",
-      "symbol": "JINDALSTEL"
-    },
-    "FUTSTK|JIOFIN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2350,
-      "stock_name": "JIOFIN26OCTFUT",
-      "symbol": "JIOFIN"
-    },
-    "FUTSTK|JIOFIN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2350,
-      "stock_name": "JIOFIN26NOVFUT",
-      "symbol": "JIOFIN"
-    },
-    "FUTSTK|JIOFIN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2350,
-      "stock_name": "JIOFIN26DECFUT",
-      "symbol": "JIOFIN"
-    },
-    "FUTSTK|JSWENERGY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1075,
-      "stock_name": "JSWENERGY26OCTFUT",
-      "symbol": "JSWENERGY"
-    },
-    "FUTSTK|JSWENERGY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1075,
-      "stock_name": "JSWENERGY26NOVFUT",
-      "symbol": "JSWENERGY"
-    },
-    "FUTSTK|JSWENERGY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1075,
-      "stock_name": "JSWENERGY26DECFUT",
-      "symbol": "JSWENERGY"
-    },
-    "FUTSTK|JSWSTEEL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 675,
-      "stock_name": "JSWSTEEL26OCTFUT",
-      "symbol": "JSWSTEEL"
-    },
-    "FUTSTK|JSWSTEEL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 675,
-      "stock_name": "JSWSTEEL26NOVFUT",
-      "symbol": "JSWSTEEL"
-    },
-    "FUTSTK|JSWSTEEL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 675,
-      "stock_name": "JSWSTEEL26DECFUT",
-      "symbol": "JSWSTEEL"
-    },
-    "FUTSTK|JUBLFOOD|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "JUBLFOOD26OCTFUT",
-      "symbol": "JUBLFOOD"
-    },
-    "FUTSTK|JUBLFOOD|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "JUBLFOOD26NOVFUT",
-      "symbol": "JUBLFOOD"
-    },
-    "FUTSTK|JUBLFOOD|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1250,
-      "stock_name": "JUBLFOOD26DECFUT",
-      "symbol": "JUBLFOOD"
-    },
-    "FUTSTK|KALYANKJIL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1350,
-      "stock_name": "KALYANKJIL26OCTFUT",
-      "symbol": "KALYANKJIL"
-    },
-    "FUTSTK|KALYANKJIL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1350,
-      "stock_name": "KALYANKJIL26NOVFUT",
-      "symbol": "KALYANKJIL"
-    },
-    "FUTSTK|KALYANKJIL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1350,
-      "stock_name": "KALYANKJIL26DECFUT",
-      "symbol": "KALYANKJIL"
-    },
-    "FUTSTK|KAYNES|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "KAYNES26OCTFUT",
-      "symbol": "KAYNES"
-    },
-    "FUTSTK|KAYNES|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "KAYNES26NOVFUT",
-      "symbol": "KAYNES"
-    },
-    "FUTSTK|KAYNES|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "KAYNES26DECFUT",
-      "symbol": "KAYNES"
-    },
-    "FUTSTK|KEI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "KEI26OCTFUT",
-      "symbol": "KEI"
-    },
-    "FUTSTK|KEI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "KEI26NOVFUT",
-      "symbol": "KEI"
-    },
-    "FUTSTK|KEI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "KEI26DECFUT",
-      "symbol": "KEI"
-    },
-    "FUTSTK|KFINTECH|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 575,
-      "stock_name": "KFINTECH26OCTFUT",
-      "symbol": "KFINTECH"
-    },
-    "FUTSTK|KFINTECH|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 575,
-      "stock_name": "KFINTECH26NOVFUT",
-      "symbol": "KFINTECH"
-    },
-    "FUTSTK|KFINTECH|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 575,
-      "stock_name": "KFINTECH26DECFUT",
-      "symbol": "KFINTECH"
-    },
-    "FUTSTK|KOTAKBANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2000,
-      "stock_name": "KOTAKBANK26OCTFUT",
-      "symbol": "KOTAKBANK"
-    },
-    "FUTSTK|KOTAKBANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2000,
-      "stock_name": "KOTAKBANK26NOVFUT",
-      "symbol": "KOTAKBANK"
-    },
-    "FUTSTK|KOTAKBANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2000,
-      "stock_name": "KOTAKBANK26DECFUT",
-      "symbol": "KOTAKBANK"
-    },
-    "FUTSTK|KPITTECH|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "KPITTECH26OCTFUT",
-      "symbol": "KPITTECH"
-    },
-    "FUTSTK|KPITTECH|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "KPITTECH26NOVFUT",
-      "symbol": "KPITTECH"
-    },
-    "FUTSTK|KPITTECH|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "KPITTECH26DECFUT",
-      "symbol": "KPITTECH"
-    },
-    "FUTSTK|LAURUSLABS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 850,
-      "stock_name": "LAURUSLABS26OCTFUT",
-      "symbol": "LAURUSLABS"
-    },
-    "FUTSTK|LAURUSLABS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 850,
-      "stock_name": "LAURUSLABS26NOVFUT",
-      "symbol": "LAURUSLABS"
-    },
-    "FUTSTK|LAURUSLABS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 850,
-      "stock_name": "LAURUSLABS26DECFUT",
-      "symbol": "LAURUSLABS"
-    },
-    "FUTSTK|LICHSGFIN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "LICHSGFIN26OCTFUT",
-      "symbol": "LICHSGFIN"
-    },
-    "FUTSTK|LICHSGFIN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "LICHSGFIN26NOVFUT",
-      "symbol": "LICHSGFIN"
-    },
-    "FUTSTK|LICHSGFIN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1000,
-      "stock_name": "LICHSGFIN26DECFUT",
-      "symbol": "LICHSGFIN"
-    },
-    "FUTSTK|LICI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1400,
-      "stock_name": "LICI26OCTFUT",
-      "symbol": "LICI"
-    },
-    "FUTSTK|LICI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1400,
-      "stock_name": "LICI26NOVFUT",
-      "symbol": "LICI"
-    },
-    "FUTSTK|LICI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1400,
-      "stock_name": "LICI26DECFUT",
-      "symbol": "LICI"
-    },
-    "FUTSTK|LODHA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "LODHA26OCTFUT",
-      "symbol": "LODHA"
-    },
-    "FUTSTK|LODHA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "LODHA26NOVFUT",
-      "symbol": "LODHA"
-    },
-    "FUTSTK|LODHA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "LODHA26DECFUT",
-      "symbol": "LODHA"
-    },
-    "FUTSTK|LTF|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2250,
-      "stock_name": "LTF26OCTFUT",
-      "symbol": "LTF"
-    },
-    "FUTSTK|LTF|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2250,
-      "stock_name": "LTF26NOVFUT",
-      "symbol": "LTF"
-    },
-    "FUTSTK|LTF|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2250,
-      "stock_name": "LTF26DECFUT",
-      "symbol": "LTF"
-    },
-    "FUTSTK|LTM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "LTM26OCTFUT",
-      "symbol": "LTM"
-    },
-    "FUTSTK|LTM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "LTM26NOVFUT",
-      "symbol": "LTM"
-    },
-    "FUTSTK|LTM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "LTM26DECFUT",
-      "symbol": "LTM"
-    },
-    "FUTSTK|LT|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "LT26OCTFUT",
-      "symbol": "LT"
-    },
-    "FUTSTK|LT|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "LT26NOVFUT",
-      "symbol": "LT"
-    },
-    "FUTSTK|LT|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "LT26DECFUT",
-      "symbol": "LT"
-    },
-    "FUTSTK|LUPIN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "LUPIN26OCTFUT",
-      "symbol": "LUPIN"
-    },
-    "FUTSTK|LUPIN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "LUPIN26NOVFUT",
-      "symbol": "LUPIN"
-    },
-    "FUTSTK|LUPIN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 425,
-      "stock_name": "LUPIN26DECFUT",
-      "symbol": "LUPIN"
-    },
-    "FUTSTK|M&M|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "M&M26OCTFUT",
-      "symbol": "M&M"
-    },
-    "FUTSTK|M&M|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "M&M26NOVFUT",
-      "symbol": "M&M"
-    },
-    "FUTSTK|M&M|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "M&M26DECFUT",
-      "symbol": "M&M"
-    },
-    "FUTSTK|MAHABANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 6500,
-      "stock_name": "MAHABANK26OCTFUT",
-      "symbol": "MAHABANK"
-    },
-    "FUTSTK|MAHABANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 6500,
-      "stock_name": "MAHABANK26NOVFUT",
-      "symbol": "MAHABANK"
-    },
-    "FUTSTK|MAHABANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 6500,
-      "stock_name": "MAHABANK26DECFUT",
-      "symbol": "MAHABANK"
-    },
-    "FUTSTK|MANAPPURAM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 3000,
-      "stock_name": "MANAPPURAM26OCTFUT",
-      "symbol": "MANAPPURAM"
-    },
-    "FUTSTK|MANAPPURAM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 3000,
-      "stock_name": "MANAPPURAM26NOVFUT",
-      "symbol": "MANAPPURAM"
-    },
-    "FUTSTK|MANAPPURAM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 3000,
-      "stock_name": "MANAPPURAM26DECFUT",
-      "symbol": "MANAPPURAM"
-    },
-    "FUTSTK|MANKIND|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "MANKIND26OCTFUT",
-      "symbol": "MANKIND"
-    },
-    "FUTSTK|MANKIND|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "MANKIND26NOVFUT",
-      "symbol": "MANKIND"
-    },
-    "FUTSTK|MANKIND|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 250,
-      "stock_name": "MANKIND26DECFUT",
-      "symbol": "MANKIND"
-    },
-    "FUTSTK|MARICO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1200,
-      "stock_name": "MARICO26OCTFUT",
-      "symbol": "MARICO"
-    },
-    "FUTSTK|MARICO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1200,
-      "stock_name": "MARICO26NOVFUT",
-      "symbol": "MARICO"
-    },
-    "FUTSTK|MARICO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1200,
-      "stock_name": "MARICO26DECFUT",
-      "symbol": "MARICO"
-    },
-    "FUTSTK|MARUTI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "MARUTI26OCTFUT",
-      "symbol": "MARUTI"
-    },
-    "FUTSTK|MARUTI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "MARUTI26NOVFUT",
-      "symbol": "MARUTI"
-    },
-    "FUTSTK|MARUTI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "MARUTI26DECFUT",
-      "symbol": "MARUTI"
-    },
-    "FUTSTK|MAXHEALTH|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 525,
-      "stock_name": "MAXHEALTH26OCTFUT",
-      "symbol": "MAXHEALTH"
-    },
-    "FUTSTK|MAXHEALTH|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 525,
-      "stock_name": "MAXHEALTH26NOVFUT",
-      "symbol": "MAXHEALTH"
-    },
-    "FUTSTK|MAXHEALTH|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 525,
-      "stock_name": "MAXHEALTH26DECFUT",
-      "symbol": "MAXHEALTH"
-    },
-    "FUTSTK|MAZDOCK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "MAZDOCK26OCTFUT",
-      "symbol": "MAZDOCK"
-    },
-    "FUTSTK|MAZDOCK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "MAZDOCK26NOVFUT",
-      "symbol": "MAZDOCK"
-    },
-    "FUTSTK|MAZDOCK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "MAZDOCK26DECFUT",
-      "symbol": "MAZDOCK"
-    },
-    "FUTSTK|MCX|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "MCX26OCTFUT",
-      "symbol": "MCX"
-    },
-    "FUTSTK|MCX|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "MCX26NOVFUT",
-      "symbol": "MCX"
-    },
-    "FUTSTK|MCX|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "MCX26DECFUT",
-      "symbol": "MCX"
-    },
-    "FUTSTK|MFSL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "MFSL26OCTFUT",
-      "symbol": "MFSL"
-    },
-    "FUTSTK|MFSL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "MFSL26NOVFUT",
-      "symbol": "MFSL"
-    },
-    "FUTSTK|MFSL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "MFSL26DECFUT",
-      "symbol": "MFSL"
-    },
-    "FUTSTK|MOTHERSON|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 6150,
-      "stock_name": "MOTHERSON26OCTFUT",
-      "symbol": "MOTHERSON"
-    },
-    "FUTSTK|MOTHERSON|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 6150,
-      "stock_name": "MOTHERSON26NOVFUT",
-      "symbol": "MOTHERSON"
-    },
-    "FUTSTK|MOTHERSON|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 6150,
-      "stock_name": "MOTHERSON26DECFUT",
-      "symbol": "MOTHERSON"
-    },
-    "FUTSTK|MOTILALOFS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "MOTILALOFS26OCTFUT",
-      "symbol": "MOTILALOFS"
-    },
-    "FUTSTK|MOTILALOFS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "MOTILALOFS26NOVFUT",
-      "symbol": "MOTILALOFS"
-    },
-    "FUTSTK|MOTILALOFS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 775,
-      "stock_name": "MOTILALOFS26DECFUT",
-      "symbol": "MOTILALOFS"
-    },
-    "FUTSTK|MPHASIS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "MPHASIS26OCTFUT",
-      "symbol": "MPHASIS"
-    },
-    "FUTSTK|MPHASIS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "MPHASIS26NOVFUT",
-      "symbol": "MPHASIS"
-    },
-    "FUTSTK|MPHASIS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "MPHASIS26DECFUT",
-      "symbol": "MPHASIS"
-    },
-    "FUTSTK|MUTHOOTFIN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "MUTHOOTFIN26OCTFUT",
-      "symbol": "MUTHOOTFIN"
-    },
-    "FUTSTK|MUTHOOTFIN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "MUTHOOTFIN26NOVFUT",
-      "symbol": "MUTHOOTFIN"
-    },
-    "FUTSTK|MUTHOOTFIN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 275,
-      "stock_name": "MUTHOOTFIN26DECFUT",
-      "symbol": "MUTHOOTFIN"
-    },
-    "FUTSTK|NAM-INDIA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "NAM-INDIA26OCTFUT",
-      "symbol": "NAM-INDIA"
-    },
-    "FUTSTK|NAM-INDIA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "NAM-INDIA26NOVFUT",
-      "symbol": "NAM-INDIA"
-    },
-    "FUTSTK|NAM-INDIA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 625,
-      "stock_name": "NAM-INDIA26DECFUT",
-      "symbol": "NAM-INDIA"
-    },
-    "FUTSTK|NATIONALUM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1875,
-      "stock_name": "NATIONALUM26OCTFUT",
-      "symbol": "NATIONALUM"
-    },
-    "FUTSTK|NATIONALUM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1875,
-      "stock_name": "NATIONALUM26NOVFUT",
-      "symbol": "NATIONALUM"
-    },
-    "FUTSTK|NATIONALUM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1875,
-      "stock_name": "NATIONALUM26DECFUT",
-      "symbol": "NATIONALUM"
-    },
-    "FUTSTK|NAUKRI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "NAUKRI26OCTFUT",
-      "symbol": "NAUKRI"
-    },
-    "FUTSTK|NAUKRI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "NAUKRI26NOVFUT",
-      "symbol": "NAUKRI"
-    },
-    "FUTSTK|NAUKRI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "NAUKRI26DECFUT",
-      "symbol": "NAUKRI"
-    },
-    "FUTSTK|NBCC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 6500,
-      "stock_name": "NBCC26OCTFUT",
-      "symbol": "NBCC"
-    },
-    "FUTSTK|NBCC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 6500,
-      "stock_name": "NBCC26NOVFUT",
-      "symbol": "NBCC"
-    },
-    "FUTSTK|NBCC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 6500,
-      "stock_name": "NBCC26DECFUT",
-      "symbol": "NBCC"
-    },
-    "FUTSTK|NESTLEIND|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "NESTLEIND26OCTFUT",
-      "symbol": "NESTLEIND"
-    },
-    "FUTSTK|NESTLEIND|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "NESTLEIND26NOVFUT",
-      "symbol": "NESTLEIND"
-    },
-    "FUTSTK|NESTLEIND|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "NESTLEIND26DECFUT",
-      "symbol": "NESTLEIND"
-    },
-    "FUTSTK|NHPC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 6950,
-      "stock_name": "NHPC26OCTFUT",
-      "symbol": "NHPC"
-    },
-    "FUTSTK|NHPC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 6950,
-      "stock_name": "NHPC26NOVFUT",
-      "symbol": "NHPC"
-    },
-    "FUTSTK|NHPC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 6950,
-      "stock_name": "NHPC26DECFUT",
-      "symbol": "NHPC"
-    },
-    "FUTSTK|NMDC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 6750,
-      "stock_name": "NMDC26OCTFUT",
-      "symbol": "NMDC"
-    },
-    "FUTSTK|NMDC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 6750,
-      "stock_name": "NMDC26NOVFUT",
-      "symbol": "NMDC"
-    },
-    "FUTSTK|NMDC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 6750,
-      "stock_name": "NMDC26DECFUT",
-      "symbol": "NMDC"
-    },
-    "FUTSTK|NTPC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1500,
-      "stock_name": "NTPC26OCTFUT",
-      "symbol": "NTPC"
-    },
-    "FUTSTK|NTPC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1500,
-      "stock_name": "NTPC26NOVFUT",
-      "symbol": "NTPC"
-    },
-    "FUTSTK|NTPC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1500,
-      "stock_name": "NTPC26DECFUT",
-      "symbol": "NTPC"
-    },
-    "FUTSTK|NYKAA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 3125,
-      "stock_name": "NYKAA26OCTFUT",
-      "symbol": "NYKAA"
-    },
-    "FUTSTK|NYKAA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 3125,
-      "stock_name": "NYKAA26NOVFUT",
-      "symbol": "NYKAA"
-    },
-    "FUTSTK|NYKAA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 3125,
-      "stock_name": "NYKAA26DECFUT",
-      "symbol": "NYKAA"
-    },
-    "FUTSTK|OBEROIRLTY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "OBEROIRLTY26OCTFUT",
-      "symbol": "OBEROIRLTY"
-    },
-    "FUTSTK|OBEROIRLTY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "OBEROIRLTY26NOVFUT",
-      "symbol": "OBEROIRLTY"
-    },
-    "FUTSTK|OBEROIRLTY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "OBEROIRLTY26DECFUT",
-      "symbol": "OBEROIRLTY"
-    },
-    "FUTSTK|OFSS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "OFSS26OCTFUT",
-      "symbol": "OFSS"
-    },
-    "FUTSTK|OFSS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "OFSS26NOVFUT",
-      "symbol": "OFSS"
-    },
-    "FUTSTK|OFSS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 100,
-      "stock_name": "OFSS26DECFUT",
-      "symbol": "OFSS"
-    },
-    "FUTSTK|OIL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1400,
-      "stock_name": "OIL26OCTFUT",
-      "symbol": "OIL"
-    },
-    "FUTSTK|OIL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1400,
-      "stock_name": "OIL26NOVFUT",
-      "symbol": "OIL"
-    },
-    "FUTSTK|OIL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1400,
-      "stock_name": "OIL26DECFUT",
-      "symbol": "OIL"
-    },
-    "FUTSTK|ONGC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2250,
-      "stock_name": "ONGC26OCTFUT",
-      "symbol": "ONGC"
-    },
-    "FUTSTK|ONGC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2250,
-      "stock_name": "ONGC26NOVFUT",
-      "symbol": "ONGC"
-    },
-    "FUTSTK|ONGC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2250,
-      "stock_name": "ONGC26DECFUT",
-      "symbol": "ONGC"
-    },
-    "FUTSTK|PAGEIND|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 20,
-      "stock_name": "PAGEIND26OCTFUT",
-      "symbol": "PAGEIND"
-    },
-    "FUTSTK|PAGEIND|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 20,
-      "stock_name": "PAGEIND26NOVFUT",
-      "symbol": "PAGEIND"
-    },
-    "FUTSTK|PAGEIND|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 20,
-      "stock_name": "PAGEIND26DECFUT",
-      "symbol": "PAGEIND"
-    },
-    "FUTSTK|PATANJALI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1075,
-      "stock_name": "PATANJALI26OCTFUT",
-      "symbol": "PATANJALI"
-    },
-    "FUTSTK|PATANJALI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1075,
-      "stock_name": "PATANJALI26NOVFUT",
-      "symbol": "PATANJALI"
-    },
-    "FUTSTK|PATANJALI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1075,
-      "stock_name": "PATANJALI26DECFUT",
-      "symbol": "PATANJALI"
-    },
-    "FUTSTK|PAYTM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 725,
-      "stock_name": "PAYTM26OCTFUT",
-      "symbol": "PAYTM"
-    },
-    "FUTSTK|PAYTM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 725,
-      "stock_name": "PAYTM26NOVFUT",
-      "symbol": "PAYTM"
-    },
-    "FUTSTK|PAYTM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 725,
-      "stock_name": "PAYTM26DECFUT",
-      "symbol": "PAYTM"
-    },
-    "FUTSTK|PERSISTENT|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "PERSISTENT26OCTFUT",
-      "symbol": "PERSISTENT"
-    },
-    "FUTSTK|PERSISTENT|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "PERSISTENT26NOVFUT",
-      "symbol": "PERSISTENT"
-    },
-    "FUTSTK|PERSISTENT|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "PERSISTENT26DECFUT",
-      "symbol": "PERSISTENT"
-    },
-    "FUTSTK|PETRONET|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1900,
-      "stock_name": "PETRONET26OCTFUT",
-      "symbol": "PETRONET"
-    },
-    "FUTSTK|PETRONET|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1900,
-      "stock_name": "PETRONET26NOVFUT",
-      "symbol": "PETRONET"
-    },
-    "FUTSTK|PETRONET|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1900,
-      "stock_name": "PETRONET26DECFUT",
-      "symbol": "PETRONET"
-    },
-    "FUTSTK|PFC|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1300,
-      "stock_name": "PFC26OCTFUT",
-      "symbol": "PFC"
-    },
-    "FUTSTK|PFC|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1300,
-      "stock_name": "PFC26NOVFUT",
-      "symbol": "PFC"
-    },
-    "FUTSTK|PFC|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1300,
-      "stock_name": "PFC26DECFUT",
-      "symbol": "PFC"
-    },
-    "FUTSTK|PGEL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 950,
-      "stock_name": "PGEL26OCTFUT",
-      "symbol": "PGEL"
-    },
-    "FUTSTK|PGEL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 950,
-      "stock_name": "PGEL26NOVFUT",
-      "symbol": "PGEL"
-    },
-    "FUTSTK|PGEL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 950,
-      "stock_name": "PGEL26DECFUT",
-      "symbol": "PGEL"
-    },
-    "FUTSTK|PHOENIXLTD|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "PHOENIXLTD26OCTFUT",
-      "symbol": "PHOENIXLTD"
-    },
-    "FUTSTK|PHOENIXLTD|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "PHOENIXLTD26NOVFUT",
-      "symbol": "PHOENIXLTD"
-    },
-    "FUTSTK|PHOENIXLTD|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "PHOENIXLTD26DECFUT",
-      "symbol": "PHOENIXLTD"
-    },
-    "FUTSTK|PIDILITIND|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "PIDILITIND26OCTFUT",
-      "symbol": "PIDILITIND"
-    },
-    "FUTSTK|PIDILITIND|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "PIDILITIND26NOVFUT",
-      "symbol": "PIDILITIND"
-    },
-    "FUTSTK|PIDILITIND|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "PIDILITIND26DECFUT",
-      "symbol": "PIDILITIND"
-    },
-    "FUTSTK|PIIND|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "PIIND26OCTFUT",
-      "symbol": "PIIND"
-    },
-    "FUTSTK|PIIND|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "PIIND26NOVFUT",
-      "symbol": "PIIND"
-    },
-    "FUTSTK|PIIND|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "PIIND26DECFUT",
-      "symbol": "PIIND"
-    },
-    "FUTSTK|PNBHOUSING|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "PNBHOUSING26OCTFUT",
-      "symbol": "PNBHOUSING"
-    },
-    "FUTSTK|PNBHOUSING|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "PNBHOUSING26NOVFUT",
-      "symbol": "PNBHOUSING"
-    },
-    "FUTSTK|PNBHOUSING|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "PNBHOUSING26DECFUT",
-      "symbol": "PNBHOUSING"
-    },
-    "FUTSTK|PNB|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 8000,
-      "stock_name": "PNB26OCTFUT",
-      "symbol": "PNB"
-    },
-    "FUTSTK|PNB|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 8000,
-      "stock_name": "PNB26NOVFUT",
-      "symbol": "PNB"
-    },
-    "FUTSTK|PNB|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 8000,
-      "stock_name": "PNB26DECFUT",
-      "symbol": "PNB"
-    },
-    "FUTSTK|POLICYBZR|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "POLICYBZR26OCTFUT",
-      "symbol": "POLICYBZR"
-    },
-    "FUTSTK|POLICYBZR|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "POLICYBZR26NOVFUT",
-      "symbol": "POLICYBZR"
-    },
-    "FUTSTK|POLICYBZR|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "POLICYBZR26DECFUT",
-      "symbol": "POLICYBZR"
-    },
-    "FUTSTK|POLYCAB|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "POLYCAB26OCTFUT",
-      "symbol": "POLYCAB"
-    },
-    "FUTSTK|POLYCAB|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "POLYCAB26NOVFUT",
-      "symbol": "POLYCAB"
-    },
-    "FUTSTK|POLYCAB|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "POLYCAB26DECFUT",
-      "symbol": "POLYCAB"
-    },
-    "FUTSTK|POWERGRID|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1900,
-      "stock_name": "POWERGRID26OCTFUT",
-      "symbol": "POWERGRID"
-    },
-    "FUTSTK|POWERGRID|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1900,
-      "stock_name": "POWERGRID26NOVFUT",
-      "symbol": "POWERGRID"
-    },
-    "FUTSTK|POWERGRID|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1900,
-      "stock_name": "POWERGRID26DECFUT",
-      "symbol": "POWERGRID"
-    },
-    "FUTSTK|POWERINDIA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "POWERINDIA26OCTFUT",
-      "symbol": "POWERINDIA"
-    },
-    "FUTSTK|POWERINDIA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "POWERINDIA26NOVFUT",
-      "symbol": "POWERINDIA"
-    },
-    "FUTSTK|POWERINDIA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "POWERINDIA26DECFUT",
-      "symbol": "POWERINDIA"
-    },
-    "FUTSTK|PREMIERENE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "PREMIERENE26OCTFUT",
-      "symbol": "PREMIERENE"
-    },
-    "FUTSTK|PREMIERENE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "PREMIERENE26NOVFUT",
-      "symbol": "PREMIERENE"
-    },
-    "FUTSTK|PREMIERENE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 650,
-      "stock_name": "PREMIERENE26DECFUT",
-      "symbol": "PREMIERENE"
-    },
-    "FUTSTK|PRESTIGE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 450,
-      "stock_name": "PRESTIGE26OCTFUT",
-      "symbol": "PRESTIGE"
-    },
-    "FUTSTK|PRESTIGE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 450,
-      "stock_name": "PRESTIGE26NOVFUT",
-      "symbol": "PRESTIGE"
-    },
-    "FUTSTK|PRESTIGE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 450,
-      "stock_name": "PRESTIGE26DECFUT",
-      "symbol": "PRESTIGE"
-    },
-    "FUTSTK|RADICO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "RADICO26OCTFUT",
-      "symbol": "RADICO"
-    },
-    "FUTSTK|RADICO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "RADICO26NOVFUT",
-      "symbol": "RADICO"
-    },
-    "FUTSTK|RADICO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 150,
-      "stock_name": "RADICO26DECFUT",
-      "symbol": "RADICO"
-    },
-    "FUTSTK|RBLBANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 3175,
-      "stock_name": "RBLBANK26OCTFUT",
-      "symbol": "RBLBANK"
-    },
-    "FUTSTK|RBLBANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 3175,
-      "stock_name": "RBLBANK26NOVFUT",
-      "symbol": "RBLBANK"
-    },
-    "FUTSTK|RBLBANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 3175,
-      "stock_name": "RBLBANK26DECFUT",
-      "symbol": "RBLBANK"
-    },
-    "FUTSTK|RECLTD|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1575,
-      "stock_name": "RECLTD26OCTFUT",
-      "symbol": "RECLTD"
-    },
-    "FUTSTK|RECLTD|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1575,
-      "stock_name": "RECLTD26NOVFUT",
-      "symbol": "RECLTD"
-    },
-    "FUTSTK|RECLTD|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1575,
-      "stock_name": "RECLTD26DECFUT",
-      "symbol": "RECLTD"
-    },
-    "FUTSTK|RELIANCE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "RELIANCE26OCTFUT",
-      "symbol": "RELIANCE"
-    },
-    "FUTSTK|RELIANCE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "RELIANCE26NOVFUT",
-      "symbol": "RELIANCE"
-    },
-    "FUTSTK|RELIANCE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 500,
-      "stock_name": "RELIANCE26DECFUT",
-      "symbol": "RELIANCE"
-    },
-    "FUTSTK|RVNL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1925,
-      "stock_name": "RVNL26OCTFUT",
-      "symbol": "RVNL"
-    },
-    "FUTSTK|RVNL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1925,
-      "stock_name": "RVNL26NOVFUT",
-      "symbol": "RVNL"
-    },
-    "FUTSTK|RVNL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1925,
-      "stock_name": "RVNL26DECFUT",
-      "symbol": "RVNL"
-    },
-    "FUTSTK|SAGILITY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 12000,
-      "stock_name": "SAGILITY26OCTFUT",
-      "symbol": "SAGILITY"
-    },
-    "FUTSTK|SAGILITY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 12000,
-      "stock_name": "SAGILITY26NOVFUT",
-      "symbol": "SAGILITY"
-    },
-    "FUTSTK|SAGILITY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 12000,
-      "stock_name": "SAGILITY26DECFUT",
-      "symbol": "SAGILITY"
-    },
-    "FUTSTK|SAIL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 4700,
-      "stock_name": "SAIL26OCTFUT",
-      "symbol": "SAIL"
-    },
-    "FUTSTK|SAIL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 4700,
-      "stock_name": "SAIL26NOVFUT",
-      "symbol": "SAIL"
-    },
-    "FUTSTK|SAIL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 4700,
-      "stock_name": "SAIL26DECFUT",
-      "symbol": "SAIL"
-    },
-    "FUTSTK|SBICARD|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 800,
-      "stock_name": "SBICARD26OCTFUT",
-      "symbol": "SBICARD"
-    },
-    "FUTSTK|SBICARD|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 800,
-      "stock_name": "SBICARD26NOVFUT",
-      "symbol": "SBICARD"
-    },
-    "FUTSTK|SBICARD|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 800,
-      "stock_name": "SBICARD26DECFUT",
-      "symbol": "SBICARD"
-    },
-    "FUTSTK|SBILIFE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "SBILIFE26OCTFUT",
-      "symbol": "SBILIFE"
-    },
-    "FUTSTK|SBILIFE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "SBILIFE26NOVFUT",
-      "symbol": "SBILIFE"
-    },
-    "FUTSTK|SBILIFE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "SBILIFE26DECFUT",
-      "symbol": "SBILIFE"
-    },
-    "FUTSTK|SBIN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 750,
-      "stock_name": "SBIN26OCTFUT",
-      "symbol": "SBIN"
-    },
-    "FUTSTK|SBIN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 750,
-      "stock_name": "SBIN26NOVFUT",
-      "symbol": "SBIN"
-    },
-    "FUTSTK|SBIN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 750,
-      "stock_name": "SBIN26DECFUT",
-      "symbol": "SBIN"
-    },
-    "FUTSTK|SHREECEM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "SHREECEM26OCTFUT",
-      "symbol": "SHREECEM"
-    },
-    "FUTSTK|SHREECEM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "SHREECEM26NOVFUT",
-      "symbol": "SHREECEM"
-    },
-    "FUTSTK|SHREECEM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 25,
-      "stock_name": "SHREECEM26DECFUT",
-      "symbol": "SHREECEM"
-    },
-    "FUTSTK|SHRIRAMFIN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 825,
-      "stock_name": "SHRIRAMFIN26OCTFUT",
-      "symbol": "SHRIRAMFIN"
-    },
-    "FUTSTK|SHRIRAMFIN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 825,
-      "stock_name": "SHRIRAMFIN26NOVFUT",
-      "symbol": "SHRIRAMFIN"
-    },
-    "FUTSTK|SHRIRAMFIN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 825,
-      "stock_name": "SHRIRAMFIN26DECFUT",
-      "symbol": "SHRIRAMFIN"
-    },
-    "FUTSTK|SIEMENS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "SIEMENS26OCTFUT",
-      "symbol": "SIEMENS"
-    },
-    "FUTSTK|SIEMENS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "SIEMENS26NOVFUT",
-      "symbol": "SIEMENS"
-    },
-    "FUTSTK|SIEMENS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "SIEMENS26DECFUT",
-      "symbol": "SIEMENS"
-    },
-    "FUTSTK|SOLARINDS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "SOLARINDS26OCTFUT",
-      "symbol": "SOLARINDS"
-    },
-    "FUTSTK|SOLARINDS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "SOLARINDS26NOVFUT",
-      "symbol": "SOLARINDS"
-    },
-    "FUTSTK|SOLARINDS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "SOLARINDS26DECFUT",
-      "symbol": "SOLARINDS"
-    },
-    "FUTSTK|SONACOMS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1225,
-      "stock_name": "SONACOMS26OCTFUT",
-      "symbol": "SONACOMS"
-    },
-    "FUTSTK|SONACOMS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1225,
-      "stock_name": "SONACOMS26NOVFUT",
-      "symbol": "SONACOMS"
-    },
-    "FUTSTK|SONACOMS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1225,
-      "stock_name": "SONACOMS26DECFUT",
-      "symbol": "SONACOMS"
-    },
-    "FUTSTK|SRF|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "SRF26OCTFUT",
-      "symbol": "SRF"
-    },
-    "FUTSTK|SRF|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "SRF26NOVFUT",
-      "symbol": "SRF"
-    },
-    "FUTSTK|SRF|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "SRF26DECFUT",
-      "symbol": "SRF"
-    },
-    "FUTSTK|SUNPHARMA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "SUNPHARMA26OCTFUT",
-      "symbol": "SUNPHARMA"
-    },
-    "FUTSTK|SUNPHARMA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "SUNPHARMA26NOVFUT",
-      "symbol": "SUNPHARMA"
-    },
-    "FUTSTK|SUNPHARMA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 350,
-      "stock_name": "SUNPHARMA26DECFUT",
-      "symbol": "SUNPHARMA"
-    },
-    "FUTSTK|SUPREMEIND|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "SUPREMEIND26OCTFUT",
-      "symbol": "SUPREMEIND"
-    },
-    "FUTSTK|SUPREMEIND|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "SUPREMEIND26NOVFUT",
-      "symbol": "SUPREMEIND"
-    },
-    "FUTSTK|SUPREMEIND|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "SUPREMEIND26DECFUT",
-      "symbol": "SUPREMEIND"
-    },
-    "FUTSTK|SUZLON|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 12700,
-      "stock_name": "SUZLON26OCTFUT",
-      "symbol": "SUZLON"
-    },
-    "FUTSTK|SUZLON|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 12700,
-      "stock_name": "SUZLON26NOVFUT",
-      "symbol": "SUZLON"
-    },
-    "FUTSTK|SUZLON|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 12700,
-      "stock_name": "SUZLON26DECFUT",
-      "symbol": "SUZLON"
-    },
-    "FUTSTK|SWIGGY|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1825,
-      "stock_name": "SWIGGY26OCTFUT",
-      "symbol": "SWIGGY"
-    },
-    "FUTSTK|SWIGGY|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1825,
-      "stock_name": "SWIGGY26NOVFUT",
-      "symbol": "SWIGGY"
-    },
-    "FUTSTK|SWIGGY|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1825,
-      "stock_name": "SWIGGY26DECFUT",
-      "symbol": "SWIGGY"
-    },
-    "FUTSTK|TATACONSUM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "TATACONSUM26OCTFUT",
-      "symbol": "TATACONSUM"
-    },
-    "FUTSTK|TATACONSUM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "TATACONSUM26NOVFUT",
-      "symbol": "TATACONSUM"
-    },
-    "FUTSTK|TATACONSUM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "TATACONSUM26DECFUT",
-      "symbol": "TATACONSUM"
-    },
-    "FUTSTK|TATAELXSI|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "TATAELXSI26OCTFUT",
-      "symbol": "TATAELXSI"
-    },
-    "FUTSTK|TATAELXSI|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "TATAELXSI26NOVFUT",
-      "symbol": "TATAELXSI"
-    },
-    "FUTSTK|TATAELXSI|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "TATAELXSI26DECFUT",
-      "symbol": "TATAELXSI"
-    },
-    "FUTSTK|TATAPOWER|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1450,
-      "stock_name": "TATAPOWER26OCTFUT",
-      "symbol": "TATAPOWER"
-    },
-    "FUTSTK|TATAPOWER|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1450,
-      "stock_name": "TATAPOWER26NOVFUT",
-      "symbol": "TATAPOWER"
-    },
-    "FUTSTK|TATAPOWER|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1450,
-      "stock_name": "TATAPOWER26DECFUT",
-      "symbol": "TATAPOWER"
-    },
-    "FUTSTK|TATASTEEL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 2750,
-      "stock_name": "TATASTEEL26OCTFUT",
-      "symbol": "TATASTEEL"
-    },
-    "FUTSTK|TATASTEEL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 2750,
-      "stock_name": "TATASTEEL26NOVFUT",
-      "symbol": "TATASTEEL"
-    },
-    "FUTSTK|TATASTEEL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 2750,
-      "stock_name": "TATASTEEL26DECFUT",
-      "symbol": "TATASTEEL"
-    },
-    "FUTSTK|TCS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "TCS26OCTFUT",
-      "symbol": "TCS"
-    },
-    "FUTSTK|TCS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "TCS26NOVFUT",
-      "symbol": "TCS"
-    },
-    "FUTSTK|TCS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "TCS26DECFUT",
-      "symbol": "TCS"
-    },
-    "FUTSTK|TECHM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 600,
-      "stock_name": "TECHM26OCTFUT",
-      "symbol": "TECHM"
-    },
-    "FUTSTK|TECHM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 600,
-      "stock_name": "TECHM26NOVFUT",
-      "symbol": "TECHM"
-    },
-    "FUTSTK|TECHM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 600,
-      "stock_name": "TECHM26DECFUT",
-      "symbol": "TECHM"
-    },
-    "FUTSTK|TIINDIA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "TIINDIA26OCTFUT",
-      "symbol": "TIINDIA"
-    },
-    "FUTSTK|TIINDIA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "TIINDIA26NOVFUT",
-      "symbol": "TIINDIA"
-    },
-    "FUTSTK|TIINDIA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 200,
-      "stock_name": "TIINDIA26DECFUT",
-      "symbol": "TIINDIA"
-    },
-    "FUTSTK|TITAN|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "TITAN26OCTFUT",
-      "symbol": "TITAN"
-    },
-    "FUTSTK|TITAN|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "TITAN26NOVFUT",
-      "symbol": "TITAN"
-    },
-    "FUTSTK|TITAN|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "TITAN26DECFUT",
-      "symbol": "TITAN"
-    },
-    "FUTSTK|TMPV|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1600,
-      "stock_name": "TMPV26OCTFUT",
-      "symbol": "TMPV"
-    },
-    "FUTSTK|TMPV|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1600,
-      "stock_name": "TMPV26NOVFUT",
-      "symbol": "TMPV"
-    },
-    "FUTSTK|TMPV|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1600,
-      "stock_name": "TMPV26DECFUT",
-      "symbol": "TMPV"
-    },
-    "FUTSTK|TORNTPHARM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "TORNTPHARM26OCTFUT",
-      "symbol": "TORNTPHARM"
-    },
-    "FUTSTK|TORNTPHARM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "TORNTPHARM26NOVFUT",
-      "symbol": "TORNTPHARM"
-    },
-    "FUTSTK|TORNTPHARM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 125,
-      "stock_name": "TORNTPHARM26DECFUT",
-      "symbol": "TORNTPHARM"
-    },
-    "FUTSTK|TRENT|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "TRENT26OCTFUT",
-      "symbol": "TRENT"
-    },
-    "FUTSTK|TRENT|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "TRENT26NOVFUT",
-      "symbol": "TRENT"
-    },
-    "FUTSTK|TRENT|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 225,
-      "stock_name": "TRENT26DECFUT",
-      "symbol": "TRENT"
-    },
-    "FUTSTK|TVSMOTOR|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "TVSMOTOR26OCTFUT",
-      "symbol": "TVSMOTOR"
-    },
-    "FUTSTK|TVSMOTOR|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "TVSMOTOR26NOVFUT",
-      "symbol": "TVSMOTOR"
-    },
-    "FUTSTK|TVSMOTOR|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "TVSMOTOR26DECFUT",
-      "symbol": "TVSMOTOR"
-    },
-    "FUTSTK|UJJIVANSFB|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 8000,
-      "stock_name": "UJJIVANSFB26OCTFUT",
-      "symbol": "UJJIVANSFB"
-    },
-    "FUTSTK|UJJIVANSFB|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 8000,
-      "stock_name": "UJJIVANSFB26NOVFUT",
-      "symbol": "UJJIVANSFB"
-    },
-    "FUTSTK|UJJIVANSFB|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 8000,
-      "stock_name": "UJJIVANSFB26DECFUT",
-      "symbol": "UJJIVANSFB"
-    },
-    "FUTSTK|ULTRACEMCO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "ULTRACEMCO26OCTFUT",
-      "symbol": "ULTRACEMCO"
-    },
-    "FUTSTK|ULTRACEMCO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "ULTRACEMCO26NOVFUT",
-      "symbol": "ULTRACEMCO"
-    },
-    "FUTSTK|ULTRACEMCO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 50,
-      "stock_name": "ULTRACEMCO26DECFUT",
-      "symbol": "ULTRACEMCO"
-    },
-    "FUTSTK|UNIONBANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 4425,
-      "stock_name": "UNIONBANK26OCTFUT",
-      "symbol": "UNIONBANK"
-    },
-    "FUTSTK|UNIONBANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 4425,
-      "stock_name": "UNIONBANK26NOVFUT",
-      "symbol": "UNIONBANK"
-    },
-    "FUTSTK|UNIONBANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 4425,
-      "stock_name": "UNIONBANK26DECFUT",
-      "symbol": "UNIONBANK"
-    },
-    "FUTSTK|UNITDSPR|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "UNITDSPR26OCTFUT",
-      "symbol": "UNITDSPR"
-    },
-    "FUTSTK|UNITDSPR|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "UNITDSPR26NOVFUT",
-      "symbol": "UNITDSPR"
-    },
-    "FUTSTK|UNITDSPR|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 400,
-      "stock_name": "UNITDSPR26DECFUT",
-      "symbol": "UNITDSPR"
-    },
-    "FUTSTK|UNOMINDA|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "UNOMINDA26OCTFUT",
-      "symbol": "UNOMINDA"
-    },
-    "FUTSTK|UNOMINDA|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "UNOMINDA26NOVFUT",
-      "symbol": "UNOMINDA"
-    },
-    "FUTSTK|UNOMINDA|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 550,
-      "stock_name": "UNOMINDA26DECFUT",
-      "symbol": "UNOMINDA"
-    },
-    "FUTSTK|UPL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1355,
-      "stock_name": "UPL26OCTFUT",
-      "symbol": "UPL"
-    },
-    "FUTSTK|UPL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1355,
-      "stock_name": "UPL26NOVFUT",
-      "symbol": "UPL"
-    },
-    "FUTSTK|UPL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1355,
-      "stock_name": "UPL26DECFUT",
-      "symbol": "UPL"
-    },
-    "FUTSTK|VBL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1275,
-      "stock_name": "VBL26OCTFUT",
-      "symbol": "VBL"
-    },
-    "FUTSTK|VBL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1275,
-      "stock_name": "VBL26NOVFUT",
-      "symbol": "VBL"
-    },
-    "FUTSTK|VBL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1275,
-      "stock_name": "VBL26DECFUT",
-      "symbol": "VBL"
-    },
-    "FUTSTK|VEDL|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 1150,
-      "stock_name": "VEDL26OCTFUT",
-      "symbol": "VEDL"
-    },
-    "FUTSTK|VEDL|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 1150,
-      "stock_name": "VEDL26NOVFUT",
-      "symbol": "VEDL"
-    },
-    "FUTSTK|VEDL|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 1150,
-      "stock_name": "VEDL26DECFUT",
-      "symbol": "VEDL"
-    },
-    "FUTSTK|VMM|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 4850,
-      "stock_name": "VMM26OCTFUT",
-      "symbol": "VMM"
-    },
-    "FUTSTK|VMM|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 4850,
-      "stock_name": "VMM26NOVFUT",
-      "symbol": "VMM"
-    },
-    "FUTSTK|VMM|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 4850,
-      "stock_name": "VMM26DECFUT",
-      "symbol": "VMM"
-    },
-    "FUTSTK|VOLTAS|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "VOLTAS26OCTFUT",
-      "symbol": "VOLTAS"
-    },
-    "FUTSTK|VOLTAS|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "VOLTAS26NOVFUT",
-      "symbol": "VOLTAS"
-    },
-    "FUTSTK|VOLTAS|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 375,
-      "stock_name": "VOLTAS26DECFUT",
-      "symbol": "VOLTAS"
-    },
-    "FUTSTK|WAAREEENER|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "WAAREEENER26OCTFUT",
-      "symbol": "WAAREEENER"
-    },
-    "FUTSTK|WAAREEENER|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "WAAREEENER26NOVFUT",
-      "symbol": "WAAREEENER"
-    },
-    "FUTSTK|WAAREEENER|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 175,
-      "stock_name": "WAAREEENER26DECFUT",
-      "symbol": "WAAREEENER"
-    },
-    "FUTSTK|WIPRO|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 3000,
-      "stock_name": "WIPRO26OCTFUT",
-      "symbol": "WIPRO"
-    },
-    "FUTSTK|WIPRO|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 3000,
-      "stock_name": "WIPRO26NOVFUT",
-      "symbol": "WIPRO"
-    },
-    "FUTSTK|WIPRO|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 3000,
-      "stock_name": "WIPRO26DECFUT",
-      "symbol": "WIPRO"
-    },
-    "FUTSTK|YESBANK|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 31100,
-      "stock_name": "YESBANK26OCTFUT",
-      "symbol": "YESBANK"
-    },
-    "FUTSTK|YESBANK|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 31100,
-      "stock_name": "YESBANK26NOVFUT",
-      "symbol": "YESBANK"
-    },
-    "FUTSTK|YESBANK|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 31100,
-      "stock_name": "YESBANK26DECFUT",
-      "symbol": "YESBANK"
-    },
-    "FUTSTK|ZYDUSLIFE|2026-10": {
-      "expiry": "2026-10",
-      "instrument": "FUTSTK",
-      "lot_size": 900,
-      "stock_name": "ZYDUSLIFE26OCTFUT",
-      "symbol": "ZYDUSLIFE"
-    },
-    "FUTSTK|ZYDUSLIFE|2026-11": {
-      "expiry": "2026-11",
-      "instrument": "FUTSTK",
-      "lot_size": 900,
-      "stock_name": "ZYDUSLIFE26NOVFUT",
-      "symbol": "ZYDUSLIFE"
-    },
-    "FUTSTK|ZYDUSLIFE|2026-12": {
-      "expiry": "2026-12",
-      "instrument": "FUTSTK",
-      "lot_size": 900,
-      "stock_name": "ZYDUSLIFE26DECFUT",
-      "symbol": "ZYDUSLIFE"
-    }
-  },
-  "expected_expiries": [
+  "generated_at_ist": "2026-10-15T14:40:06.022444+05:30",
+  "contract_file": "NSE_FO_contract_14102026.csv.gz",
+  "expected_expiry_months": [
     "2026-10",
     "2026-11",
     "2026-12"
   ],
-  "source_file": "NSE_FO_contract_14102026.csv.gz",
-  "updated_at_ist": "2026-10-15T14:25:04.614774+05:30",
-  "version": 5
+  "contracts": {
+    "FUTIDX|BANKNIFTY": {
+      "instrument_type": "FUTIDX",
+      "symbol": "BANKNIFTY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "30"
+      ]
+    },
+    "FUTIDX|FINNIFTY": {
+      "instrument_type": "FUTIDX",
+      "symbol": "FINNIFTY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "60"
+      ]
+    },
+    "FUTIDX|MIDCPNIFTY": {
+      "instrument_type": "FUTIDX",
+      "symbol": "MIDCPNIFTY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "120"
+      ]
+    },
+    "FUTIDX|NIFTY": {
+      "instrument_type": "FUTIDX",
+      "symbol": "NIFTY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "65"
+      ]
+    },
+    "FUTIDX|NIFTYFPI": {
+      "instrument_type": "FUTIDX",
+      "symbol": "NIFTYFPI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1100"
+      ]
+    },
+    "FUTIDX|NIFTYNXT50": {
+      "instrument_type": "FUTIDX",
+      "symbol": "NIFTYNXT50",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "25"
+      ]
+    },
+    "FUTSTK|360ONE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "360ONE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "500"
+      ]
+    },
+    "FUTSTK|ABB": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ABB",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|ABCAPITAL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ABCAPITAL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "3100"
+      ]
+    },
+    "FUTSTK|ADANIENSOL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ADANIENSOL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "675"
+      ]
+    },
+    "FUTSTK|ADANIENT": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ADANIENT",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "309"
+      ]
+    },
+    "FUTSTK|ADANIGREEN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ADANIGREEN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "600"
+      ]
+    },
+    "FUTSTK|ADANIPORTS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ADANIPORTS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "475"
+      ]
+    },
+    "FUTSTK|ADANIPOWER": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ADANIPOWER",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "3550"
+      ]
+    },
+    "FUTSTK|ALKEM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ALKEM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|AMBER": {
+      "instrument_type": "FUTSTK",
+      "symbol": "AMBER",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "100"
+      ]
+    },
+    "FUTSTK|AMBUJACEM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "AMBUJACEM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1200"
+      ]
+    },
+    "FUTSTK|ANANDRATHI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ANANDRATHI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "250"
+      ]
+    },
+    "FUTSTK|ANGELONE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ANGELONE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2500"
+      ]
+    },
+    "FUTSTK|APLAPOLLO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "APLAPOLLO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "350"
+      ]
+    },
+    "FUTSTK|APOLLOHOSP": {
+      "instrument_type": "FUTSTK",
+      "symbol": "APOLLOHOSP",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|ASHOKLEY": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ASHOKLEY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "5000"
+      ]
+    },
+    "FUTSTK|ASIANPAINT": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ASIANPAINT",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "250"
+      ]
+    },
+    "FUTSTK|ASTRAL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ASTRAL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "425"
+      ]
+    },
+    "FUTSTK|ATHERENERG": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ATHERENERG",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "375"
+      ]
+    },
+    "FUTSTK|AUBANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "AUBANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1000"
+      ]
+    },
+    "FUTSTK|AUROPHARMA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "AUROPHARMA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "550"
+      ]
+    },
+    "FUTSTK|AXISBANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "AXISBANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "625"
+      ]
+    },
+    "FUTSTK|BAJAJ-AUTO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BAJAJ-AUTO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "75"
+      ]
+    },
+    "FUTSTK|BAJAJFINSV": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BAJAJFINSV",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "300"
+      ]
+    },
+    "FUTSTK|BAJAJHLDNG": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BAJAJHLDNG",
+      "expiry_months": [
+        "2026-10"
+      ],
+      "lot_sizes": [
+        "75"
+      ]
+    },
+    "FUTSTK|BAJFINANCE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BAJFINANCE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "750"
+      ]
+    },
+    "FUTSTK|BANDHANBNK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BANDHANBNK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "3600"
+      ]
+    },
+    "FUTSTK|BANKBARODA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BANKBARODA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2925"
+      ]
+    },
+    "FUTSTK|BANKINDIA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BANKINDIA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "5200"
+      ]
+    },
+    "FUTSTK|BDL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BDL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "425"
+      ]
+    },
+    "FUTSTK|BEL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BEL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1425"
+      ]
+    },
+    "FUTSTK|BHARATFORG": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BHARATFORG",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "500"
+      ]
+    },
+    "FUTSTK|BHARTIARTL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BHARTIARTL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "475"
+      ]
+    },
+    "FUTSTK|BHEL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BHEL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2625"
+      ]
+    },
+    "FUTSTK|BIOCON": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BIOCON",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2500"
+      ]
+    },
+    "FUTSTK|BLUESTARCO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BLUESTARCO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "325"
+      ]
+    },
+    "FUTSTK|BOSCHLTD": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BOSCHLTD",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "25"
+      ]
+    },
+    "FUTSTK|BPCL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BPCL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1975"
+      ]
+    },
+    "FUTSTK|BRITANNIA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BRITANNIA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|BSE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "BSE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "200"
+      ]
+    },
+    "FUTSTK|CAMS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CAMS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "825"
+      ]
+    },
+    "FUTSTK|CANBK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CANBK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "6750"
+      ]
+    },
+    "FUTSTK|CDSL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CDSL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "475"
+      ]
+    },
+    "FUTSTK|CGPOWER": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CGPOWER",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "850"
+      ]
+    },
+    "FUTSTK|CHOLAFIN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CHOLAFIN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "625"
+      ]
+    },
+    "FUTSTK|CIPLA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CIPLA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "425"
+      ]
+    },
+    "FUTSTK|COALINDIA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "COALINDIA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1350"
+      ]
+    },
+    "FUTSTK|COCHINSHIP": {
+      "instrument_type": "FUTSTK",
+      "symbol": "COCHINSHIP",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "400"
+      ]
+    },
+    "FUTSTK|COFORGE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "COFORGE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "475"
+      ]
+    },
+    "FUTSTK|COLPAL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "COLPAL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "275"
+      ]
+    },
+    "FUTSTK|CONCOR": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CONCOR",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1250"
+      ]
+    },
+    "FUTSTK|CROMPTON": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CROMPTON",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2150"
+      ]
+    },
+    "FUTSTK|CUMMINSIND": {
+      "instrument_type": "FUTSTK",
+      "symbol": "CUMMINSIND",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "200"
+      ]
+    },
+    "FUTSTK|DABUR": {
+      "instrument_type": "FUTSTK",
+      "symbol": "DABUR",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1250"
+      ]
+    },
+    "FUTSTK|DELHIVERY": {
+      "instrument_type": "FUTSTK",
+      "symbol": "DELHIVERY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2075"
+      ]
+    },
+    "FUTSTK|DIVISLAB": {
+      "instrument_type": "FUTSTK",
+      "symbol": "DIVISLAB",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "100"
+      ]
+    },
+    "FUTSTK|DIXON": {
+      "instrument_type": "FUTSTK",
+      "symbol": "DIXON",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "50"
+      ]
+    },
+    "FUTSTK|DLF": {
+      "instrument_type": "FUTSTK",
+      "symbol": "DLF",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "950"
+      ]
+    },
+    "FUTSTK|DMART": {
+      "instrument_type": "FUTSTK",
+      "symbol": "DMART",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "150"
+      ]
+    },
+    "FUTSTK|DRREDDY": {
+      "instrument_type": "FUTSTK",
+      "symbol": "DRREDDY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "625"
+      ]
+    },
+    "FUTSTK|EICHERMOT": {
+      "instrument_type": "FUTSTK",
+      "symbol": "EICHERMOT",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "100"
+      ]
+    },
+    "FUTSTK|ENRIN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ENRIN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|ETERNAL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ETERNAL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2425"
+      ]
+    },
+    "FUTSTK|FEDERALBNK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "FEDERALBNK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2500"
+      ]
+    },
+    "FUTSTK|FORCEMOT": {
+      "instrument_type": "FUTSTK",
+      "symbol": "FORCEMOT",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "25"
+      ]
+    },
+    "FUTSTK|FORTIS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "FORTIS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "775"
+      ]
+    },
+    "FUTSTK|GAIL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "GAIL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "3550"
+      ]
+    },
+    "FUTSTK|GLENMARK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "GLENMARK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "375"
+      ]
+    },
+    "FUTSTK|GMRAIRPORT": {
+      "instrument_type": "FUTSTK",
+      "symbol": "GMRAIRPORT",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "6975"
+      ]
+    },
+    "FUTSTK|GODFRYPHLP": {
+      "instrument_type": "FUTSTK",
+      "symbol": "GODFRYPHLP",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "275"
+      ]
+    },
+    "FUTSTK|GODREJCP": {
+      "instrument_type": "FUTSTK",
+      "symbol": "GODREJCP",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "500"
+      ]
+    },
+    "FUTSTK|GODREJPROP": {
+      "instrument_type": "FUTSTK",
+      "symbol": "GODREJPROP",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "325"
+      ]
+    },
+    "FUTSTK|GRASIM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "GRASIM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "250"
+      ]
+    },
+    "FUTSTK|GVT&D": {
+      "instrument_type": "FUTSTK",
+      "symbol": "GVT&D",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|HAL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HAL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "150"
+      ]
+    },
+    "FUTSTK|HAVELLS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HAVELLS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "500"
+      ]
+    },
+    "FUTSTK|HCLTECH": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HCLTECH",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "400"
+      ]
+    },
+    "FUTSTK|HDFCAMC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HDFCAMC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "300"
+      ]
+    },
+    "FUTSTK|HDFCBANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HDFCBANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "650"
+      ]
+    },
+    "FUTSTK|HDFCLIFE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HDFCLIFE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1100"
+      ]
+    },
+    "FUTSTK|HEROMOTOCO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HEROMOTOCO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "150"
+      ]
+    },
+    "FUTSTK|HINDALCO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HINDALCO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "700"
+      ]
+    },
+    "FUTSTK|HINDPETRO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HINDPETRO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2025"
+      ]
+    },
+    "FUTSTK|HINDUNILVR": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HINDUNILVR",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "300"
+      ]
+    },
+    "FUTSTK|HINDZINC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HINDZINC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1225"
+      ]
+    },
+    "FUTSTK|HYUNDAI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "HYUNDAI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "275"
+      ]
+    },
+    "FUTSTK|ICICIBANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ICICIBANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "700"
+      ]
+    },
+    "FUTSTK|ICICIGI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ICICIGI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "325"
+      ]
+    },
+    "FUTSTK|ICICIPRULI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ICICIPRULI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "925"
+      ]
+    },
+    "FUTSTK|IDEA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "IDEA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "71475"
+      ]
+    },
+    "FUTSTK|IDFCFIRSTB": {
+      "instrument_type": "FUTSTK",
+      "symbol": "IDFCFIRSTB",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "9275"
+      ]
+    },
+    "FUTSTK|IEX": {
+      "instrument_type": "FUTSTK",
+      "symbol": "IEX",
+      "expiry_months": [
+        "2026-10",
+        "2026-11"
+      ],
+      "lot_sizes": [
+        "4350"
+      ]
+    },
+    "FUTSTK|INDHOTEL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "INDHOTEL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1000"
+      ]
+    },
+    "FUTSTK|INDIANB": {
+      "instrument_type": "FUTSTK",
+      "symbol": "INDIANB",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1000"
+      ]
+    },
+    "FUTSTK|INDIGO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "INDIGO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "150"
+      ]
+    },
+    "FUTSTK|INDUSINDBK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "INDUSINDBK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "700"
+      ]
+    },
+    "FUTSTK|INDUSTOWER": {
+      "instrument_type": "FUTSTK",
+      "symbol": "INDUSTOWER",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1700"
+      ]
+    },
+    "FUTSTK|INFY": {
+      "instrument_type": "FUTSTK",
+      "symbol": "INFY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "400"
+      ]
+    },
+    "FUTSTK|INOXWIND": {
+      "instrument_type": "FUTSTK",
+      "symbol": "INOXWIND",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "6400"
+      ]
+    },
+    "FUTSTK|IOC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "IOC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "4875"
+      ]
+    },
+    "FUTSTK|IREDA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "IREDA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11"
+      ],
+      "lot_sizes": [
+        "4525"
+      ]
+    },
+    "FUTSTK|IRFC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "IRFC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "5425"
+      ]
+    },
+    "FUTSTK|ITC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ITC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1725"
+      ]
+    },
+    "FUTSTK|JINDALSTEL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "JINDALSTEL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "625"
+      ]
+    },
+    "FUTSTK|JIOFIN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "JIOFIN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2350"
+      ]
+    },
+    "FUTSTK|JSWENERGY": {
+      "instrument_type": "FUTSTK",
+      "symbol": "JSWENERGY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1075"
+      ]
+    },
+    "FUTSTK|JSWSTEEL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "JSWSTEEL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "675"
+      ]
+    },
+    "FUTSTK|JUBLFOOD": {
+      "instrument_type": "FUTSTK",
+      "symbol": "JUBLFOOD",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1250"
+      ]
+    },
+    "FUTSTK|KALYANKJIL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "KALYANKJIL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1350"
+      ]
+    },
+    "FUTSTK|KAYNES": {
+      "instrument_type": "FUTSTK",
+      "symbol": "KAYNES",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "150"
+      ]
+    },
+    "FUTSTK|KEI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "KEI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|KFINTECH": {
+      "instrument_type": "FUTSTK",
+      "symbol": "KFINTECH",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "575"
+      ]
+    },
+    "FUTSTK|KOTAKBANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "KOTAKBANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2000"
+      ]
+    },
+    "FUTSTK|KPITTECH": {
+      "instrument_type": "FUTSTK",
+      "symbol": "KPITTECH",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "775"
+      ]
+    },
+    "FUTSTK|LAURUSLABS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "LAURUSLABS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "850"
+      ]
+    },
+    "FUTSTK|LICHSGFIN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "LICHSGFIN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1000"
+      ]
+    },
+    "FUTSTK|LICI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "LICI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1400"
+      ]
+    },
+    "FUTSTK|LODHA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "LODHA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "625"
+      ]
+    },
+    "FUTSTK|LT": {
+      "instrument_type": "FUTSTK",
+      "symbol": "LT",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|LTF": {
+      "instrument_type": "FUTSTK",
+      "symbol": "LTF",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2250"
+      ]
+    },
+    "FUTSTK|LTM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "LTM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "150"
+      ]
+    },
+    "FUTSTK|LUPIN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "LUPIN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "425"
+      ]
+    },
+    "FUTSTK|M&M": {
+      "instrument_type": "FUTSTK",
+      "symbol": "M&M",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "200"
+      ]
+    },
+    "FUTSTK|MAHABANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MAHABANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "6500"
+      ]
+    },
+    "FUTSTK|MANAPPURAM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MANAPPURAM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "3000"
+      ]
+    },
+    "FUTSTK|MANKIND": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MANKIND",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "250"
+      ]
+    },
+    "FUTSTK|MARICO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MARICO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1200"
+      ]
+    },
+    "FUTSTK|MARUTI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MARUTI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "50"
+      ]
+    },
+    "FUTSTK|MAXHEALTH": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MAXHEALTH",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "525"
+      ]
+    },
+    "FUTSTK|MAZDOCK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MAZDOCK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "225"
+      ]
+    },
+    "FUTSTK|MCX": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MCX",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "225"
+      ]
+    },
+    "FUTSTK|MFSL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MFSL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "400"
+      ]
+    },
+    "FUTSTK|MOTHERSON": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MOTHERSON",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "6150"
+      ]
+    },
+    "FUTSTK|MOTILALOFS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MOTILALOFS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "775"
+      ]
+    },
+    "FUTSTK|MPHASIS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MPHASIS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "275"
+      ]
+    },
+    "FUTSTK|MUTHOOTFIN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "MUTHOOTFIN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "275"
+      ]
+    },
+    "FUTSTK|NAM-INDIA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NAM-INDIA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "625"
+      ]
+    },
+    "FUTSTK|NATIONALUM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NATIONALUM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1875"
+      ]
+    },
+    "FUTSTK|NAUKRI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NAUKRI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "550"
+      ]
+    },
+    "FUTSTK|NBCC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NBCC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "6500"
+      ]
+    },
+    "FUTSTK|NESTLEIND": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NESTLEIND",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "500"
+      ]
+    },
+    "FUTSTK|NHPC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NHPC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "6950"
+      ]
+    },
+    "FUTSTK|NMDC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NMDC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "6750"
+      ]
+    },
+    "FUTSTK|NTPC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NTPC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1500"
+      ]
+    },
+    "FUTSTK|NYKAA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "NYKAA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "3125"
+      ]
+    },
+    "FUTSTK|OBEROIRLTY": {
+      "instrument_type": "FUTSTK",
+      "symbol": "OBEROIRLTY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "350"
+      ]
+    },
+    "FUTSTK|OFSS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "OFSS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "100"
+      ]
+    },
+    "FUTSTK|OIL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "OIL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1400"
+      ]
+    },
+    "FUTSTK|ONGC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ONGC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2250"
+      ]
+    },
+    "FUTSTK|PAGEIND": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PAGEIND",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "20"
+      ]
+    },
+    "FUTSTK|PATANJALI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PATANJALI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1075"
+      ]
+    },
+    "FUTSTK|PAYTM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PAYTM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "725"
+      ]
+    },
+    "FUTSTK|PERSISTENT": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PERSISTENT",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|PETRONET": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PETRONET",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1900"
+      ]
+    },
+    "FUTSTK|PFC": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PFC",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1300"
+      ]
+    },
+    "FUTSTK|PGEL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PGEL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "950"
+      ]
+    },
+    "FUTSTK|PHOENIXLTD": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PHOENIXLTD",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "350"
+      ]
+    },
+    "FUTSTK|PIDILITIND": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PIDILITIND",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "500"
+      ]
+    },
+    "FUTSTK|PIIND": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PIIND",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|PNB": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PNB",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "8000"
+      ]
+    },
+    "FUTSTK|PNBHOUSING": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PNBHOUSING",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "650"
+      ]
+    },
+    "FUTSTK|POLICYBZR": {
+      "instrument_type": "FUTSTK",
+      "symbol": "POLICYBZR",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "350"
+      ]
+    },
+    "FUTSTK|POLYCAB": {
+      "instrument_type": "FUTSTK",
+      "symbol": "POLYCAB",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|POWERGRID": {
+      "instrument_type": "FUTSTK",
+      "symbol": "POWERGRID",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1900"
+      ]
+    },
+    "FUTSTK|POWERINDIA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "POWERINDIA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "25"
+      ]
+    },
+    "FUTSTK|PREMIERENE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PREMIERENE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "650"
+      ]
+    },
+    "FUTSTK|PRESTIGE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "PRESTIGE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "450"
+      ]
+    },
+    "FUTSTK|RADICO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "RADICO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "150"
+      ]
+    },
+    "FUTSTK|RBLBANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "RBLBANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "3175"
+      ]
+    },
+    "FUTSTK|RECLTD": {
+      "instrument_type": "FUTSTK",
+      "symbol": "RECLTD",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1575"
+      ]
+    },
+    "FUTSTK|RELIANCE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "RELIANCE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "500"
+      ]
+    },
+    "FUTSTK|RVNL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "RVNL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1925"
+      ]
+    },
+    "FUTSTK|SAGILITY": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SAGILITY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "12000"
+      ]
+    },
+    "FUTSTK|SAIL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SAIL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "4700"
+      ]
+    },
+    "FUTSTK|SBICARD": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SBICARD",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "800"
+      ]
+    },
+    "FUTSTK|SBILIFE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SBILIFE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "375"
+      ]
+    },
+    "FUTSTK|SBIN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SBIN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "750"
+      ]
+    },
+    "FUTSTK|SHREECEM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SHREECEM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "25"
+      ]
+    },
+    "FUTSTK|SHRIRAMFIN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SHRIRAMFIN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "825"
+      ]
+    },
+    "FUTSTK|SIEMENS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SIEMENS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|SOLARINDS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SOLARINDS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "50"
+      ]
+    },
+    "FUTSTK|SONACOMS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SONACOMS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1225"
+      ]
+    },
+    "FUTSTK|SRF": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SRF",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "200"
+      ]
+    },
+    "FUTSTK|SUNPHARMA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SUNPHARMA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "350"
+      ]
+    },
+    "FUTSTK|SUPREMEIND": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SUPREMEIND",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|SUZLON": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SUZLON",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "12700"
+      ]
+    },
+    "FUTSTK|SWIGGY": {
+      "instrument_type": "FUTSTK",
+      "symbol": "SWIGGY",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1825"
+      ]
+    },
+    "FUTSTK|TATACONSUM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TATACONSUM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "550"
+      ]
+    },
+    "FUTSTK|TATAELXSI": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TATAELXSI",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|TATAPOWER": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TATAPOWER",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1450"
+      ]
+    },
+    "FUTSTK|TATASTEEL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TATASTEEL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "2750"
+      ]
+    },
+    "FUTSTK|TCS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TCS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "225"
+      ]
+    },
+    "FUTSTK|TECHM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TECHM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "600"
+      ]
+    },
+    "FUTSTK|TIINDIA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TIINDIA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "200"
+      ]
+    },
+    "FUTSTK|TITAN": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TITAN",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|TMPV": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TMPV",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1600"
+      ]
+    },
+    "FUTSTK|TORNTPHARM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TORNTPHARM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "125"
+      ]
+    },
+    "FUTSTK|TRENT": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TRENT",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "225"
+      ]
+    },
+    "FUTSTK|TVSMOTOR": {
+      "instrument_type": "FUTSTK",
+      "symbol": "TVSMOTOR",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|UJJIVANSFB": {
+      "instrument_type": "FUTSTK",
+      "symbol": "UJJIVANSFB",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "8000"
+      ]
+    },
+    "FUTSTK|ULTRACEMCO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ULTRACEMCO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "50"
+      ]
+    },
+    "FUTSTK|UNIONBANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "UNIONBANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "4425"
+      ]
+    },
+    "FUTSTK|UNITDSPR": {
+      "instrument_type": "FUTSTK",
+      "symbol": "UNITDSPR",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "400"
+      ]
+    },
+    "FUTSTK|UNOMINDA": {
+      "instrument_type": "FUTSTK",
+      "symbol": "UNOMINDA",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "550"
+      ]
+    },
+    "FUTSTK|UPL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "UPL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1355"
+      ]
+    },
+    "FUTSTK|VBL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "VBL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1275"
+      ]
+    },
+    "FUTSTK|VEDL": {
+      "instrument_type": "FUTSTK",
+      "symbol": "VEDL",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "1150"
+      ]
+    },
+    "FUTSTK|VMM": {
+      "instrument_type": "FUTSTK",
+      "symbol": "VMM",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "4850"
+      ]
+    },
+    "FUTSTK|VOLTAS": {
+      "instrument_type": "FUTSTK",
+      "symbol": "VOLTAS",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "375"
+      ]
+    },
+    "FUTSTK|WAAREEENER": {
+      "instrument_type": "FUTSTK",
+      "symbol": "WAAREEENER",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "175"
+      ]
+    },
+    "FUTSTK|WIPRO": {
+      "instrument_type": "FUTSTK",
+      "symbol": "WIPRO",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "3000"
+      ]
+    },
+    "FUTSTK|YESBANK": {
+      "instrument_type": "FUTSTK",
+      "symbol": "YESBANK",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "31100"
+      ]
+    },
+    "FUTSTK|ZYDUSLIFE": {
+      "instrument_type": "FUTSTK",
+      "symbol": "ZYDUSLIFE",
+      "expiry_months": [
+        "2026-10",
+        "2026-11",
+        "2026-12"
+      ],
+      "lot_sizes": [
+        "900"
+      ]
+    }
+  }
 }
