@@ -1,6 +1,8 @@
+import html
 import json
 import os
 import re
+import textwrap
 import urllib.parse
 import urllib.request
 import http.cookiejar
@@ -26,6 +28,10 @@ TELEGRAM_API = "https://api.telegram.org"
 
 # Set LISTENER_MODE=1 when called by listener.py
 LISTENER_MODE = os.environ.get("LISTENER_MODE") == "1"
+
+# Table layout
+ACTION_WIDTH = 28          # wrap width of the ACTION column
+MAX_MESSAGE_CHARS = 3500   # Telegram limit is 4096
 
 
 # --------------------------------------------------
@@ -193,39 +199,97 @@ def match_actions(watchlist, actions):
 
 
 # --------------------------------------------------
-# BUILD REPORT
+# BUILD REPORT (table format)
+#
+# SYMBOL    EX-DATE      REC-DATE     ACTION
+# ABC       16-Oct-2026  17-Oct-2026  Dividend - Rs 5
+#                                     Per Share
+#
+# Returns a list of plain-text messages. Each message has the
+# title and table header, and is kept under MAX_MESSAGE_CHARS.
 # --------------------------------------------------
 
-def build_report(matched):
-    lines = [
-        "NSE CORPORATE ACTIONS",
-        "",
-    ]
+def clean(value):
+    value = str(value or "").strip()
+    return value if value and value.upper() != "N/A" else "-"
+
+
+def build_report_messages(matched):
+    title = "NSE CORPORATE ACTIONS"
 
     if not matched:
-        lines.append(
-            "No matching corporate actions found for your watchlist."
-        )
-        return "\n".join(lines)
+        return [
+            title
+            + "\n\nNo matching corporate actions found "
+            "for your watchlist."
+        ]
 
-    for item in matched:
-        lines.extend([
-            f"Company: {item['company']}",
-            f"Symbol: {item['symbol']}",
-            f"Action: {item['purpose']}",
-            f"Ex-date: {item['ex_date']}",
-            f"Record date: {item['record_date']}",
-            "",
-        ])
+    symbols = [clean(item["symbol"]) for item in matched]
+    ex_dates = [clean(item["ex_date"]) for item in matched]
+    rec_dates = [clean(item["record_date"]) for item in matched]
 
-    return "\n".join(lines).strip()
+    sym_w = max(len("SYMBOL"), max(len(v) for v in symbols))
+    ex_w = max(len("EX-DATE"), max(len(v) for v in ex_dates))
+    rec_w = max(len("REC-DATE"), max(len(v) for v in rec_dates))
+
+    prefix_w = sym_w + 2 + ex_w + 2 + rec_w + 2
+
+    header = (
+        "SYMBOL".ljust(sym_w) + "  "
+        + "EX-DATE".ljust(ex_w) + "  "
+        + "REC-DATE".ljust(rec_w) + "  "
+        + "ACTION"
+    )
+
+    # Build one text block per record (action may wrap onto
+    # continuation lines aligned under the ACTION column).
+    blocks = []
+    for item, sym, ex, rec in zip(
+        matched, symbols, ex_dates, rec_dates
+    ):
+        action_lines = textwrap.wrap(
+            clean(item["purpose"]),
+            width=ACTION_WIDTH,
+            break_long_words=True,
+        ) or ["-"]
+
+        lines = [
+            sym.ljust(sym_w) + "  "
+            + ex.ljust(ex_w) + "  "
+            + rec.ljust(rec_w) + "  "
+            + action_lines[0]
+        ]
+        for extra in action_lines[1:]:
+            lines.append(" " * prefix_w + extra)
+
+        blocks.append("\n".join(lines))
+
+    # Group blocks into messages without splitting a record.
+    messages = []
+    current = []
+    base = f"{title}\n\n{header}\n"
+    current_len = len(base)
+
+    for block in blocks:
+        if current and current_len + len(block) + 1 > MAX_MESSAGE_CHARS:
+            messages.append(base + "\n".join(current))
+            current = []
+            current_len = len(base)
+        current.append(block)
+        current_len += len(block) + 1
+
+    if current:
+        messages.append(base + "\n".join(current))
+
+    return messages
 
 
 # --------------------------------------------------
 # SEND TELEGRAM MESSAGE
+# Sent inside <pre> so the table columns line up.
 # --------------------------------------------------
 
-def send_telegram(message):
+def send_telegram(messages):
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
 
@@ -234,26 +298,16 @@ def send_telegram(message):
             "Telegram credentials are missing."
         )
 
+    if isinstance(messages, str):
+        messages = [messages]
+
     url = f"{TELEGRAM_API}/bot{token}/sendMessage"
 
-    remaining = message
-
-    while remaining:
-        if len(remaining) <= 3500:
-            chunk = remaining
-            remaining = ""
-        else:
-            split_at = remaining.rfind("\n", 0, 3500)
-
-            if split_at <= 0:
-                split_at = 3500
-
-            chunk = remaining[:split_at]
-            remaining = remaining[split_at:].lstrip("\n")
-
+    for message in messages:
         payload = urllib.parse.urlencode({
             "chat_id": chat_id,
-            "text": chunk,
+            "text": "<pre>" + html.escape(message) + "</pre>",
+            "parse_mode": "HTML",
         }).encode("utf-8")
 
         request = urllib.request.Request(
@@ -276,7 +330,7 @@ def send_telegram(message):
 
         if not result.get("ok"):
             raise RuntimeError(
-                "Telegram rejected the message."
+                f"Telegram rejected the message: {result}"
             )
 
 
@@ -293,14 +347,14 @@ def main():
         actions,
     )
 
-    report = build_report(matched)
+    messages = build_report_messages(matched)
 
     if LISTENER_MODE:
         # listener.py will send this report to Telegram.
-        print(report)
+        print("\n\n".join(messages))
     else:
         # Standalone or scheduled execution sends it directly.
-        send_telegram(report)
+        send_telegram(messages)
 
 
 if __name__ == "__main__":
