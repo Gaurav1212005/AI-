@@ -2,8 +2,8 @@ name: Daily NSE F&O Ban Monitor
 
 on:
   schedule:
-    # 9:30 AM IST = 4:00 AM UTC, Mon-Fri
-    - cron: "0 4 * * 1-5"
+    # 3:00 AM IST (Mon-Fri) = 9:30 PM UTC (Sun-Thu)
+    - cron: "30 21 * * 0-4"
   workflow_dispatch:
 
 jobs:
