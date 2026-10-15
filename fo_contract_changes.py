@@ -1,5 +1,6 @@
 import csv
 import gzip
+import html
 import io
 import json
 import os
@@ -419,14 +420,16 @@ def save_snapshot(
     print(f"Snapshot saved to {SNAPSHOT_FILE}")
 
 # ============================================================
-# GENERATE TELEGRAM REPORT
-# Only:
-# - Report title
-# - Report time
-# - Contract file
-# - Expected expiry months
-# - Missing expiry months
+# GENERATE TELEGRAM REPORT (table format)
+# Returns a list of HTML messages (Telegram limit: 4096 chars).
+#
+# SYMBOL       OCT-26  NOV-26  DEC-26
+# BAJAJHLDNG   OK      MISS    MISS
 # ============================================================
+def month_label(year_month):
+    return datetime.strptime(year_month, "%Y-%m").strftime("%b-%y").upper()
+
+
 def generate_report(
     contract_filename,
     expected_months,
@@ -434,41 +437,71 @@ def generate_report(
 ):
     now = datetime.now(IST)
 
-    lines = [
-        "NSE F&O CONTRACT CHANGE MONITOR",
-        "",
-        (
-            "Report generated: "
-            f"{now.strftime('%d %b %Y, %I:%M %p')} IST"
-        ),
-        f"Contract file: {contract_filename}",
-        "",
-        "EXPECTED EXPIRY MONTHS",
-        ", ".join(expected_months),
-        "",
-        "MISSING EXPIRY MONTHS",
-    ]
+    header = (
+        "<b>NSE F&amp;O CONTRACT MONITOR</b>\n"
+        f"{now.strftime('%d %b %Y, %I:%M %p')} IST\n"
+        f"File: {html.escape(contract_filename)}\n"
+    )
 
     if not missing_months:
-        lines.append("None")
-    else:
-        for item in missing_months:
-            present = ", ".join(item["present"])
-            missing = ", ".join(item["missing"])
+        return [header + "\nNo missing expiry months."]
 
-            lines.append(
-                f"{item['symbol']} "
-                f"({item['instrument_type']}): "
-                f"present [{present}]; "
-                f"missing [{missing}]"
-            )
+    header += f"\nMissing expiry months: {len(missing_months)} contract(s)\n\n"
 
-    return "\n".join(lines)
+    labels = [month_label(m) for m in expected_months]
+    col_width = max(6, max(len(label) for label in labels))
+
+    names = []
+    for item in missing_months:
+        name = item["symbol"]
+        if item["instrument_type"] == "FUTIDX":
+            name += " (IDX)"
+        names.append(name)
+
+    name_width = max(len("SYMBOL"), max(len(name) for name in names))
+
+    table_head = (
+        "SYMBOL".ljust(name_width)
+        + "  "
+        + "  ".join(label.ljust(col_width) for label in labels)
+    ).rstrip()
+
+    rows = []
+    for name, item in zip(names, missing_months):
+        cells = [
+            ("OK" if month in item["present"] else "MISS").ljust(col_width)
+            for month in expected_months
+        ]
+        rows.append(
+            (name.ljust(name_width) + "  " + "  ".join(cells)).rstrip()
+        )
+
+    # Split rows into messages under ~3500 characters each.
+    messages = []
+    current_rows = []
+    current_len = len(header) + len(table_head)
+
+    def flush(prefix):
+        body = html.escape("\n".join([table_head] + current_rows))
+        messages.append(prefix + "<pre>" + body + "</pre>")
+
+    for row in rows:
+        if current_rows and current_len + len(row) + 1 > 3500:
+            flush(header if not messages else "")
+            current_rows = []
+            current_len = len(table_head)
+        current_rows.append(row)
+        current_len += len(row) + 1
+
+    if current_rows:
+        flush(header if not messages else "")
+
+    return messages
 
 # ============================================================
-# SEND TELEGRAM MESSAGE
+# SEND TELEGRAM MESSAGES
 # ============================================================
-def send_telegram_message(message):
+def send_telegram_message(messages):
     if not TELEGRAM_BOT_TOKEN:
         raise RuntimeError(
             "TELEGRAM_BOT_TOKEN environment variable is missing."
@@ -479,26 +512,19 @@ def send_telegram_message(message):
             "TELEGRAM_CHAT_ID environment variable is missing."
         )
 
+    if isinstance(messages, str):
+        messages = [messages]
+
     url = (
         "https://api.telegram.org/"
         f"bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     )
 
-    # Telegram limit is 4096 characters per message.
-    chunks = []
-    current = ""
-    for line in message.split("\n"):
-        if len(current) + len(line) + 1 > 4000:
-            chunks.append(current)
-            current = ""
-        current += line + "\n"
-    if current.strip():
-        chunks.append(current)
-
-    for chunk in chunks:
+    for message in messages:
         payload = json.dumps({
             "chat_id": TELEGRAM_CHAT_ID,
-            "text": chunk.rstrip("\n"),
+            "text": message,
+            "parse_mode": "HTML",
             "disable_web_page_preview": True,
         }).encode("utf-8")
 
@@ -571,7 +597,7 @@ def main():
         missing_months,
     )
 
-    print("\n" + report)
+    print("\n" + "\n\n".join(report))
 
     # Deliver the report to Telegram.
     send_telegram_message(report)
