@@ -215,14 +215,21 @@ def clean(value):
 
 
 def build_report_messages(matched):
+    """
+    Returns a list of (head, table) tuples.
+    head  = plain text shown above the table (first line is the title);
+            empty for follow-up messages.
+    table = monospace table text (empty when there is nothing to show).
+    """
     title = "NSE CORPORATE ACTIONS"
 
     if not matched:
-        return [
+        return [(
             title
             + "\n\nNo matching corporate actions found "
-            "for your watchlist."
-        ]
+            "for your watchlist.",
+            "",
+        )]
 
     symbols = [clean(item["symbol"]) for item in matched]
     ex_dates = [clean(item["ex_date"]) for item in matched]
@@ -265,28 +272,40 @@ def build_report_messages(matched):
         blocks.append("\n".join(lines))
 
     # Group blocks into messages without splitting a record.
+    # The title appears only above the first table.
     messages = []
     current = []
-    base = f"{title}\n\n{header}\n"
-    current_len = len(base)
+    current_len = len(header) + 1
+
+    def flush():
+        head = title if not messages else ""
+        messages.append((head, header + "\n" + "\n".join(current)))
 
     for block in blocks:
         if current and current_len + len(block) + 1 > MAX_MESSAGE_CHARS:
-            messages.append(base + "\n".join(current))
+            flush()
             current = []
-            current_len = len(base)
+            current_len = len(header) + 1
         current.append(block)
         current_len += len(block) + 1
 
     if current:
-        messages.append(base + "\n".join(current))
+        flush()
 
     return messages
 
 
+def format_plain(messages):
+    """Plain-text version (used in LISTENER_MODE)."""
+    parts = []
+    for head, table in messages:
+        parts.append("\n\n".join(x for x in (head, table) if x))
+    return "\n\n".join(parts)
+
+
 # --------------------------------------------------
 # SEND TELEGRAM MESSAGE
-# Sent inside <pre> so the table columns line up.
+# Title is normal bold text; only the table is monospace.
 # --------------------------------------------------
 
 def send_telegram(messages):
@@ -298,15 +317,26 @@ def send_telegram(messages):
             "Telegram credentials are missing."
         )
 
-    if isinstance(messages, str):
-        messages = [messages]
-
     url = f"{TELEGRAM_API}/bot{token}/sendMessage"
 
-    for message in messages:
+    for head, table in messages:
+        parts = []
+
+        if head:
+            first, _, rest = head.partition("\n")
+            text = f"<b>{html.escape(first)}</b>"
+            if rest:
+                text += "\n" + html.escape(rest)
+            parts.append(text)
+
+        if table:
+            parts.append(
+                "<pre>" + html.escape(table) + "</pre>"
+            )
+
         payload = urllib.parse.urlencode({
             "chat_id": chat_id,
-            "text": "<pre>" + html.escape(message) + "</pre>",
+            "text": "\n".join(parts),
             "parse_mode": "HTML",
         }).encode("utf-8")
 
@@ -351,7 +381,7 @@ def main():
 
     if LISTENER_MODE:
         # listener.py will send this report to Telegram.
-        print("\n\n".join(messages))
+        print(format_plain(messages))
     else:
         # Standalone or scheduled execution sends it directly.
         send_telegram(messages)
