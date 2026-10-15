@@ -1,10 +1,10 @@
-
 name: Corporate Actions Monitor
 
 on:
   workflow_dispatch:
-schedule:
-  - cron: "0 4 * * *"
+  schedule:
+    # 3:00 AM IST = 9:30 PM UTC (previous day)
+    - cron: "30 21 * * *"
 
 permissions:
   contents: read
