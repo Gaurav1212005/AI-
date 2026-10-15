@@ -1,8 +1,8 @@
 name: F&O Contract Changes Monitor
 on:
   schedule:
-    # 9:30 AM Kolkata / IST = 4:00 AM UTC
-   - cron: "45 3 * * 1-5"   # 9:15 AM IST
+    # 3:00 AM IST (Mon-Fri) = 9:30 PM UTC (Sun-Thu)
+    - cron: "30 21 * * 0-4"
   workflow_dispatch:
 permissions:
   contents: write
