@@ -224,12 +224,18 @@ def build_report_messages(matched):
     title = "NSE CORPORATE ACTIONS"
 
     if not matched:
-        return [(
-            title
-            + "\n\nNo matching corporate actions found "
-            "for your watchlist.",
-            "",
-        )]
+        # Same table layout, with a "no matches" row.
+        empty_table = (
+            "SYMBOL".ljust(10) + "  "
+            + "EX-DATE".ljust(11) + "  "
+            + "REC-DATE".ljust(11) + "  "
+            + "ACTION\n"
+            + "-".ljust(10) + "  "
+            + "-".ljust(11) + "  "
+            + "-".ljust(11) + "  "
+            + "No matching actions found"
+        )
+        return [(title, empty_table)]
 
     symbols = [clean(item["symbol"]) for item in matched]
     ex_dates = [clean(item["ex_date"]) for item in matched]
