@@ -7,28 +7,19 @@ import re
 import time
 import urllib.request
 import urllib.error
-
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
-
-
 # ============================================================
 # CONFIGURATION
 # ============================================================
-
 IST = ZoneInfo("Asia/Kolkata")
-
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
-
 SNAPSHOT_FILE = "fo_contract_snapshot.json"
-
 NSE_ARCHIVE_URL = (
     "https://archives.nseindia.com/content/fo/"
 )
-
 EXPECTED_INSTRUMENT_TYPES = {"FUTSTK", "FUTIDX"}
-
 MONTHS = {
     "JAN": 1,
     "FEB": 2,
@@ -43,43 +34,29 @@ MONTHS = {
     "NOV": 11,
     "DEC": 12,
 }
-
 MONTH_NAMES = list(MONTHS.keys())
-
-
 # ============================================================
 # EXPECTED EXPIRY MONTHS
 # Current month + next two calendar months
 # ============================================================
-
 def get_expected_expiry_months():
     today = datetime.now(IST).date()
-
     expected = []
-
     year = today.year
     month = today.month
-
     for _ in range(3):
         expected.append(f"{year:04d}-{month:02d}")
-
         month += 1
-
         if month > 12:
             month = 1
             year += 1
-
     return expected
-
-
 # ============================================================
-# NSE CONTRACT FILE DOWNLOAD
-# Start with yesterday's file and look back up to 10 days.
+# DOWNLOAD NSE CONTRACT FILE
+# Try yesterday's file, then look back up to 10 days.
 # ============================================================
-
 def download_contract_file():
     today = datetime.now(IST).date()
-
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -89,47 +66,34 @@ def download_contract_file():
         "Accept": "*/*",
         "Referer": "https://www.nseindia.com/",
     }
-
     for days_back in range(1, 11):
         file_date = today - timedelta(days=days_back)
-
         filename = (
             f"NSE_FO_contract_"
             f"{file_date.strftime('%d%m%Y')}.csv.gz"
         )
-
         url = NSE_ARCHIVE_URL + filename
-
         request = urllib.request.Request(
             url,
             headers=headers,
         )
-
         try:
             print(f"Checking NSE contract file: {filename}")
-
             with urllib.request.urlopen(
                 request,
                 timeout=30,
             ) as response:
                 compressed_data = response.read()
-
             if not compressed_data:
                 continue
-
-            # Verify that the response is a valid gzip file.
             with gzip.GzipFile(
                 fileobj=io.BytesIO(compressed_data)
             ) as gz:
                 csv_data = gz.read()
-
             if not csv_data:
                 continue
-
             print(f"Downloaded contract file: {filename}")
-
             return filename, csv_data
-
         except (
             urllib.error.HTTPError,
             urllib.error.URLError,
@@ -139,131 +103,145 @@ def download_contract_file():
         ) as error:
             print(f"Could not retrieve {filename}: {error}")
             continue
-
     raise RuntimeError(
         "Could not download a valid NSE F&O contract file "
         "from the previous 10 calendar days."
     )
-
-
 # ============================================================
 # EXPIRY MONTH EXTRACTION
-# Extract from StockNm, e.g. NIFTY26OCTFUT -> 2026-10
+# Extract expiry month from StockNm.
+# Example: ABC26OCTFUT -> 2026-10
 # ============================================================
-
 def extract_expiry_month(stock_name):
     if not stock_name:
         return None
-
     stock_name = stock_name.strip().upper()
-
     pattern = (
         r"(\d{2})"
         r"(" + "|".join(MONTH_NAMES) + r")"
     )
-
     matches = list(re.finditer(pattern, stock_name))
-
     if not matches:
         return None
-
     match = matches[-1]
-
     year_suffix = int(match.group(1))
     month_name = match.group(2)
-
     year = 2000 + year_suffix
     month = MONTHS[month_name]
-
     return f"{year:04d}-{month:02d}"
-
-
 # ============================================================
-# CSV PROCESSING
+# CSV COLUMN DETECTION
 # ============================================================
-
+def normalize_column_name(name):
+    return re.sub(
+        r"[^a-z0-9]",
+        "",
+        (name or "").strip().lower(),
+    )
+def detect_csv_dialect(text):
+    try:
+        return csv.Sniffer().sniff(
+            text[:10000],
+            delimiters=",;\t|",
+        )
+    except csv.Error:
+        return csv.excel
 def read_contracts(csv_data):
-    text = csv_data.decode("utf-8-sig", errors="replace")
-
-    reader = csv.DictReader(io.StringIO(text))
-
+    text = csv_data.decode(
+        "utf-8-sig",
+        errors="replace",
+    )
+    dialect = detect_csv_dialect(text)
+    reader = csv.DictReader(
+        io.StringIO(text),
+        dialect=dialect,
+    )
     if not reader.fieldnames:
-        raise ValueError("The NSE contract CSV has no header row.")
-
-    # Normalize column names without changing their values.
+        raise ValueError(
+            "The NSE contract CSV has no header row."
+        )
     column_map = {
-        name.strip().lower(): name
+        normalize_column_name(name): name
         for name in reader.fieldnames
         if name
     }
-
-    required_columns = [
-        "stocknm",
-        "tckrsymb",
-        "fininstrmtp",
-    ]
-
-    missing_columns = [
-        column
-        for column in required_columns
-        if column not in column_map
-    ]
-
-    if missing_columns:
+    print("Detected NSE CSV columns:")
+    print(reader.fieldnames)
+    def find_column(*possible_names):
+        for name in possible_names:
+            normalized = normalize_column_name(name)
+            if normalized in column_map:
+                return column_map[normalized]
+        return None
+    stock_column = find_column(
+        "StockNm",
+        "StockName",
+        "Stock",
+    )
+    symbol_column = find_column(
+        "TckrSymb",
+        "TickerSymbol",
+        "Symbol",
+        "Underlying",
+        "UnderlyingSymbol",
+    )
+    type_column = find_column(
+        "FinInstrmTp",
+        "FinInstrmType",
+        "InstrumentType",
+        "Instrument",
+    )
+    lot_column = find_column(
+        "MinLot",
+        "MarketLot",
+        "LotSize",
+    )
+    if not stock_column or not type_column:
         raise ValueError(
-            "Unexpected NSE contract file format. "
-            f"Missing columns: {', '.join(missing_columns)}. "
-            f"Available columns: {', '.join(reader.fieldnames)}"
+            "Unable to identify the required NSE CSV columns. "
+            f"Detected columns: {reader.fieldnames}"
         )
-
-    stock_column = column_map["stocknm"]
-    symbol_column = column_map["tckrsymb"]
-    type_column = column_map["fininstrmtp"]
-
-    lot_column = column_map.get("minlot")
-
     contracts = {}
-
+    rows_read = 0
+    matching_types = 0
+    excluded_test = 0
+    recognized_expiry_rows = 0
     for row in reader:
+        rows_read += 1
         instrument_type = (
             row.get(type_column) or ""
         ).strip().upper()
-
         if instrument_type not in EXPECTED_INSTRUMENT_TYPES:
             continue
-
+        matching_types += 1
         stock_name = (
             row.get(stock_column) or ""
         ).strip().upper()
-
         symbol = (
             row.get(symbol_column) or ""
-        ).strip().upper()
-
-        # Exclude test instruments from the entire report.
+        ).strip().upper() if symbol_column else ""
+        # Exclude all NSETEST instruments.
         if "NSETEST" in stock_name or "NSETEST" in symbol:
+            excluded_test += 1
             continue
-
-        if not symbol or not stock_name:
+        if not stock_name:
             continue
-
+        # Use StockNm as a fallback if the symbol column
+        # is unavailable or the symbol value is blank.
+        if not symbol:
+            symbol = stock_name
         expiry_month = extract_expiry_month(stock_name)
-
         if not expiry_month:
             continue
-
+        recognized_expiry_rows += 1
         lot_size = None
-
         if lot_column:
             lot_value = (
                 row.get(lot_column) or ""
             ).strip()
-
             if lot_value:
                 lot_size = lot_value
-
         key = (instrument_type, symbol)
-
         if key not in contracts:
             contracts[key] = {
                 "instrument_type": instrument_type,
@@ -271,58 +249,46 @@ def read_contracts(csv_data):
                 "expiry_months": set(),
                 "lot_sizes": set(),
             }
-
         contracts[key]["expiry_months"].add(expiry_month)
-
         if lot_size is not None:
             contracts[key]["lot_sizes"].add(lot_size)
-
+    print(f"CSV rows read: {rows_read}")
+    print(f"FUTSTK/FUTIDX rows: {matching_types}")
+    print(f"NSETEST rows excluded: {excluded_test}")
+    print(f"Rows with recognized expiry months: {recognized_expiry_rows}")
+    print(f"Unique contracts identified: {len(contracts)}")
     if not contracts:
         raise ValueError(
             "No valid FUTSTK or FUTIDX contracts were found. "
-            "The file may have an unexpected format."
+            "Check the detected CSV columns, instrument type values, "
+            "and StockNm expiry format in the logs."
         )
-
     return contracts
-
-
 # ============================================================
-# MISSING EXPIRY MONTHS
+# FIND MISSING EXPIRY MONTHS
 # ============================================================
-
 def find_missing_expiry_months(
     contracts,
     expected_months,
 ):
     results = []
-
     expected_set = set(expected_months)
-
     for key in sorted(contracts):
         contract = contracts[key]
-
         present = contract["expiry_months"]
-
         missing = expected_set - present
-
         if not missing:
             continue
-
         results.append({
             "instrument_type": contract["instrument_type"],
             "symbol": contract["symbol"],
             "present": sorted(present),
             "missing": sorted(missing),
         })
-
     return results
-
-
 # ============================================================
-# SNAPSHOT
-# Keep the snapshot updated for GitHub Actions.
+# SAVE SNAPSHOT
 # ============================================================
-
 def save_snapshot(
     contracts,
     contract_filename,
@@ -334,15 +300,12 @@ def save_snapshot(
         "expected_expiry_months": expected_months,
         "contracts": {},
     }
-
     for key in sorted(contracts):
         contract = contracts[key]
-
         snapshot_key = (
             f"{contract['instrument_type']}|"
             f"{contract['symbol']}"
         )
-
         snapshot["contracts"][snapshot_key] = {
             "instrument_type": contract["instrument_type"],
             "symbol": contract["symbol"],
@@ -353,7 +316,6 @@ def save_snapshot(
                 contract["lot_sizes"]
             ),
         }
-
     with open(
         SNAPSHOT_FILE,
         "w",
@@ -365,34 +327,32 @@ def save_snapshot(
             indent=2,
             ensure_ascii=False,
         )
-
     print(f"Snapshot saved to {SNAPSHOT_FILE}")
-
-
 # ============================================================
-# REPORT GENERATION
-# Only show:
-# 1. Report title
-# 2. Generation time
-# 3. Contract filename
-# 4. Expected expiry months
-# 5. Missing expiry months
+# GENERATE TELEGRAM REPORT
+# Only:
+# - Report title
+# - Report time
+# - Contract file
+# - Expected expiry months
+# - Missing expiry months
 #
 # No contract counts, additions, removals, lot-size changes,
 # NSETEST instruments, or explanatory footer.
 # ============================================================
-
 def generate_report(
     contract_filename,
     expected_months,
     missing_months,
 ):
     now = datetime.now(IST)
-
     lines = [
         "NSE F&O CONTRACT CHANGE MONITOR",
         "",
-        f"Report generated: {now.strftime('%d %b %Y, %I:%M %p')} IST",
+        (
+            "Report generated: "
+            f"{now.strftime('%d %b %Y, %I:%M %p')} IST"
+        ),
         f"Contract file: {contract_filename}",
         "",
         "EXPECTED EXPIRY MONTHS",
@@ -400,51 +360,40 @@ def generate_report(
         "",
         "MISSING EXPIRY MONTHS",
     ]
-
     if not missing_months:
         lines.append("None")
-
     else:
         for item in missing_months:
             present = ", ".join(item["present"])
             missing = ", ".join(item["missing"])
-
             lines.append(
                 f"{item['symbol']} "
                 f"({item['instrument_type']}): "
                 f"present [{present}]; "
                 f"missing [{missing}]"
             )
-
     return "\n".join(lines)
-
-
 # ============================================================
-# TELEGRAM DELIVERY
+# SEND TELEGRAM MESSAGE
 # ============================================================
-
 def send_telegram_message(message):
     if not TELEGRAM_BOT_TOKEN:
         raise RuntimeError(
             "TELEGRAM_BOT_TOKEN environment variable is missing."
         )
-
     if not TELEGRAM_CHAT_ID:
         raise RuntimeError(
             "TELEGRAM_CHAT_ID environment variable is missing."
         )
-
     url = (
         "https://api.telegram.org/"
         f"bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     )
-
     payload = json.dumps({
         "chat_id": TELEGRAM_CHAT_ID,
         "text": message,
         "disable_web_page_preview": True,
     }).encode("utf-8")
-
     request = urllib.request.Request(
         url,
         data=payload,
@@ -454,7 +403,6 @@ def send_telegram_message(message):
         },
         method="POST",
     )
-
     for attempt in range(1, 4):
         try:
             with urllib.request.urlopen(
@@ -462,75 +410,54 @@ def send_telegram_message(message):
                 timeout=30,
             ) as response:
                 response_data = response.read().decode("utf-8")
-
             result = json.loads(response_data)
-
             if not result.get("ok"):
                 raise RuntimeError(
                     f"Telegram API returned an error: {result}"
                 )
-
             print("Telegram message sent successfully.")
             return
-
         except Exception as error:
             print(
                 f"Telegram attempt {attempt}/3 failed: {error}"
             )
-
             if attempt == 3:
                 raise
-
             time.sleep(attempt * 3)
-
-
 # ============================================================
 # MAIN
 # ============================================================
-
 def main():
     print("=" * 60)
     print("NSE F&O CONTRACT CHANGE MONITOR")
     print(f"Current IST time: {datetime.now(IST)}")
     print("=" * 60)
-
-    # 1. Download the latest available contract file.
+    # Download the latest available contract file.
     contract_filename, csv_data = download_contract_file()
-
-    # 2. Read FUTSTK and FUTIDX contracts.
-    #    NSETEST instruments are excluded.
+    # Parse contracts and exclude NSETEST instruments.
     contracts = read_contracts(csv_data)
-
-    # 3. Determine expected expiry months.
+    # Get current month and the next two calendar months.
     expected_months = get_expected_expiry_months()
-
-    # 4. Identify missing expiry months.
+    # Identify contracts missing expected expiry months.
     missing_months = find_missing_expiry_months(
         contracts,
         expected_months,
     )
-
-    # 5. Generate the simplified report.
+    # Generate the simplified report.
     report = generate_report(
         contract_filename,
         expected_months,
         missing_months,
     )
-
     print("\n" + report)
-
-    # 6. Send the report to Telegram.
+    # Deliver the report to Telegram.
     send_telegram_message(report)
-
-    # 7. Update the snapshot after successful delivery.
+    # Save snapshot after successful delivery.
     save_snapshot(
         contracts,
         contract_filename,
         expected_months,
     )
-
     print("\nMonitor completed successfully.")
-
-
 if __name__ == "__main__":
     main()
