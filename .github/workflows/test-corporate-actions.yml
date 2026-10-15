@@ -3,8 +3,8 @@ name: Corporate Actions Monitor
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "52 3 * * *"
+schedule:
+  - cron: "0 4 * * *"
 
 permissions:
   contents: read
