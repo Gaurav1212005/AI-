@@ -1,6 +1,6 @@
 {
-  "generated_at_ist": "2026-10-22T05:34:08.427893+05:30",
-  "contract_file": "NSE_FO_contract_21102026.csv.gz",
+  "generated_at_ist": "2026-10-23T05:32:49.556715+05:30",
+  "contract_file": "NSE_FO_contract_22102026.csv.gz",
   "expected_expiry_months": [
     "2026-10",
     "2026-11",
@@ -1133,9 +1133,9 @@
         "325"
       ]
     },
-    "FUTSTK|ICICIPRULI": {
+    "FUTSTK|ICICILIFE": {
       "instrument_type": "FUTSTK",
-      "symbol": "ICICIPRULI",
+      "symbol": "ICICILIFE",
       "expiry_months": [
         "2026-10",
         "2026-11",
